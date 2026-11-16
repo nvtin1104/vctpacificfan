@@ -1,0 +1,534 @@
+[
+  {
+    "id": "vct-pacific-2027-kickoff",
+    "tournament": "vct-pacific-2027-kickoff",
+    "type": "triple-elimination",
+    "confirmed": false,
+    "note": {
+      "vi": "Nhánh đấu dựng theo thể thức Triple-Elimination của Kickoff 2025–2026 (4 hạt giống được bye vào vòng 2 nhánh trên, 8 đội còn lại bốc thăm). Cặp đấu, hạt giống và lịch chờ Riot công bố.",
+      "en": "Bracket modelled on the 2025–2026 Kickoff triple-elimination format (4 seeds get byes into Upper Round 2, the other 8 are drawn). Pairings, seeds and schedule are TBA.",
+      "ko": "2025–2026 킥오프 트리플 엘리미네이션 방식을 기반으로 한 대진입니다(시드 4팀은 상위 2라운드 부전승, 나머지 8팀 추첨). 대진·시드·일정은 발표 예정.",
+      "ja": "2025–2026キックオフのトリプルエリミネーション形式を基にしたブラケットです（シード4チームはアッパー2回戦へシード、残り8チームは抽選）。組み合わせ・シード・日程は発表待ち。"
+    },
+    "sections": [
+      {
+        "id": "upper",
+        "title": {
+          "vi": "Nhánh trên",
+          "en": "Upper Bracket",
+          "ko": "상위 브래킷",
+          "ja": "アッパーブラケット"
+        },
+        "rounds": [
+          {
+            "id": "upper-r1",
+            "title": {
+              "vi": "Vòng 1",
+              "en": "Round 1",
+              "ko": "1라운드",
+              "ja": "ラウンド1"
+            },
+            "matches": [
+              "ko27-u1-1",
+              "ko27-u1-2",
+              "ko27-u1-3",
+              "ko27-u1-4"
+            ]
+          },
+          {
+            "id": "upper-r2",
+            "title": {
+              "vi": "Vòng 2",
+              "en": "Round 2",
+              "ko": "2라운드",
+              "ja": "ラウンド2"
+            },
+            "matches": [
+              "ko27-u2-1",
+              "ko27-u2-2",
+              "ko27-u2-3",
+              "ko27-u2-4"
+            ]
+          },
+          {
+            "id": "upper-r3",
+            "title": {
+              "vi": "Vòng 3",
+              "en": "Round 3",
+              "ko": "3라운드",
+              "ja": "ラウンド3"
+            },
+            "matches": [
+              "ko27-u3-1",
+              "ko27-u3-2"
+            ]
+          },
+          {
+            "id": "upper-r4",
+            "title": {
+              "vi": "Chung kết nhánh trên",
+              "en": "Upper Bracket Final",
+              "ko": "상위 브래킷 결승",
+              "ja": "アッパーブラケット決勝"
+            },
+            "matches": [
+              "ko27-u4-1"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "middle",
+        "title": {
+          "vi": "Nhánh giữa",
+          "en": "Middle Bracket",
+          "ko": "중위 브래킷",
+          "ja": "ミドルブラケット"
+        },
+        "rounds": [
+          {
+            "id": "middle-r1",
+            "title": {
+              "vi": "Vòng 1",
+              "en": "Round 1",
+              "ko": "1라운드",
+              "ja": "ラウンド1"
+            },
+            "matches": [
+              "ko27-m1-1",
+              "ko27-m1-2",
+              "ko27-m1-3",
+              "ko27-m1-4"
+            ]
+          },
+          {
+            "id": "middle-r2",
+            "title": {
+              "vi": "Vòng 2",
+              "en": "Round 2",
+              "ko": "2라운드",
+              "ja": "ラウンド2"
+            },
+            "matches": [
+              "ko27-m2-1",
+              "ko27-m2-2"
+            ]
+          },
+          {
+            "id": "middle-r3",
+            "title": {
+              "vi": "Vòng 3",
+              "en": "Round 3",
+              "ko": "3라운드",
+              "ja": "ラウンド3"
+            },
+            "matches": [
+              "ko27-m3-1",
+              "ko27-m3-2"
+            ]
+          },
+          {
+            "id": "middle-r4",
+            "title": {
+              "vi": "Vòng 4",
+              "en": "Round 4",
+              "ko": "4라운드",
+              "ja": "ラウンド4"
+            },
+            "matches": [
+              "ko27-m4-1"
+            ]
+          },
+          {
+            "id": "middle-r5",
+            "title": {
+              "vi": "Chung kết nhánh giữa",
+              "en": "Middle Bracket Final",
+              "ko": "중위 브래킷 결승",
+              "ja": "ミドルブラケット決勝"
+            },
+            "matches": [
+              "ko27-m5-1"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lower",
+        "title": {
+          "vi": "Nhánh dưới",
+          "en": "Lower Bracket",
+          "ko": "하위 브래킷",
+          "ja": "ロワーブラケット"
+        },
+        "rounds": [
+          {
+            "id": "lower-r1",
+            "title": {
+              "vi": "Vòng 1",
+              "en": "Round 1",
+              "ko": "1라운드",
+              "ja": "ラウンド1"
+            },
+            "matches": [
+              "ko27-l1-1",
+              "ko27-l1-2"
+            ]
+          },
+          {
+            "id": "lower-r2",
+            "title": {
+              "vi": "Vòng 2",
+              "en": "Round 2",
+              "ko": "2라운드",
+              "ja": "ラウンド2"
+            },
+            "matches": [
+              "ko27-l2-1",
+              "ko27-l2-2"
+            ]
+          },
+          {
+            "id": "lower-r3",
+            "title": {
+              "vi": "Vòng 3",
+              "en": "Round 3",
+              "ko": "3라운드",
+              "ja": "ラウンド3"
+            },
+            "matches": [
+              "ko27-l3-1",
+              "ko27-l3-2"
+            ]
+          },
+          {
+            "id": "lower-r4",
+            "title": {
+              "vi": "Vòng 4",
+              "en": "Round 4",
+              "ko": "4라운드",
+              "ja": "ラウンド4"
+            },
+            "matches": [
+              "ko27-l4-1"
+            ]
+          },
+          {
+            "id": "lower-r5",
+            "title": {
+              "vi": "Vòng 5",
+              "en": "Round 5",
+              "ko": "5라운드",
+              "ja": "ラウンド5"
+            },
+            "matches": [
+              "ko27-l5-1"
+            ]
+          },
+          {
+            "id": "lower-r6",
+            "title": {
+              "vi": "Chung kết nhánh dưới",
+              "en": "Lower Bracket Final",
+              "ko": "하위 브래킷 결승",
+              "ja": "ロワーブラケット決勝"
+            },
+            "matches": [
+              "ko27-l6-1"
+            ]
+          }
+        ]
+      }
+    ],
+    "progression": {
+      "ko27-u1-1": {
+        "winner": {
+          "match": "ko27-u2-1",
+          "slot": 1
+        },
+        "loser": {
+          "match": "ko27-m1-4",
+          "slot": 1
+        }
+      },
+      "ko27-u1-2": {
+        "winner": {
+          "match": "ko27-u2-2",
+          "slot": 1
+        },
+        "loser": {
+          "match": "ko27-m1-3",
+          "slot": 1
+        }
+      },
+      "ko27-u1-3": {
+        "winner": {
+          "match": "ko27-u2-3",
+          "slot": 1
+        },
+        "loser": {
+          "match": "ko27-m1-2",
+          "slot": 1
+        }
+      },
+      "ko27-u1-4": {
+        "winner": {
+          "match": "ko27-u2-4",
+          "slot": 1
+        },
+        "loser": {
+          "match": "ko27-m1-1",
+          "slot": 1
+        }
+      },
+      "ko27-u2-1": {
+        "winner": {
+          "match": "ko27-u3-1",
+          "slot": 0
+        },
+        "loser": {
+          "match": "ko27-m1-1",
+          "slot": 0
+        }
+      },
+      "ko27-u2-2": {
+        "winner": {
+          "match": "ko27-u3-1",
+          "slot": 1
+        },
+        "loser": {
+          "match": "ko27-m1-2",
+          "slot": 0
+        }
+      },
+      "ko27-u2-3": {
+        "winner": {
+          "match": "ko27-u3-2",
+          "slot": 0
+        },
+        "loser": {
+          "match": "ko27-m1-3",
+          "slot": 0
+        }
+      },
+      "ko27-u2-4": {
+        "winner": {
+          "match": "ko27-u3-2",
+          "slot": 1
+        },
+        "loser": {
+          "match": "ko27-m1-4",
+          "slot": 0
+        }
+      },
+      "ko27-u3-1": {
+        "winner": {
+          "match": "ko27-u4-1",
+          "slot": 0
+        },
+        "loser": {
+          "match": "ko27-m3-2",
+          "slot": 1
+        }
+      },
+      "ko27-u3-2": {
+        "winner": {
+          "match": "ko27-u4-1",
+          "slot": 1
+        },
+        "loser": {
+          "match": "ko27-m3-1",
+          "slot": 1
+        }
+      },
+      "ko27-u4-1": {
+        "winner": {
+          "qualifies": 1
+        },
+        "loser": {
+          "match": "ko27-m5-1",
+          "slot": 1
+        }
+      },
+      "ko27-m1-1": {
+        "winner": {
+          "match": "ko27-m2-1",
+          "slot": 0
+        },
+        "loser": {
+          "match": "ko27-l1-1",
+          "slot": 0
+        }
+      },
+      "ko27-m1-2": {
+        "winner": {
+          "match": "ko27-m2-1",
+          "slot": 1
+        },
+        "loser": {
+          "match": "ko27-l1-1",
+          "slot": 1
+        }
+      },
+      "ko27-m1-3": {
+        "winner": {
+          "match": "ko27-m2-2",
+          "slot": 0
+        },
+        "loser": {
+          "match": "ko27-l1-2",
+          "slot": 0
+        }
+      },
+      "ko27-m1-4": {
+        "winner": {
+          "match": "ko27-m2-2",
+          "slot": 1
+        },
+        "loser": {
+          "match": "ko27-l1-2",
+          "slot": 1
+        }
+      },
+      "ko27-m2-1": {
+        "winner": {
+          "match": "ko27-m3-1",
+          "slot": 0
+        },
+        "loser": {
+          "match": "ko27-l2-2",
+          "slot": 1
+        }
+      },
+      "ko27-m2-2": {
+        "winner": {
+          "match": "ko27-m3-2",
+          "slot": 0
+        },
+        "loser": {
+          "match": "ko27-l2-1",
+          "slot": 1
+        }
+      },
+      "ko27-m3-1": {
+        "winner": {
+          "match": "ko27-m4-1",
+          "slot": 0
+        },
+        "loser": {
+          "match": "ko27-l3-2",
+          "slot": 1
+        }
+      },
+      "ko27-m3-2": {
+        "winner": {
+          "match": "ko27-m4-1",
+          "slot": 1
+        },
+        "loser": {
+          "match": "ko27-l3-1",
+          "slot": 1
+        }
+      },
+      "ko27-m4-1": {
+        "winner": {
+          "match": "ko27-m5-1",
+          "slot": 0
+        },
+        "loser": {
+          "match": "ko27-l5-1",
+          "slot": 1
+        }
+      },
+      "ko27-m5-1": {
+        "winner": {
+          "qualifies": 2
+        },
+        "loser": {
+          "match": "ko27-l6-1",
+          "slot": 1
+        }
+      },
+      "ko27-l1-1": {
+        "winner": {
+          "match": "ko27-l2-1",
+          "slot": 0
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "ko27-l1-2": {
+        "winner": {
+          "match": "ko27-l2-2",
+          "slot": 0
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "ko27-l2-1": {
+        "winner": {
+          "match": "ko27-l3-1",
+          "slot": 0
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "ko27-l2-2": {
+        "winner": {
+          "match": "ko27-l3-2",
+          "slot": 0
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "ko27-l3-1": {
+        "winner": {
+          "match": "ko27-l4-1",
+          "slot": 0
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "ko27-l3-2": {
+        "winner": {
+          "match": "ko27-l4-1",
+          "slot": 1
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "ko27-l4-1": {
+        "winner": {
+          "match": "ko27-l5-1",
+          "slot": 0
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "ko27-l5-1": {
+        "winner": {
+          "match": "ko27-l6-1",
+          "slot": 0
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "ko27-l6-1": {
+        "winner": {
+          "qualifies": 3
+        },
+        "loser": {
+          "eliminated": true
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,1361 @@
+[
+  {
+    "id": "gam-esports-2027",
+    "team": "gam-esports",
+    "status": "partner",
+    "partnerSince": 2027,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "crazyguy",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      }
+    ],
+    "staff": [],
+    "history": [],
+    "source": {
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia",
+      "url": "https://liquipedia.net/valorant/GAM_Esports"
+    },
+    "asOf": "2026-11-13"
+  },
+  {
+    "id": "crazy-raccoon-2027",
+    "team": "crazy-raccoon",
+    "status": "partner",
+    "partnerSince": 2027,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "meiy",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "akame",
+        "role": "Initiator",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "clz",
+        "role": null,
+        "igl": true,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "sugarz3ro",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "aace",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      }
+    ],
+    "staff": [
+      {
+        "handle": "Vorz",
+        "position": "head-coach",
+        "status": "reported"
+      }
+    ],
+    "history": [
+      {
+        "year": 2023,
+        "event": "VALORANT Challengers 2023: Japan Split 2",
+        "placement": "4th"
+      },
+      {
+        "year": 2023,
+        "event": "VALORANT Challengers 2023: Japan Split 1",
+        "placement": "2nd"
+      },
+      {
+        "year": 2022,
+        "event": "VCT 2022: East Asia Last Chance Qualifier",
+        "placement": "5th - 6th"
+      },
+      {
+        "year": 2022,
+        "event": "VCT 2022: Japan Stage 2 Challengers Playoffs",
+        "placement": "3rd"
+      },
+      {
+        "year": 2022,
+        "event": "VCT 2022: Japan Stage 1 Challengers Playoffs",
+        "placement": "2nd"
+      },
+      {
+        "year": 2021,
+        "event": "VALORANT Champions 2021",
+        "placement": "13th - 16th"
+      },
+      {
+        "year": 2021,
+        "event": "VALORANT Masters Berlin 2021",
+        "placement": "9th - 12th"
+      }
+    ],
+    "source": {
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia",
+      "url": "https://liquipedia.net/valorant/Crazy_Raccoon"
+    },
+    "asOf": "2026-11-13"
+  },
+  {
+    "id": "paper-rex-2027",
+    "team": "paper-rex",
+    "status": "partner",
+    "partnerSince": 2023,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "invy",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "f0rsaken",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "something",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "patmen",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      }
+    ],
+    "staff": [
+      {
+        "handle": "alecks",
+        "position": "head-coach",
+        "status": "official"
+      },
+      {
+        "handle": "Panda",
+        "position": "coach",
+        "status": "official"
+      },
+      {
+        "handle": "Anderzz",
+        "position": "analyst",
+        "status": "official"
+      }
+    ],
+    "history": [
+      {
+        "year": 2026,
+        "event": "VALORANT Champions 2026",
+        "placement": "7th - 8th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Champions"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Stage 2",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Pacific_League/Stage_2"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026",
+        "placement": "13th - 16th",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2026"
+      },
+      {
+        "year": 2026,
+        "event": "VALORANT Masters London 2026",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Stage_2/Masters"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Stage 1",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Pacific_League/Stage_1"
+      },
+      {
+        "year": 2026,
+        "event": "VALORANT Masters Santiago 2026",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Stage_1/Masters"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Kickoff",
+        "placement": "3rd",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Pacific_League/Kickoff"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Radiant International Invitational",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VALORANT_Radiant_International_Invitational/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Champions 2025",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Champions"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Stage 2",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Pacific_League/Stage_2"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Masters Toronto 2025",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Stage_2/Masters"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Stage 1",
+        "placement": "3rd",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Pacific_League/Stage_1"
+      }
+    ],
+    "source": {
+      "label": "Liquipedia - Paper Rex",
+      "url": "https://liquipedia.net/valorant/Paper_Rex"
+    },
+    "asOf": "2026-11-13"
+  },
+  {
+    "id": "gen-g-2027",
+    "team": "gen-g",
+    "status": "partner",
+    "partnerSince": 2023,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "t3xture",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "raxcal",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "karon",
+        "role": "Controller",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "dambi",
+        "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "mako",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "ray",
+        "role": "Controller",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      }
+    ],
+    "staff": [
+      {
+        "handle": "solo",
+        "position": "head-coach",
+        "status": "official"
+      },
+      {
+        "handle": "hsk",
+        "position": "coach",
+        "status": "official"
+      }
+    ],
+    "history": [
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Stage 2",
+        "placement": "5th - 6th"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026: Pacific Qualifier",
+        "placement": "4th"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Stage 1",
+        "placement": "11th - 12th"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Kickoff",
+        "placement": "9th - 10th"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Radiant International Invitational",
+        "placement": "2nd"
+      },
+      {
+        "year": 2025,
+        "event": "SOOP VALORANT League 2025",
+        "placement": "3rd - 4th"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Stage 2",
+        "placement": "7th - 8th"
+      },
+      {
+        "year": 2025,
+        "event": "Esports World Cup 2025",
+        "placement": "3rd"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Masters Toronto 2025",
+        "placement": "5th - 6th"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Stage 1",
+        "placement": "2nd"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Kickoff",
+        "placement": "3rd"
+      }
+    ],
+    "source": {
+      "label": "Liquipedia - Gen.G Esports",
+      "url": "https://liquipedia.net/valorant/Gen.G_Esports"
+    },
+    "asOf": "2026-11-13"
+  },
+  {
+    "id": "t1-2027",
+    "team": "t1",
+    "status": "partner",
+    "partnerSince": 2023,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "izu",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "stax",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "buzz",
+        "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "crashies",
+        "role": "Initiator",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "tenz",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      }
+    ],
+    "staff": [
+      {
+        "handle": "Sacy",
+        "position": "head-coach",
+        "status": "reported"
+      },
+      {
+        "handle": "sungmin",
+        "position": "coach",
+        "status": "official"
+      }
+    ],
+    "history": [
+      {
+        "year": 2026,
+        "event": "VALORANT Champions 2026",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Champions"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Stage 2",
+        "placement": "3rd",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Pacific_League/Stage_2"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Stage 1",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Pacific_League/Stage_1"
+      },
+      {
+        "year": 2026,
+        "event": "VALORANT Masters Santiago 2026",
+        "placement": "9th - 10th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Stage_1/Masters"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Kickoff",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Pacific_League/Kickoff"
+      },
+      {
+        "year": 2025,
+        "event": "SOOP VALORANT League 2025",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/SOOP/VALORANT_LEAGUE/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Champions 2025",
+        "placement": "9th - 12th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Champions"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Stage 2",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Pacific_League/Stage_2"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Masters Bangkok 2025",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Stage_1/Masters"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Kickoff",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Pacific_League/Kickoff"
+      }
+    ],
+    "source": {
+      "label": "Liquipedia - T1",
+      "url": "https://liquipedia.net/valorant/T1"
+    },
+    "asOf": "2026-11-13"
+  },
+  {
+    "id": "zeta-division-2027",
+    "team": "zeta-division",
+    "status": "partner",
+    "partnerSince": 2023,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "ken",
+        "role": "Flex",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "yatsuka",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      }
+    ],
+    "staff": [
+      {
+        "handle": "ryota-",
+        "position": "head-coach",
+        "status": "official"
+      }
+    ],
+    "history": [],
+    "source": {
+      "label": "VCT Rostermania 2027 (vct.today)",
+      "url": "https://vct.today/pacific"
+    },
+    "asOf": "2026-11-12"
+  },
+  {
+    "id": "rex-regum-qeon-2027",
+    "team": "rex-regum-qeon",
+    "status": "partner",
+    "partnerSince": 2023,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "xffero",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "jemkin",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      }
+    ],
+    "staff": [
+      {
+        "handle": "Faded",
+        "position": "head-coach",
+        "status": "reported"
+      }
+    ],
+    "history": [],
+    "source": {
+      "label": "VCT Rostermania 2027 (vct.today)",
+      "url": "https://vct.today/pacific"
+    },
+    "asOf": "2026-11-12"
+  },
+  {
+    "id": "full-sense-2027",
+    "team": "full-sense",
+    "status": "partner",
+    "partnerSince": null,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "seph1roth",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "leviathan",
+        "role": null,
+        "igl": false,
+        "sub": true,
+        "status": "official"
+      },
+      {
+        "player": "kr1stal",
+        "role": "Initiator",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      }
+    ],
+    "staff": [
+      {
+        "handle": "FrosT",
+        "position": "head-coach",
+        "status": "official"
+      },
+      {
+        "handle": "sushiboys",
+        "position": "coach",
+        "status": "official"
+      },
+      {
+        "handle": "THEE",
+        "position": "coach",
+        "status": "official"
+      },
+      {
+        "handle": "Crws",
+        "position": "head-coach",
+        "status": "reported"
+      }
+    ],
+    "history": [
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Stage 2",
+        "placement": "11th - 12th"
+      },
+      {
+        "year": 2026,
+        "event": "VALORANT Masters London 2026",
+        "placement": "11th - 12th"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026: Pacific Qualifier",
+        "placement": "7th - 8th"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Stage 1",
+        "placement": "2nd"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Kickoff",
+        "placement": "7th - 8th"
+      },
+      {
+        "year": 2025,
+        "event": "SOOP VALORANT League 2025",
+        "placement": "5th - 6th"
+      },
+      {
+        "year": 2025,
+        "event": "Predator League Thailand 2026",
+        "placement": "1st"
+      },
+      {
+        "year": 2025,
+        "event": "VCT Ascension Pacific 2025",
+        "placement": "7th - 8th"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Challengers 2025 Southeast Asia: Split 3",
+        "placement": "2nd"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Challengers 2025 Southeast Asia: Split 2",
+        "placement": "3rd"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Challengers 2025 Southeast Asia: Split 1",
+        "placement": "1st"
+      }
+    ],
+    "source": {
+      "label": "Liquipedia - FULL SENSE",
+      "url": "https://liquipedia.net/valorant/FULL_SENSE"
+    },
+    "asOf": "2026-11-13"
+  },
+  {
+    "id": "g2-esports-2027",
+    "team": "g2-esports",
+    "status": "invited",
+    "partnerSince": null,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "trent",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "leaf",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      }
+    ],
+    "staff": [
+      {
+        "handle": "JoshRT",
+        "position": "head-coach",
+        "status": "official"
+      },
+      {
+        "handle": "Robert Yip",
+        "position": "coach",
+        "status": "official"
+      }
+    ],
+    "history": [
+      {
+        "year": 2026,
+        "event": "VALORANT Champions 2026",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Champions"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Stage 2",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Stage_2"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026",
+        "placement": "9th - 12th",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2026"
+      },
+      {
+        "year": 2026,
+        "event": "VALORANT Masters London 2026",
+        "placement": "7th - 8th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Stage_2/Masters"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Stage 1",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Stage_1"
+      },
+      {
+        "year": 2026,
+        "event": "VALORANT Masters Santiago 2026",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Stage_1/Masters"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Kickoff",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Kickoff"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Radiant International Invitational",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/VALORANT_Radiant_International_Invitational/2025"
+      },
+      {
+        "year": 2025,
+        "event": "Red Bull Home Ground 2025",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/Red_Bull/Home_Ground/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Champions 2025",
+        "placement": "7th - 8th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Champions"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Stage 2",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Stage_2"
+      },
+      {
+        "year": 2025,
+        "event": "Esports World Cup 2025",
+        "placement": "13th - 16th",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Masters Toronto 2025",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Stage_2/Masters"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Stage 1",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Stage_1"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Masters Bangkok 2025",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Stage_1/Masters"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Kickoff",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Kickoff"
+      }
+    ],
+    "source": {
+      "label": "Liquipedia - G2 Esports",
+      "url": "https://liquipedia.net/valorant/G2_Esports"
+    },
+    "asOf": "2026-11-13"
+  },
+  {
+    "id": "loud-2027",
+    "team": "loud",
+    "status": "invited",
+    "partnerSince": null,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "lukxo",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "darker",
+        "role": "Controller",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "erde",
+        "role": "Controller",
+        "igl": true,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "davih",
+        "role": "Initiator",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      }
+    ],
+    "staff": [
+      {
+        "handle": "Romanilly",
+        "position": "head-coach",
+        "status": "official"
+      },
+      {
+        "handle": "Bati",
+        "position": "coach",
+        "status": "official"
+      }
+    ],
+    "history": [
+      {
+        "year": 2026,
+        "event": "VALORANT Champions 2026",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Champions"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Stage 2",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Stage_2"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026: Americas Qualifier",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2026/Americas"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Stage 1",
+        "placement": "7th - 8th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Stage_1"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Kickoff",
+        "placement": "11th - 12th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Kickoff"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Stage 2",
+        "placement": "11th - 12th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Stage_2"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Stage 1",
+        "placement": "11th - 12th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Stage_1"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Kickoff",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Kickoff"
+      }
+    ],
+    "source": {
+      "label": "Liquipedia - LOUD",
+      "url": "https://liquipedia.net/valorant/LOUD"
+    },
+    "asOf": "2026-11-13"
+  },
+  {
+    "id": "sentinels-2027",
+    "team": "sentinels",
+    "status": "invited",
+    "partnerSince": null,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "johnqt",
+        "role": null,
+        "igl": true,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "oxy",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "brawk",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "canezerra",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "zellsis",
+        "role": null,
+        "igl": false,
+        "sub": true,
+        "status": "official"
+      }
+    ],
+    "staff": [
+      {
+        "handle": "Ewok",
+        "position": "head-coach",
+        "status": "official"
+      },
+      {
+        "handle": "GUNTER",
+        "position": "coach",
+        "status": "official"
+      }
+    ],
+    "history": [
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Stage 2",
+        "placement": "11th - 12th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Stage_2"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026: Americas Qualifier",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2026/Americas"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Stage 1",
+        "placement": "9th - 10th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Stage_1"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Kickoff",
+        "placement": "9th - 10th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Kickoff"
+      },
+      {
+        "year": 2025,
+        "event": "Sentinels Invitational 2025",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/Sentinels_Invitational/2025"
+      },
+      {
+        "year": 2025,
+        "event": "Red Bull Home Ground 2025",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/Red_Bull/Home_Ground/2025"
+      },
+      {
+        "year": 2025,
+        "event": "SEN City Classic 2025",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/SEN_City_Classic/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Champions 2025",
+        "placement": "13th - 16th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Champions"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Stage 2",
+        "placement": "3rd",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Stage_2"
+      },
+      {
+        "year": 2025,
+        "event": "Esports World Cup 2025",
+        "placement": "5th - 8th",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Masters Toronto 2025",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Stage_2/Masters"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Stage 1",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Stage_1"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Masters Bangkok 2025",
+        "placement": "7th - 8th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Stage_1/Masters"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Kickoff",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Kickoff"
+      }
+    ],
+    "source": {
+      "label": "Liquipedia - Sentinels",
+      "url": "https://liquipedia.net/valorant/Sentinels"
+    },
+    "asOf": "2026-11-13"
+  },
+  {
+    "id": "nrg-2027",
+    "team": "nrg",
+    "status": "invited",
+    "partnerSince": null,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "ethan",
+        "role": null,
+        "igl": true,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "mada",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "skuba",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      }
+    ],
+    "staff": [
+      {
+        "handle": "bonkar",
+        "position": "head-coach",
+        "status": "official"
+      },
+      {
+        "handle": "mitch",
+        "position": "coach",
+        "status": "official"
+      }
+    ],
+    "history": [
+      {
+        "year": 2026,
+        "event": "VALORANT Champions 2026",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Champions"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Stage 2",
+        "placement": "3rd",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Stage_2"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2026"
+      },
+      {
+        "year": 2026,
+        "event": "VALORANT Masters London 2026",
+        "placement": "9th - 10th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Stage_2/Masters"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026: Americas Qualifier",
+        "placement": "3rd",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2026/Americas"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Stage 1",
+        "placement": "3rd",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Stage_1"
+      },
+      {
+        "year": 2026,
+        "event": "VALORANT Masters Santiago 2026",
+        "placement": "3rd",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Stage_1/Masters"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Kickoff",
+        "placement": "3rd",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Kickoff"
+      },
+      {
+        "year": 2025,
+        "event": "Red Bull Home Ground 2025",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/Red_Bull/Home_Ground/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Champions 2025",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Champions"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Stage 2",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Stage_2"
+      },
+      {
+        "year": 2025,
+        "event": "Esports World Cup 2025",
+        "placement": "5th - 8th",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2025"
+      },
+      {
+        "year": 2025,
+        "event": "Esports World Cup 2025: Americas Qualifier",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2025/Americas"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Stage 1",
+        "placement": "7th - 8th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Stage_1"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Kickoff",
+        "placement": "7th - 8th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Kickoff"
+      }
+    ],
+    "source": {
+      "label": "Liquipedia - NRG",
+      "url": "https://liquipedia.net/valorant/NRG"
+    },
+    "asOf": "2026-11-13"
+  },
+  {
+    "id": "fnatic-2027",
+    "team": "fnatic",
+    "status": "invited",
+    "partnerSince": null,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "kaajak",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "cloud",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      }
+    ],
+    "staff": [],
+    "history": [
+      {
+        "year": 2026,
+        "event": "VCT 2026: EMEA Stage 2",
+        "placement": "11th - 12th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/EMEA_League/Stage_2"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026: EMEA Qualifier",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2026/EMEA"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: EMEA Stage 1",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/EMEA_League/Stage_1"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: EMEA Kickoff",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/EMEA_League/Kickoff"
+      },
+      {
+        "year": 2025,
+        "event": "SOOP VALORANT League 2025",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/SOOP/VALORANT_LEAGUE/2025"
+      },
+      {
+        "year": 2025,
+        "event": "Red Bull Home Ground 2025",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/Red_Bull/Home_Ground/2025"
+      },
+      {
+        "year": 2025,
+        "event": "INZONE London Clash 2025",
+        "placement": "W",
+        "url": "https://liquipedia.net/valorant/INZONE_London_Clash/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Champions 2025",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Champions"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: EMEA Stage 2",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/EMEA_League/Stage_2"
+      },
+      {
+        "year": 2025,
+        "event": "Esports World Cup 2025",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Masters Toronto 2025",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Stage_2/Masters"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: EMEA Stage 1",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2025/EMEA_League/Stage_1"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: EMEA Kickoff",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/EMEA_League/Kickoff"
+      }
+    ],
+    "source": {
+      "label": "Liquipedia - Fnatic",
+      "url": "https://liquipedia.net/valorant/Fnatic"
+    },
+    "asOf": "2026-11-13"
+  }
+]

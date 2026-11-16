@@ -1,0 +1,73 @@
+{
+  "year": 2027,
+  "current": true,
+  "explainer": true,
+  "banner": {
+    "file": "banner.jpg",
+    "alt": {
+      "vi": "Lộ trình VCT Pacific 2027: Kickoff Bangkok, Masters Seoul, Cup Manila, Masters Valencia, Cup Tokyo và Champions Austin",
+      "en": "VCT Pacific 2027 roadmap: Kickoff in Bangkok, Masters Seoul, Cup in Manila, Masters Valencia, Cup in Tokyo and Champions Austin",
+      "ko": "VCT 퍼시픽 2027 로드맵: 방콕 킥오프, 마스터스 서울, 마닐라 컵, 마스터스 발렌시아, 도쿄 컵, 챔피언스 오스틴",
+      "ja": "VCT Pacific 2027 ロードマップ：バンコクのキックオフ、Masters Seoul、マニラのCup、Masters Valencia、東京のCup、Champions Austin"
+    }
+  },
+  "asOf": "2026-11-12",
+  "mapPool": {
+    "maps": [
+      "Abyss",
+      "Bind",
+      "Corrode",
+      "Haven",
+      "Lotus",
+      "Summit",
+      "Sunset"
+    ],
+    "confirmed": false,
+    "note": {
+      "vi": "Map pool thi đấu hiện tại (V26 Act 6). Pool cho Kickoff 2027 sẽ được chốt sau đợt xoay vòng V27 Act 1 (dự kiến đầu tháng 1/2027).",
+      "en": "Current competitive pool (V26 Act 6). The Kickoff 2027 pool will be set after the V27 Act 1 rotation (expected early January 2027).",
+      "ko": "현재 경쟁전 맵 풀(V26 액트 6). 킥오프 2027 맵 풀은 V27 액트 1 로테이션(2027년 1월 초 예정) 이후 확정됩니다.",
+      "ja": "現在の競技マッププール（V26 Act 6）。キックオフ2027のプールはV27 Act 1のローテーション（2027年1月上旬予定）後に確定します。"
+    },
+    "source": {
+      "label": "Strafe - Valorant active map pool (V26 Act 6)",
+      "url": "https://www.strafe.com/articles/read/valorant-active-map-pool/"
+    }
+  },
+  "stipends": [
+    {
+      "stage": "kickoff-cup",
+      "amount": 100000
+    },
+    {
+      "stage": "masters",
+      "amount": 200000
+    },
+    {
+      "stage": "champions",
+      "amount": 400000
+    }
+  ],
+  "sources": [
+    {
+      "label": "VALORANT Esports - No Guaranteed Paths: Inside the New VCT 2027",
+      "url": "https://valorantesports.com/en-US/news/no-guaranteed-paths-inside-the-new-vct-2027"
+    },
+    {
+      "label": "Sports Kyunghyang - VCT Pacific 2027 format (2026-10-28)",
+      "url": "https://sports.khan.co.kr/en/article/202610281645007/"
+    },
+    {
+      "label": "Inquirer - Riot outlines VCT 2027 qualification paths",
+      "url": "https://technology.inquirer.net/147531/riot-outlines-vct-2027-qualification-paths-funding-tournaments"
+    },
+    {
+      "label": "Inquirer - VCT Pacific partnered teams for 2027",
+      "url": "https://technology.inquirer.net/149981/riot-games-unveils-vct-pacific-partnered-teams-for-2027/amp"
+    },
+    {
+      "label": "Esports Radar - financial support for non-partnered teams",
+      "url": "https://esportsradar.gg/riot-confirms-financial-support-for-non-partnered-teams-in-vct-pacific-restructure/"
+    }
+  ]
+}

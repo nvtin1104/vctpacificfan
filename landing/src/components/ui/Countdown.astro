@@ -1,0 +1,28 @@
+---
+import { useT, type Lang } from '../../i18n';
+
+interface Props {
+  to: string;
+  lang: Lang;
+  class?: string;
+}
+const { to, lang, class: className } = Astro.props;
+const t = useT(lang);
+const units = [
+  ['d', t('common.days')],
+  ['h', t('common.hours')],
+  ['m', t('common.minutes')],
+  ['s', t('common.seconds')],
+] as const;
+---
+
+<span class:list={['inline-flex items-baseline gap-2 tabular-nums', className]} data-countdown={to} role="timer">
+  {
+    units.map(([unit, label]) => (
+      <span class="inline-flex items-baseline gap-0.5">
+        <span class="tabular-nums text-bone" data-unit={unit}>--</span>
+        <span class="text-[0.65em] text-muted">{label}</span>
+      </span>
+    ))
+  }
+</span>

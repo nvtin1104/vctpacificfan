@@ -1,0 +1,134 @@
+---
+import { Globe } from '@lucide/astro';
+import CountryFlag from '../../../components/ui/CountryFlag.astro';
+import EmptyState from '../../../components/ui/EmptyState.astro';
+import SectionTitle from '../../../components/ui/SectionTitle.astro';
+import TeamBadge from '../../../components/ui/TeamBadge.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { localePath, useT, type Lang } from '../../../i18n';
+import { countryName, db, firstOfKind, orgRegionName, refId, seasonPath, seasonStaticPaths, teamsOf, tournamentsOf } from '../../../lib/data';
+import { breadcrumbLd } from '../../../lib/jsonld';
+
+export const getStaticPaths = () => seasonStaticPaths();
+const lang = Astro.params.lang as Lang;
+const year = Number(Astro.params.season);
+const t = useT(lang, { year });
+const entries = await teamsOf(year);
+const partners = entries.filter(x => x.roster.data.status === 'partner');
+const qualified = entries.filter(x => x.roster.data.status === 'open_qualifier');
+const invitedFromRosters = entries.filter(x => x.roster.data.status === 'invited').map(x => x.team);
+const rosterIds = new Set(entries.map(x => x.team.id));
+const { team: teamMap } = await db();
+const intlIds = [...new Set((await tournamentsOf(year)).flatMap(ev => ev.data.slots.map(s => refId(s.team))).filter((id): id is string => Boolean(id)).filter(id => !rosterIds.has(id)))];
+const international = [...invitedFromRosters, ...intlIds.map(id => teamMap.get(id)!).filter(Boolean)].sort((a, b) => a.data.name.localeCompare(b.data.name));
+// Open slots = Kickoff slots that are still unfilled this season.
+const kickoff = await firstOfKind(year, 'kickoff');
+const qualifier = await firstOfKind(year, 'kickoff-qualifier');
+const openTotal = kickoff ? kickoff.data.slots.filter(s => !s.team || qualified.some(q => q.team.id === s.team?.id)).length : 0;
+const openLeft = Math.max(0, openTotal - qualified.length);
+const path = seasonPath(year, 'teams');
+---
+
+<BaseLayout
+  lang={lang}
+  path={path}
+  title={t('teams.title')}
+  description={t('teams.lead')}
+  jsonLd={[breadcrumbLd([{ name: t('nav.home'), path: '/' }, { name: t('nav.teams'), path }], Astro.site, lang)]}
+>
+  <div class="wrap py-10">
+    <SectionTitle as="h1" eyebrow={t('nav.teams')} title={t('teams.title')} lead={t('teams.lead')} />
+
+    {entries.length === 0 && <EmptyState text={t('common.tba')} />}
+
+    {
+      partners.length > 0 && (
+        <>
+          <h2 class="heading mb-5 mt-10 text-xl">
+            {t('teams.partners')} <span class="tabular-nums text-base text-muted">{partners.length}</span>
+          </h2>
+          <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {partners.map(({ team, roster }) => (
+              <li>
+                <a href={localePath(lang, `/teams/${team.id}`)} class="panel flex h-full flex-col gap-4 p-5">
+                  <div class="flex items-center justify-between">
+                    <TeamBadge team={team} size="lg" />
+                    {roster.data.partnerSince === year && <span class="chip chip-red">{t('teams.newPartner')}</span>}
+                  </div>
+                  <div>
+                    <h3 class="heading text-lg">{team.data.name}</h3>
+                    <p class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
+                      <span class="inline-flex items-center gap-1.5"><CountryFlag code={team.data.country} />{countryName(team.data.country, lang)}</span>
+                      <span class="inline-flex items-center gap-1 text-xs"><Globe class="size-3 text-sky-400" aria-hidden="true" />{orgRegionName(team.data.orgRegion, lang)}</span>
+                    </p>
+                  </div>
+                  <p class="mt-auto text-xs font-semibold uppercase text-muted">{t('teams.players', { n: Math.min(roster.data.roster.filter(p => !p.sub).length, 5) })}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+
+    {
+      openTotal > 0 && (
+        <>
+          <h2 class="heading mb-5 mt-12 text-xl">
+            {t('teams.openSlots')} <span class="tabular-nums text-base text-muted">{openTotal}</span>
+          </h2>
+          <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {qualified.map(({ team }) => (
+              <li>
+                <a href={localePath(lang, `/teams/${team.id}`)} class="panel flex items-center gap-4 p-5">
+                  <TeamBadge team={team} size="lg" />
+                  <span class="heading text-lg">{team.data.name}</span>
+                </a>
+              </li>
+            ))}
+            {Array.from({ length: openLeft }, (_, i) => (
+              <li>
+                <a
+                  href={qualifier ? localePath(lang, `/tournaments/${qualifier.id}`) : undefined}
+                  class="flex h-full items-center gap-4 rounded-lg border border-dashed border-line p-5 text-muted hover:text-bone"
+                >
+                  <TeamBadge fallback="?" size="lg" />
+                  <span>
+                    <span class="block font-bold">{t('teams.openSlot', { n: qualified.length + i + 1 })}</span>
+                    <span class="block text-xs">{t('teams.openSlotLead')}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+
+    {
+      international.length > 0 && (
+        <>
+          <h2 class="heading mb-5 mt-12 text-xl">
+            {t('teams.international')} <span class="tabular-nums text-base text-muted">{international.length}</span>
+          </h2>
+          <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {international.map(team => (
+              <li>
+                <a href={localePath(lang, `/teams/${team.id}`)} class="panel flex h-full flex-col gap-4 p-5">
+                  <div class="flex items-center justify-between">
+                    <TeamBadge team={team} size="lg" />
+                    <span class="chip inline-flex items-center gap-1 text-xs"><Globe class="size-3 text-sky-400" aria-hidden="true" />{orgRegionName(team.data.orgRegion, lang)}</span>
+                  </div>
+                  <div>
+                    <h3 class="heading text-lg">{team.data.name}</h3>
+                    <p class="mt-1 flex items-center gap-1.5 text-sm text-muted"><CountryFlag code={team.data.country} />{countryName(team.data.country, lang)}</p>
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+  </div>
+</BaseLayout>

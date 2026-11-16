@@ -1,0 +1,160 @@
+---
+import { formatDateRange, loc, localePath, useT, type Lang } from '../../i18n';
+import { CURRENT_SEASON, db, refId, regionName, tournamentsOf } from '../../lib/data';
+
+interface Props {
+  lang: Lang;
+  year?: number;
+}
+const { lang, year = CURRENT_SEASON } = Astro.props;
+const t = useT(lang, { year });
+const { tournament } = await db();
+const tournaments = await tournamentsOf(year);
+// Left → right: where teams start, the regional league, the world stage.
+const columns = [3, 2, 1] as const;
+---
+
+<div class="relative" data-roadmap>
+  <svg class="pointer-events-none absolute inset-0 hidden size-full overflow-visible lg:block" aria-hidden="true" data-roadmap-svg></svg>
+  <div class="relative grid gap-6 lg:grid-cols-3 lg:gap-24">
+    {
+      columns.map(tier => (
+        <section aria-labelledby={`tier-${tier}`}>
+          <h3 id={`tier-${tier}`} class="eyebrow mb-4">
+            {t(`tier.${tier}long`)}
+          </h3>
+          <ol class="grid gap-2">
+            {tournaments
+              .filter(x => x.data.tier === tier)
+              .map(x => {
+                const targets = x.data.qualifiesTo.map(q => refId(q.tournament)!);
+                const dates = formatDateRange(x.data.startDate, x.data.endDate, lang);
+                return (
+                  <li>
+                    <a
+                      href={localePath(lang, `/tournaments/${x.id}`)}
+                      data-node={x.id}
+                      data-targets={targets.join(' ')}
+                      class="roadmap-node block rounded border border-line bg-surface-2 px-4 py-3"
+                    >
+                      <span class="flex items-baseline justify-between gap-3">
+                        <span class="text-sm font-bold">{x.data.shortName}</span>
+                        <span class="text-[0.6875rem] font-semibold uppercase text-muted">{x.data.location ? loc(x.data.location.city, lang) : regionName(x.data.region, lang)}</span>
+                      </span>
+                      <span class="mt-1 block text-xs text-muted">{dates ?? t('common.tba')}</span>
+                      {targets.length > 0 && (
+                        <span class="mt-2 flex flex-wrap gap-1 lg:hidden">
+                          {x.data.qualifiesTo.map(q => (
+                            <span class="chip">
+                              → {tournament.get(refId(q.tournament)!)?.data.shortName}
+                              {q.spots ? ` ×${q.spots}` : ''}
+                            </span>
+                          ))}
+                        </span>
+                      )}
+                    </a>
+                  </li>
+                );
+              })}
+          </ol>
+        </section>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .roadmap-node {
+    transition:
+      border-color 120ms,
+      opacity 120ms;
+  }
+  [data-roadmap].is-focused .roadmap-node:not(.is-lit) {
+    opacity: 0.4;
+  }
+  .roadmap-node.is-lit {
+    border-color: var(--color-crimson);
+  }
+  [data-roadmap] :global(path) {
+    fill: none;
+    stroke: var(--color-line-strong);
+    stroke-width: 1.5;
+    transition:
+      stroke 150ms,
+      opacity 150ms;
+  }
+  [data-roadmap].is-focused :global(path:not(.is-lit)) {
+    opacity: 0.15;
+  }
+  [data-roadmap] :global(path.is-lit) {
+    stroke: var(--color-crimson);
+    stroke-width: 2;
+    stroke-dasharray: 6 6;
+    animation: roadmap-flow 700ms linear infinite;
+  }
+  @keyframes roadmap-flow {
+    to {
+      stroke-dashoffset: -12;
+    }
+  }
+</style>
+
+<script>
+  // Draws qualification edges between cards in different columns and highlights a node's neighbourhood on hover.
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+  for (const root of document.querySelectorAll<HTMLElement>('[data-roadmap]')) {
+    const svg = root.querySelector<SVGSVGElement>('[data-roadmap-svg]')!;
+    const nodes = new Map([...root.querySelectorAll<HTMLElement>('[data-node]')].map(el => [el.dataset.node!, el]));
+    let current: string | null = null;
+
+    const draw = () => {
+      svg.replaceChildren();
+      if (getComputedStyle(svg).display === 'none') return;
+      const box = root.getBoundingClientRect();
+      for (const [id, el] of nodes) {
+        for (const target of (el.dataset.targets ?? '').split(' ').filter(Boolean)) {
+          const to = nodes.get(target);
+          if (!to) continue;
+          const a = el.getBoundingClientRect();
+          const b = to.getBoundingClientRect();
+          if (Math.abs(a.left - b.left) < 10) continue; // same column: shown as chips on the card instead
+          const x1 = a.right - box.left;
+          const y1 = a.top + a.height / 2 - box.top;
+          const x2 = b.left - box.left;
+          const y2 = b.top + b.height / 2 - box.top;
+          const mid = (x1 + x2) / 2;
+          const path = document.createElementNS(SVG_NS, 'path');
+          path.setAttribute('d', `M${x1} ${y1}C${mid} ${y1} ${mid} ${y2} ${x2} ${y2}`);
+          path.dataset.from = id;
+          path.dataset.to = target;
+          svg.append(path);
+        }
+      }
+      light(current); // redraws (resize, font load) must keep the active highlight
+    };
+
+    function light(id: string | null) {
+      current = id;
+      root.classList.toggle('is-focused', !!id);
+      const lit = new Set<string>();
+      if (id) {
+        lit.add(id);
+        for (const target of nodes.get(id)?.dataset.targets?.split(' ') ?? []) lit.add(target);
+        for (const [other, el] of nodes) if (el.dataset.targets?.split(' ').includes(id)) lit.add(other);
+      }
+      for (const [nid, el] of nodes) el.classList.toggle('is-lit', lit.has(nid));
+      for (const path of svg.querySelectorAll<SVGPathElement>('path')) {
+        path.classList.toggle('is-lit', !!id && (path.dataset.from === id || path.dataset.to === id));
+      }
+    }
+
+    for (const [id, el] of nodes) {
+      el.addEventListener('pointerenter', () => light(id));
+      el.addEventListener('focus', () => light(id));
+      el.addEventListener('pointerleave', () => light(null));
+      el.addEventListener('blur', () => light(null));
+    }
+    new ResizeObserver(draw).observe(root);
+    document.fonts?.ready.then(draw);
+  }
+</script>

@@ -1,0 +1,22 @@
+---
+import { Eye } from '@lucide/astro';
+import { useT, type Lang } from '../../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+---
+
+<button
+  type="button"
+  class="btn btn-ghost !px-3 !py-2 text-xs"
+  data-spoiler-toggle
+  aria-pressed="false"
+  data-label-show={t('schedule.spoilerShow')}
+  data-label-hide={t('schedule.spoilerHide')}
+>
+  <Eye class="size-4" aria-hidden="true" />
+  <span data-spoiler-label>{t('schedule.spoilerShow')}</span>
+</button>

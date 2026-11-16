@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/logo.jpg';
+
+interface Props {
+  /** Display size in CSS pixels (the image is rendered at 2× for sharp edges on HiDPI screens). */
+  size?: number;
+  class?: string;
+}
+const { size = 32, class: className } = Astro.props;
+---
+
+<Image src={logo} alt="" width={size * 2} height={size * 2} format="webp" quality={85} loading="eager" class:list={['shrink-0 rounded', className]} style={`width:${size}px;height:${size}px`} aria-hidden="true" />

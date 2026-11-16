@@ -1,0 +1,235 @@
+---
+import { ExternalLink } from '@lucide/astro';
+import EmptyState from '../../../components/ui/EmptyState.astro';
+import SectionTitle from '../../../components/ui/SectionTitle.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { localePath, useT, type Lang } from '../../../i18n';
+import { db, refId, seasonPath, seasonStaticPaths, statisticsOf, tournamentsOf } from '../../../lib/data';
+import { breadcrumbLd } from '../../../lib/jsonld';
+
+export const getStaticPaths = () => seasonStaticPaths();
+const lang = Astro.params.lang as Lang;
+const year = Number(Astro.params.season);
+const t = useT(lang, { year });
+const { team: teams } = await db();
+const [statistics, tournaments] = await Promise.all([statisticsOf(year), tournamentsOf(year)]);
+const path = seasonPath(year, 'statistics');
+const pct = (n: number) => `${(n * 100).toFixed(1)}%`;
+
+const mainEvents = tournaments
+  .filter(x => x.data.tier <= 2 && x.data.startDate && x.data.kind !== 'offseason')
+  .sort((a, b) => a.data.startDate!.localeCompare(b.data.startDate!));
+
+const statsByTournament = new Map(statistics.map(s => [refId(s.data.tournament)!, s]));
+
+const statTabs = [
+  { id: 'offseason', name: t('offseason.title'), href: localePath(lang, `/${year}/offseason`), stat: null },
+  ...mainEvents.map(ev => ({
+    id: ev.id,
+    name: ev.data.name,
+    href: localePath(lang, `/tournaments/${ev.id}`),
+    stat: statsByTournament.get(ev.id) ?? null,
+  })),
+];
+
+const defaultTab = statTabs.find(tab => tab.stat !== null)?.id ?? statTabs[0]?.id ?? '';
+---
+
+<BaseLayout
+  lang={lang}
+  path={path}
+  title={t('stats.title')}
+  description={t('stats.lead')}
+  jsonLd={[breadcrumbLd([{ name: t('nav.home'), path: '/' }, { name: t('nav.statistics'), path }], Astro.site, lang)]}
+>
+  <div class="wrap py-12 md:py-16">
+    <SectionTitle as="h1" eyebrow={t('nav.statistics')} title={t('stats.title')} lead={t('stats.lead')} />
+
+    {
+      statTabs.map(tab => {
+        const s = tab.stat;
+        const empty = (cols: number) => (
+          <tr>
+            <td colspan={cols} class="!py-6 text-center text-muted">
+              {t('stats.pending')}
+            </td>
+          </tr>
+        );
+        return (
+          <section
+            id={tab.id}
+            data-stats-panel={tab.id}
+            hidden={tab.id !== defaultTab}
+            class="mt-6 space-y-10"
+            aria-labelledby={`stats-${tab.id}`}
+          >
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <h2 id={`stats-${tab.id}`} class="heading text-xl">
+                <a href={tab.href} class="hover:text-white">
+                  {tab.name}
+                </a>
+              </h2>
+              {s && (
+                <a href={s.data.source.url} class="link inline-flex items-center gap-1 tabular-nums text-xs uppercase" rel="noopener noreferrer external" target="_blank">
+                  {t('common.source')}: Liquipedia <ExternalLink class="size-3" aria-hidden="true" />
+                </a>
+              )}
+            </div>
+
+            {!s ? (
+              <EmptyState text={t('stats.pending')} />
+            ) : (
+              <>
+                {s.data.status === 'pending' && <EmptyState text={t('stats.pending')} />}
+
+                <div class="grid gap-6 lg:grid-cols-2">
+                  <article class="panel" aria-labelledby={`agents-${s.id}`}>
+                    <h3 id={`agents-${s.id}`} class="heading p-4 text-xl">{t('stats.agents')}</h3>
+                    <div class="overflow-x-auto">
+                      <table class="data-table">
+                        <thead>
+                          <tr>
+                            <th scope="col">{t('match.agent')}</th>
+                            <th scope="col" class="num">{t('stats.picks')}</th>
+                            <th scope="col" class="num">{t('stats.pickRate')}</th>
+                            <th scope="col" class="num">{t('stats.winRate')}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {s.data.agents.length
+                            ? [...s.data.agents]
+                                .sort((a, b) => b.pickRate - a.pickRate)
+                                .map(a => (
+                                  <tr>
+                                    <th scope="row">{a.agent}</th>
+                                    <td class="num">{a.picks}</td>
+                                    <td class="num">
+                                      <span class="inline-flex items-center gap-2">
+                                        <span class="h-1.5 bg-crimson" style={`width:${Math.round(a.pickRate * 60)}px`} aria-hidden="true" />
+                                        {pct(a.pickRate)}
+                                      </span>
+                                    </td>
+                                    <td class="num">{pct(a.winRate)}</td>
+                                  </tr>
+                                ))
+                            : empty(4)}
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
+
+                  <article class="panel" aria-labelledby={`maps-${s.id}`}>
+                    <h3 id={`maps-${s.id}`} class="heading p-4 text-xl">{t('stats.maps')}</h3>
+                    <div class="overflow-x-auto">
+                      <table class="data-table">
+                        <thead>
+                          <tr>
+                            <th scope="col">{t('stats.mapsCol')}</th>
+                            <th scope="col" class="num">{t('stats.played')}</th>
+                            <th scope="col" class="num">{t('stats.picks')}</th>
+                            <th scope="col" class="num">{t('stats.bans')}</th>
+                            <th scope="col" class="num">{t('stats.atk')}</th>
+                            <th scope="col" class="num">{t('stats.def')}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {s.data.maps.length
+                            ? s.data.maps.map(m => (
+                                <tr>
+                                  <th scope="row">{m.map}</th>
+                                  <td class="num">{m.played}</td>
+                                  <td class="num">{m.picks}</td>
+                                  <td class="num">{m.bans}</td>
+                                  <td class="num">{pct(m.atkWinRate)}</td>
+                                  <td class="num">{pct(m.defWinRate)}</td>
+                                </tr>
+                              ))
+                            : empty(6)}
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
+                </div>
+
+                <article class="panel" aria-labelledby={`players-${s.id}`}>
+                  <h3 id={`players-${s.id}`} class="heading p-4 text-xl">{t('stats.players')}</h3>
+                  <div class="overflow-x-auto">
+                    <table class="data-table min-w-[44rem]">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">{t('match.player')}</th>
+                          <th scope="col" class="num">{t('stats.mapsCol')}</th>
+                          <th scope="col" class="num">{t('stats.rounds')}</th>
+                          <th scope="col" class="num">ACS</th>
+                          <th scope="col" class="num">K/D</th>
+                          <th scope="col" class="num">KAST</th>
+                          <th scope="col" class="num">ADR</th>
+                          <th scope="col" class="num">FKPR</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {s.data.players.length
+                          ? [...s.data.players]
+                              .sort((a, b) => b.acs - a.acs)
+                              .map((p, i) => (
+                                <tr>
+                                  <td class="tabular-nums text-muted">{i + 1}</td>
+                                  <th scope="row">
+                                    <span class="font-bold">{p.handle}</span>
+                                    <span class="ml-2 text-xs text-muted">{teams.get(refId(p.team)!)?.data.tag}</span>
+                                  </th>
+                                  <td class="num">{p.maps}</td>
+                                  <td class="num">{p.rounds}</td>
+                                  <td class="num text-crimson">{p.acs.toFixed(1)}</td>
+                                  <td class="num">{p.kd.toFixed(2)}</td>
+                                  <td class="num">{pct(p.kast)}</td>
+                                  <td class="num">{p.adr.toFixed(1)}</td>
+                                  <td class="num">{p.fkpr.toFixed(2)}</td>
+                                </tr>
+                              ))
+                          : empty(9)}
+                      </tbody>
+                    </table>
+                  </div>
+                </article>
+              </>
+            )}
+          </section>
+        );
+      })
+    }
+
+    <section class="mt-12 border-t border-line pt-8" aria-labelledby="glossary">
+      <h2 id="glossary" class="eyebrow mb-4">{t('stats.glossary')}</h2>
+      <ul class="grid gap-2 text-sm text-muted sm:grid-cols-2">
+        {(['acsDef', 'kdDef', 'kastDef', 'adrDef', 'fkprDef'] as const).map(k => <li>{t(`stats.${k}`)}</li>)}
+      </ul>
+    </section>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ defaultTab }}>
+  const strip = document.querySelector('[data-season-strip][data-strip-mode="statistics"]');
+  const panels = [...document.querySelectorAll('[data-stats-panel]')];
+  const buttons = strip ? [...strip.querySelectorAll('[data-strip-tab]')] : [];
+
+  function activate(id, updateUrl = true) {
+    if (!panels.some(p => p.dataset.statsPanel === id)) return;
+    for (const p of panels) p.hidden = p.dataset.statsPanel !== id;
+    for (const b of buttons) b.setAttribute('aria-pressed', String(b.dataset.stripTab === id));
+    if (updateUrl) {
+      const url = new URL(location.href);
+      url.searchParams.set('tournament', id);
+      history.replaceState(null, '', url);
+    }
+  }
+
+  const params = new URLSearchParams(location.search);
+  const initial = params.get('tournament') || location.hash.slice(1) || defaultTab;
+  activate(panels.some(p => p.dataset.statsPanel === initial) ? initial : defaultTab, false);
+
+  for (const b of buttons) {
+    b.addEventListener('click', () => activate(b.dataset.stripTab || defaultTab));
+  }
+</script>

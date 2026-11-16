@@ -1,0 +1,236 @@
+---
+import { loc, localePath, useT, type Lang } from '../../i18n';
+import { DEFAULT_LAYOUT, layoutBracket, type Target } from '../../lib/bracket-layout';
+import { db, refId, sideName, targetLabel, type Bracket } from '../../lib/data';
+import LocalTime from '../ui/LocalTime.astro';
+import TeamBadge from '../ui/TeamBadge.astro';
+
+interface Props {
+  bracket: Bracket;
+  lang: Lang;
+}
+const { bracket, lang } = Astro.props;
+const t = useT(lang);
+const { match: matches, team: teams } = await db();
+const progression = bracket.data.progression as Record<string, { winner: Target; loser: Target }>;
+const sections = bracket.data.sections.map(s => ({ ...s, rounds: s.rounds.map(r => ({ ...r, matches: r.matches.map(m => m.id) })) }));
+const layout = layoutBracket(sections, progression);
+const { nodeW, nodeH, colGap } = DEFAULT_LAYOUT;
+const HEAD = 36;
+const TAIL = 32; // room for the Masters-berth chip under a final
+const targetMatch = (target: Target) => ('match' in target ? target.match : '');
+---
+
+<div class="space-y-10" data-bracket>
+  <p class="text-sm text-muted">{t('bracket.hint')}</p>
+  {
+    sections.map((section, si) => {
+      const box = layout[si];
+      return (
+        <section aria-labelledby={`bracket-${section.id}`}>
+          <h3 id={`bracket-${section.id}`} class="mb-3 text-base font-bold">
+            {loc(section.title, lang)}
+          </h3>
+          <div class="bracket-scroll -mx-4 overflow-x-auto px-4 pb-3 md:mx-0 md:px-0" tabindex="0" aria-label={t('bracket.scrollHint')} data-fit>
+            <div class="bracket-frame" style={`width:${box.width}px;height:${box.height + HEAD + TAIL}px`} data-w={box.width} data-h={box.height + HEAD + TAIL}>
+            <div class="bracket-canvas relative origin-top-left" style={`width:${box.width}px;height:${box.height + HEAD + TAIL}px`}>
+              {section.rounds.map((round, col) => (
+                <p class="absolute top-0 text-[0.6875rem] font-semibold uppercase text-muted" style={`left:${col * (nodeW + colGap)}px;width:${nodeW}px`}>
+                  {loc(round.title, lang)}
+                </p>
+              ))}
+              <svg class="absolute left-0 overflow-visible" style={`top:${HEAD}px`} width={box.width} height={box.height} aria-hidden="true">
+                {box.edges.map(edge => (
+                  <path d={edge.d} data-from={edge.from} data-to={edge.to} class="bracket-edge" />
+                ))}
+              </svg>
+              {box.nodes.map(node => {
+                const m = matches.get(node.id)!;
+                const p = progression[node.id];
+                const qualifies = 'qualifies' in p.winner ? p.winner.qualifies : null;
+                const sideTeams = m.data.teams.map(s => refId(s.team));
+                return (
+                  <>
+                    <a
+                      id={`m-${m.id}`}
+                      href={localePath(lang, `/matches/${m.id}`)}
+                      class="bracket-node absolute flex flex-col overflow-hidden rounded bg-surface-2 text-sm"
+                      style={`left:${node.x}px;top:${node.y + HEAD}px;width:${nodeW}px;height:${nodeH}px`}
+                      data-match={m.id}
+                      data-winner-to={targetMatch(p.winner)}
+                      data-loser-to={targetMatch(p.loser)}
+                      data-teams={sideTeams.filter(Boolean).join(' ')}
+                      title={`${t('bracket.winnerTo', { target: targetLabel(p.winner, matches, lang, t) })} · ${t('bracket.loserTo', { target: targetLabel(p.loser, matches, lang, t) })}`}
+                    >
+                      {m.data.teams.map((side, i) => {
+                        const team = side.team ? teams.get(side.team.id) : undefined;
+                        const won = m.data.winner === i;
+                        return (
+                          <span class:list={['flex flex-1 items-center gap-2 px-2.5', i === 0 && 'border-b border-line', won && 'font-bold']} data-team={team?.id}>
+                            <TeamBadge team={team} size="sm" fallback="" />
+                            <span class:list={['min-w-0 flex-1 truncate', team ? 'font-semibold' : 'text-xs text-muted']}>{sideName(side, teams, lang)}</span>
+                            <span class="w-5 text-right tabular-nums" data-score>
+                              {side.score ?? ''}
+                            </span>
+                          </span>
+                        );
+                      })}
+                    </a>
+                    <span class="absolute text-right tabular-nums text-[0.6rem] text-muted" style={`left:${node.x}px;top:${node.y + HEAD - 16}px;width:${nodeW}px`}>
+                      {m.data.format}
+                      {m.data.startTime && (
+                        <>
+                          {' · '}
+                          <LocalTime iso={m.data.startTime} lang={lang} mode="date" />
+                        </>
+                      )}
+                    </span>
+                    {qualifies && (
+                      <span class="chip chip-red absolute" style={`left:${node.x}px;top:${node.y + HEAD + nodeH + 8}px`}>
+                                                {t('bracket.qualifies', { n: qualifies })}
+                      </span>
+                    )}
+                  </>
+                );
+              })}
+            </div>
+            </div>
+          </div>
+        </section>
+      );
+    })
+  }
+</div>
+
+<style>
+  .bracket-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-line-strong) transparent;
+  }
+  /* The frame is sized to the scaled canvas; clip so the unscaled layout box does not add scroll width. */
+  .bracket-frame {
+    overflow: hidden;
+  }
+  .bracket-canvas {
+    transition: transform 160ms ease;
+  }
+  .bracket-node {
+    border: 1px solid var(--color-line);
+    transition:
+      border-color 120ms,
+      opacity 120ms;
+  }
+  .bracket-node:hover,
+  .bracket-node:focus-visible {
+    outline: none;
+    border-color: var(--color-line-strong);
+  }
+  .bracket-edge {
+    fill: none;
+    stroke: var(--color-line-strong);
+    stroke-width: 1.5;
+  }
+  [data-bracket].is-focused .bracket-node:not(.is-win):not(.is-lose) {
+    opacity: 0.4;
+  }
+  .bracket-node.is-win {
+    border-color: var(--color-crimson);
+  }
+  .bracket-node.is-lose {
+    border-color: var(--color-slate-muted);
+    border-style: dashed;
+  }
+  .bracket-node.is-origin {
+    border-color: var(--color-bone);
+  }
+  .bracket-edge.is-win {
+    stroke: var(--color-crimson);
+    stroke-width: 2;
+  }
+  .bracket-edge.is-projected {
+    stroke-dasharray: 5 4;
+  }
+</style>
+
+<script>
+  // Fit: shrink every section of a bracket by one shared factor so the widest section fits the container.
+  // Below MIN_SCALE text would get too small, so the frame stays at that size and scrolls sideways instead.
+  const MIN_SCALE = 0.68;
+  for (const root of document.querySelectorAll<HTMLElement>('[data-bracket]')) {
+    const scrollers = [...root.querySelectorAll<HTMLElement>('[data-fit]')];
+    const fit = () => {
+      const avail = Math.min(
+        ...scrollers.map(el => {
+          const cs = getComputedStyle(el);
+          return el.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+        }),
+      );
+      const widest = Math.max(...scrollers.map(el => Number(el.querySelector<HTMLElement>('.bracket-frame')!.dataset.w)));
+      const scale = Math.min(1, Math.max(MIN_SCALE, avail / widest));
+      for (const el of scrollers) {
+        const frame = el.querySelector<HTMLElement>('.bracket-frame')!;
+        const canvas = frame.querySelector<HTMLElement>('.bracket-canvas')!;
+        canvas.style.transform = scale < 1 ? `scale(${scale})` : '';
+        frame.style.width = `${Number(frame.dataset.w) * scale}px`;
+        frame.style.height = `${Number(frame.dataset.h) * scale}px`;
+      }
+      root.dataset.scale = scale.toFixed(2);
+    };
+    fit();
+    new ResizeObserver(fit).observe(root);
+  }
+
+  // Hover a match: light the projected route of its winner (red) and where its loser drops (grey).
+  // Hover a team row: light every match that team is in (actual run once results exist).
+  for (const root of document.querySelectorAll<HTMLElement>('[data-bracket]')) {
+    const nodes = new Map([...root.querySelectorAll<HTMLElement>('[data-match]')].map(el => [el.dataset.match!, el]));
+    const edges = [...root.querySelectorAll<SVGPathElement>('.bracket-edge')];
+
+    const reset = () => {
+      root.classList.remove('is-focused');
+      for (const el of nodes.values()) el.classList.remove('is-win', 'is-lose', 'is-origin');
+      for (const e of edges) e.classList.remove('is-win', 'is-projected');
+    };
+
+    const lightRoute = (route: string[], loser: string | undefined, projected: boolean) => {
+      reset();
+      root.classList.add('is-focused');
+      route.forEach((id, i) => nodes.get(id)?.classList.add(i === 0 ? 'is-origin' : 'is-win'));
+      if (route[0]) nodes.get(route[0])?.classList.add('is-win');
+      if (loser) nodes.get(loser)?.classList.add('is-lose');
+      const set = new Set(route);
+      for (const e of edges) {
+        const on = set.has(e.dataset.from!) && set.has(e.dataset.to!);
+        e.classList.toggle('is-win', on);
+        e.classList.toggle('is-projected', on && projected);
+      }
+    };
+
+    const winnerRoute = (start: string) => {
+      const route: string[] = [];
+      for (let id: string | undefined = start; id && !route.includes(id); id = nodes.get(id)?.dataset.winnerTo || undefined) route.push(id);
+      return route;
+    };
+
+    for (const [id, el] of nodes) {
+      const onMatch = () => lightRoute(winnerRoute(id), el.dataset.loserTo || undefined, true);
+      el.addEventListener('pointerenter', onMatch);
+      el.addEventListener('focus', onMatch);
+      el.addEventListener('pointerleave', reset);
+      el.addEventListener('blur', reset);
+      for (const row of el.querySelectorAll<HTMLElement>('[data-team]')) {
+        const team = row.dataset.team;
+        if (!team) continue;
+        row.addEventListener('pointerenter', event => {
+          event.stopPropagation();
+          const run = [...nodes].filter(([, n]) => n.dataset.teams?.split(' ').includes(team)).map(([mid]) => mid);
+          // With no further results the run ends at its latest match; project the rest via winner pointers.
+          const last = run.at(-1);
+          const projected = last ? winnerRoute(last).slice(1) : [];
+          lightRoute([...run, ...projected], undefined, projected.length > 0);
+        });
+        row.addEventListener('pointerleave', () => onMatch());
+      }
+    }
+  }
+</script>

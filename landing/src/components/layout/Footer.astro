@@ -1,0 +1,66 @@
+---
+import { LANG_LABEL, LOCALES, localePath, stripLang, useT, type Lang } from '../../i18n';
+import { sectionPath, seasonConfig, seasonOfPath } from '../../lib/data';
+import Logo from './Logo.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const path = stripLang(Astro.url.pathname);
+const year = await seasonOfPath(path);
+const t = useT(lang, { year });
+const season = seasonConfig(year);
+const nav = [
+  [sectionPath(year, 'tournaments'), t('nav.tournaments')],
+  [sectionPath(year, 'schedule'), t('nav.schedule')],
+  [sectionPath(year, 'teams'), t('nav.teams')],
+  [sectionPath(year, 'statistics'), t('nav.statistics')],
+  [sectionPath(year, 'rules'), t('nav.rules')],
+] as const;
+---
+
+<footer class="mt-24 border-t border-line bg-carbon">
+  <div class="wrap grid gap-10 py-12 md:grid-cols-[1.5fr_1fr_1fr]">
+    <div class="space-y-3 text-sm text-muted">
+      <div class="flex flex-wrap items-center gap-3">
+        <a href={localePath(lang)} class="flex items-center gap-2 text-bone">
+          <Logo size={32} />
+          <span class="text-sm font-extrabold uppercase">{t('meta.siteName')}</span>
+        </a>
+        <span class="chip text-muted">{t('meta.unofficial')}</span>
+      </div>
+      <p>{t('footer.disclaimer')}</p>
+      <p>{t('footer.riot')}</p>
+      <p>{t('footer.data')}</p>
+      <p class="tabular-nums text-xs">{t('footer.updated', { date: season.asOf })}</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul class="space-y-2 text-sm">
+        {
+          nav.map(([href, label]) => (
+            <li>
+              <a href={localePath(lang, href)} class="hover:text-white">
+                {label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <div>
+      <p class="eyebrow mb-3">{t('nav.language')}</p>
+      <ul class="space-y-2 text-sm">
+        {
+          LOCALES.map(code => (
+            <li>
+              <a href={localePath(code, path)} hreflang={code} lang={code} class:list={[code === lang ? 'text-crimson' : 'hover:text-white']}>
+                {LANG_LABEL[code]}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,49 @@
+---
+import { ChevronDown } from '@lucide/astro';
+import { localePath, stripLang, useT, type Lang } from '../../i18n';
+import { CURRENT_SEASON, parseSeasonPath, SEASONS, sectionPath } from '../../lib/data';
+
+interface Props {
+  lang: Lang;
+  /** Season of the page being viewed. */
+  year: number;
+  id: string;
+}
+const { lang, year, id } = Astro.props;
+const t = useT(lang);
+// Stay on the same section when switching (2027 schedule → 2028 schedule); elsewhere open that season's events.
+const here = parseSeasonPath(stripLang(Astro.url.pathname));
+const hrefFor = (y: number) => localePath(lang, sectionPath(y, here?.section ?? 'tournaments'));
+const seasons = [...SEASONS].reverse();
+---
+
+<div class="relative" data-mega>
+  <button
+    type="button"
+    class="flex items-center gap-1 px-2 py-2 text-xs font-bold tabular-nums text-muted hover:text-white"
+    aria-expanded="false"
+    aria-controls={id}
+    aria-label={t('season.label')}
+    data-mega-trigger
+  >
+    {year}
+    <ChevronDown class="size-3.5" aria-hidden="true" />
+  </button>
+  <ul id={id} hidden class="panel absolute right-0 top-full z-50 mt-2 w-44 py-1">
+    <li class="eyebrow px-4 pb-1 pt-2">{t('season.label')}</li>
+    {
+      seasons.map(s => (
+        <li>
+          <a
+            href={hrefFor(s.year)}
+            aria-current={s.year === year ? 'true' : undefined}
+            class:list={['flex items-center justify-between px-4 py-2 text-sm font-semibold hover:bg-surface-3', s.year === year ? 'text-bone' : 'text-muted']}
+          >
+            {s.year}
+            {s.year === CURRENT_SEASON && <span class="chip">{t('season.current')}</span>}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

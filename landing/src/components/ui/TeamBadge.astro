@@ -1,0 +1,30 @@
+---
+import type { Team } from '../../lib/data';
+
+interface Props {
+  team?: Team | null;
+  /** Text shown in the monogram when no team is known yet (e.g. "?"). */
+  fallback?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  class?: string;
+}
+const { team, fallback = '?', size = 'md', class: className = '' } = Astro.props;
+const dims = { sm: 'size-7 text-[0.6rem]', md: 'size-10 text-xs', lg: 'size-14 text-sm', xl: 'size-20 text-xl' }[size];
+const tag = team?.data.tag ?? fallback;
+const logo = team?.data.logo;
+// Use the synced team logo when available; otherwise fall back to a flat monogram in the team's colours.
+const style = team && !logo ? `background:${team.data.colors.primary};color:${team.data.colors.secondary}` : '';
+---
+
+<span
+  class:list={[
+    'inline-grid shrink-0 place-items-center overflow-hidden font-extrabold',
+    logo ? '' : team ? 'rounded' : 'rounded border border-line bg-surface-2 text-slate-muted',
+    dims,
+    className,
+  ]}
+  style={style}
+  aria-hidden="true"
+>
+  {logo ? <img src={logo} alt="" class="size-full object-contain" loading="lazy" decoding="async" /> : tag}
+</span>

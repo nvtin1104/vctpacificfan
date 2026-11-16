@@ -1,0 +1,20 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  id?: string;
+  as?: 'h1' | 'h2' | 'h3';
+}
+const { eyebrow, title, lead, id, as: Tag = 'h2' } = Astro.props;
+const size = Tag === 'h1' ? 'text-3xl md:text-[2.5rem]' : Tag === 'h2' ? 'text-xl md:text-2xl' : 'text-lg';
+---
+
+<header class="mb-5 flex flex-wrap items-end justify-between gap-4">
+  <div class="max-w-3xl">
+    {eyebrow && <p class="eyebrow mb-1.5">{eyebrow}</p>}
+    <Tag id={id} class:list={['heading', size]}>{title}</Tag>
+    {lead && <p class="mt-2 text-sm text-muted md:text-base">{lead}</p>}
+  </div>
+  <slot />
+</header>

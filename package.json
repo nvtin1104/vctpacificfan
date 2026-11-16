@@ -1,0 +1,15 @@
+{
+  "name": "vctpacificfan",
+  "private": true,
+  "type": "module",
+  "description": "VCT Pacific Fan Hub workspace — landing/ Astro site",
+  "scripts": {
+    "dev": "pnpm --dir landing dev",
+    "build": "pnpm --dir landing build",
+    "preview": "pnpm --dir landing preview",
+    "test": "pnpm --dir landing test",
+    "test:seo": "pnpm --dir landing test:seo",
+    "deploy": "pnpm --dir landing deploy",
+    "deploy:cf": "pnpm --dir landing deploy:cf"
+  }
+}

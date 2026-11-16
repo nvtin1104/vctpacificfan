@@ -1,0 +1,233 @@
+---
+import { Check } from '@lucide/astro';
+import { HTML_LANG, localePath, stripLang, useT, type Lang } from '../../i18n';
+import { db, matchesOf, nextTimedMatches, refId, seasonOfPath, tournamentsOf } from '../../lib/data';
+import LocalTime from '../ui/LocalTime.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+const { team: teams } = await db();
+const path = stripLang(Astro.url.pathname);
+
+const isHome = path === '/';
+const isStatistics = /^\/\d{4}\/statistics\/?$/.test(path);
+const isSchedule = /^\/\d{4}\/schedule\/?$/.test(path);
+const stripMode = isHome ? 'home' : isStatistics ? 'statistics' : isSchedule ? 'schedule' : null;
+
+const seasonYear = await seasonOfPath(path);
+const [tournaments, seasonMatches] = stripMode ? await Promise.all([tournamentsOf(seasonYear), matchesOf(seasonYear)]) : [[], []];
+
+const mainEvents = tournaments
+  .filter(x => x.data.tier <= 2 && x.data.startDate && x.data.kind !== 'offseason')
+  .sort((a, b) => a.data.startDate!.localeCompare(b.data.startDate!));
+const offseasonEvents = tournaments
+  .filter(x => x.data.kind === 'offseason' && x.data.startDate)
+  .sort((a, b) => a.data.startDate!.localeCompare(b.data.startDate!));
+
+const matchTournaments = new Set(seasonMatches.map(m => refId(m.data.tournament)));
+const offseasonHasMatches = offseasonEvents.some(ev => matchTournaments.has(ev.id));
+
+const month = (iso: string) => new Intl.DateTimeFormat(HTML_LANG[lang], { month: 'long', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
+
+type StripTab = {
+  id: string;
+  label: string;
+  subLabel: string;
+  startDate: string;
+  endDate: string;
+  href: string;
+  hasMatches: boolean;
+};
+
+const tabs: StripTab[] = [
+  {
+    id: 'offseason',
+    label: t('ticker.offseason'),
+    subLabel: t('ticker.offseasonSub'),
+    startDate: offseasonEvents[0]?.data.startDate ?? `${seasonYear - 1}-11-01`,
+    endDate: offseasonEvents.at(-1)?.data.endDate ?? `${seasonYear - 1}-12-20`,
+    href: localePath(lang, `/${seasonYear}/offseason`),
+    hasMatches: offseasonHasMatches,
+  },
+  ...mainEvents.map(ev => ({
+    id: ev.id,
+    label: ev.data.shortName,
+    subLabel: month(ev.data.startDate!),
+    startDate: ev.data.startDate!,
+    endDate: ev.data.endDate ?? ev.data.startDate!,
+    href: localePath(lang, `/tournaments/${ev.id}`),
+    hasMatches: matchTournaments.has(ev.id),
+  })),
+];
+
+const timed = stripMode ? await nextTimedMatches(8) : [];
+---
+
+{
+  stripMode && (
+    <div class="vt-strip border-b border-line bg-carbon" data-season-strip data-strip-mode={stripMode}>
+      <nav class="wrap relative overflow-x-auto px-0 [scrollbar-width:none] md:px-8" aria-label={t('home.roadmap')}>
+        <ol class="grid min-w-[52rem] border-x border-line" style={`grid-template-columns:repeat(${tabs.length},minmax(0,1fr))`}>
+          {tabs.map(tab => (
+            <li class="border-r border-line last:border-r-0" data-start={tab.startDate} data-end={tab.endDate}>
+              {stripMode === 'home' ? (
+                <a href={tab.href} class="season-tab relative flex h-14 flex-col items-center justify-center px-2 text-center" data-strip-tab={tab.id}>
+                  <span class="flex items-center gap-1 text-[0.625rem] font-semibold uppercase text-muted" data-label data-month={tab.subLabel} data-now={t('ticker.current')} data-next={t('ticker.next')}>
+                    <Check class="hidden size-3" aria-hidden="true" data-check />
+                    <span data-text>{tab.subLabel}</span>
+                  </span>
+                  <span class="mt-0.5 w-full truncate text-xs font-bold text-bone">{tab.label}</span>
+                  <span class="season-bar absolute inset-x-0 bottom-0 h-[3px] bg-surface-3" aria-hidden="true">
+                    <span class="season-fill block h-full w-full origin-left scale-x-0 bg-crimson" />
+                  </span>
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  class="season-tab relative flex h-14 w-full cursor-pointer flex-col items-center justify-center px-2 text-center"
+                  data-strip-tab={tab.id}
+                  data-has-matches={String(tab.hasMatches)}
+                >
+                  <span class="flex items-center gap-1 text-[0.625rem] font-semibold uppercase text-muted" data-label data-month={tab.subLabel} data-now={t('ticker.current')} data-next={t('ticker.next')}>
+                    <Check class="hidden size-3" aria-hidden="true" data-check />
+                    <span data-text>{tab.subLabel}</span>
+                  </span>
+                  <span class="mt-0.5 w-full truncate text-xs font-bold text-bone">{tab.label}</span>
+                  <span class="season-indicator hidden" aria-hidden="true" />
+                  <span class="season-bar absolute inset-x-0 bottom-0 h-[3px] bg-surface-3" aria-hidden="true">
+                    <span class="season-fill block h-full w-full origin-left scale-x-0 bg-crimson" />
+                  </span>
+                </button>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
+
+      {timed.length > 0 && (
+        <div class="border-t border-line">
+          <ul class="wrap flex gap-2 overflow-x-auto py-2 [scrollbar-width:none]" aria-label={t('ticker.label')}>
+            {timed.map(m => {
+              const [a, b] = m.data.teams;
+              const tag = (side: typeof a) => teams.get(refId(side.team) ?? '')?.data.tag ?? 'TBD';
+              return (
+                <li class="shrink-0">
+                  <a href={localePath(lang, `/matches/${m.id}`)} class="panel-item flex items-center gap-3 px-3 py-1.5 text-xs">
+                    {m.data.status === 'live' ? <span class="live-dot" aria-label={t('ticker.live')} /> : m.data.startTime && <LocalTime iso={m.data.startTime} lang={lang} mode="time" class="text-muted" />}
+                    <span class="font-bold">{tag(a)}</span>
+                    {m.data.status === 'upcoming' ? (
+                      <span class="text-slate-muted">/</span>
+                    ) : (
+                      <span class="tabular-nums font-bold" data-score>
+                        {a.score ?? 0}-{b.score ?? 0}
+                      </span>
+                    )}
+                    <span class="font-bold">{tag(b)}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+    </div>
+  )
+}
+
+<style>
+  .season-tab {
+    background: rgb(5 5 5 / 0.7);
+    transition: background-color 160ms ease;
+  }
+  .season-tab:hover {
+    background: var(--color-surface-2);
+  }
+  /* Selected = the event of the page being viewed or active filter/tab. */
+  .season-tab[aria-current='page'],
+  .season-tab[aria-pressed='true'] {
+    background: var(--color-surface-2);
+  }
+  .season-tab[aria-current='page'] .season-indicator,
+  .season-tab[aria-pressed='true'] .season-indicator {
+    display: block;
+  }
+  .season-indicator {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2px;
+    background: var(--color-bone);
+    view-transition-name: season-indicator;
+  }
+  /* Fills are set before first paint by the inline script; only the first visit of a session animates. */
+  [data-season-strip][data-animate] .season-fill {
+    transition: transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  [data-state='done'] .season-fill {
+    background: var(--color-slate-muted);
+  }
+  [data-state='done'] [data-check] {
+    display: block;
+  }
+  [data-state='now'] [data-label],
+  [data-state='next'] [data-label] {
+    color: var(--color-crimson);
+  }
+  [data-state='next'] .season-fill {
+    animation: next-pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes next-pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.45;
+    }
+  }
+</style>
+
+<script is:inline>
+  // Runs synchronously before first paint: mark past / current / next events against the viewer's clock
+  // and set each tab's bar fill.
+  (function () {
+    var strip = document.querySelector('[data-season-strip]');
+    if (!strip) return;
+    var first = true;
+    try {
+      first = !sessionStorage.getItem('vct:strip');
+      sessionStorage.setItem('vct:strip', '1');
+    } catch (e) {}
+    var items = strip.querySelectorAll('li[data-start]');
+    var now = Date.now();
+    var today = new Date(now).toISOString().slice(0, 10);
+    var running = false;
+    items.forEach(function (li) { if (li.dataset.start <= today && li.dataset.end >= today) running = true; });
+    var nextMarked = false;
+    var fills = [];
+    items.forEach(function (li) {
+      var start = li.dataset.start, end = li.dataset.end, state = 'future', fill = 0;
+      if (end < today) { state = 'done'; fill = 1; }
+      else if (start <= today) {
+        state = 'now';
+        var s = Date.parse(start + 'T00:00:00Z'), e = Date.parse(end + 'T23:59:59Z');
+        fill = Math.min(1, Math.max(0.05, (now - s) / (e - s)));
+      } else if (!running && !nextMarked) { state = 'next'; nextMarked = true; fill = 0.12; }
+      li.dataset.state = state;
+      var label = li.querySelector('[data-label]');
+      label.querySelector('[data-text]').textContent = state === 'now' ? label.dataset.now : state === 'next' ? label.dataset.next : label.dataset.month;
+      fills.push([li.querySelector('.season-fill'), fill]);
+    });
+    var apply = function () { fills.forEach(function (f) { if (f[0]) f[0].style.transform = 'scaleX(' + f[1] + ')'; }); };
+    if (first) {
+      strip.setAttribute('data-animate', '');
+      requestAnimationFrame(function () { requestAnimationFrame(apply); });
+      setTimeout(apply, 120);
+    } else apply();
+    var nav = strip.querySelector('nav');
+    var selected = strip.querySelector('[aria-current="page"], [aria-pressed="true"]');
+    if (nav && selected && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = selected.offsetLeft - (nav.clientWidth - selected.offsetWidth) / 2;
+  })();
+</script>

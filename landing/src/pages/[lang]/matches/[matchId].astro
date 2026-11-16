@@ -1,0 +1,133 @@
+---
+import { ArrowRight, GitBranch, CirclePlay } from '@lucide/astro';
+import MapScoreboard from '../../../components/match/MapScoreboard.astro';
+import SkirmishCard from '../../../components/match/SkirmishCard.astro';
+import VetoTimeline from '../../../components/match/VetoTimeline.astro';
+import SpoilerToggle from '../../../components/schedule/SpoilerToggle.astro';
+import LocalTime from '../../../components/ui/LocalTime.astro';
+import StatusPill from '../../../components/ui/StatusPill.astro';
+import TeamBadge from '../../../components/ui/TeamBadge.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { formatDateRange, LOCALES, loc, localePath, useT, type Lang } from '../../../i18n';
+import { db, refId, sideName, targetLabel } from '../../../lib/data';
+import { breadcrumbLd, matchLd } from '../../../lib/jsonld';
+import { ogImagePath } from '../../../lib/seo';
+
+export async function getStaticPaths() {
+  const { matches } = await db();
+  return LOCALES.flatMap(lang => matches.map(m => ({ params: { lang, matchId: m.id } })));
+}
+
+const lang = Astro.params.lang as Lang;
+const { match: matches, team: teams, tournament, progression } = await db();
+const m = matches.get(Astro.params.matchId!)!;
+const t = useT(lang, { year: m.data.season });
+const event = tournament.get(refId(m.data.tournament)!)!;
+const names = m.data.teams.map(s => sideName(s, teams, lang)) as [string, string];
+const title = t('match.title', { a: names[0], b: names[1] });
+const p = progression.get(m.id);
+const linked = (target: { match: string } | object | undefined) => (target && 'match' in target ? (target as { match: string }).match : null);
+const crumbs = [
+  { name: t('nav.home'), path: '/' },
+  { name: event.data.shortName, path: `/tournaments/${event.id}` },
+  { name: title, path: `/matches/${m.id}` },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  path={`/matches/${m.id}`}
+  title={`${title} · ${event.data.shortName}`}
+  description={`${loc(m.data.stage, lang)} · ${m.data.format} · ${event.data.name}`}
+  ogImage={ogImagePath('match', m.id)}
+  jsonLd={[matchLd(m, event, teams, Astro.site, lang), breadcrumbLd(crumbs, Astro.site, lang)]}
+>
+  <section class="border-b border-line">
+    <div class="wrap py-10 md:py-14">
+      <nav class="mb-6 flex flex-wrap items-center gap-2 tabular-nums text-xs uppercase text-muted" aria-label="Breadcrumb">
+        <a href={localePath(lang, `/tournaments/${event.id}`)} class="hover:text-white">{event.data.name}</a>
+        <span aria-hidden="true">/</span>
+        <span>{loc(m.data.stage, lang)}</span>
+      </nav>
+
+      <div class="grid items-center gap-6 md:grid-cols-[1fr_auto_1fr]">
+        {
+          m.data.teams.map((side, i) => {
+            const team = side.team ? teams.get(side.team.id) : undefined;
+            const inner = (
+              <>
+                <TeamBadge team={team} size="xl" fallback="?" />
+                <span class:list={['heading text-xl md:text-2xl', !team && '!normal-case text-muted', m.data.winner === i && 'text-crimson']}>{names[i]}</span>
+              </>
+            );
+            // Grid placement keeps team A | score | team B on desktop and team A, score, team B stacked on mobile.
+            const place = i === 0 ? 'md:col-start-1 md:row-start-1' : 'order-last md:order-none md:col-start-3 md:row-start-1 md:flex-row-reverse md:text-right';
+            return team ? (
+              <a href={localePath(lang, `/teams/${team.id}`)} class:list={['flex items-center gap-4 hover:text-white', place]}>
+                {inner}
+              </a>
+            ) : (
+              <div class:list={['flex items-center gap-4', place]}>{inner}</div>
+            );
+          })
+        }
+        <div class="flex flex-col items-center gap-2 md:col-start-2 md:row-start-1">
+          <StatusPill status={m.data.status} lang={lang} />
+          {
+            m.data.teams[0].score !== null ? (
+              <p class="text-5xl font-bold tabular-nums" data-score>
+                {m.data.teams[0].score} : {m.data.teams[1].score}
+              </p>
+            ) : (
+              <p class="text-3xl font-bold text-slate-muted">VS</p>
+            )
+          }
+          <p class="tabular-nums text-xs uppercase text-muted">{m.data.format}</p>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3 text-sm">
+        <span class="chip flex-wrap !whitespace-normal">
+          {t('common.localTime')}:
+          {m.data.startTime ? <LocalTime iso={m.data.startTime} lang={lang} /> : <span>{t('common.tba')} ({formatDateRange(event.data.startDate, event.data.endDate, lang)})</span>}
+        </span>
+        <a href={`${localePath(lang, `/tournaments/${event.id}`)}#m-${m.id}`} class="btn btn-ghost !px-3 !py-2 text-xs"><GitBranch class="size-4" aria-hidden="true" />{t('match.bracketLink')}</a>
+        {m.data.vodUrl && <a href={m.data.vodUrl} class="btn btn-ghost !px-3 !py-2 text-xs" rel="noopener noreferrer external" target="_blank"><CirclePlay class="size-4" aria-hidden="true" />{t('match.vod')}</a>}
+        <SpoilerToggle lang={lang} />
+      </div>
+
+      {
+        p && (
+          <dl class="mt-6 grid gap-3 sm:grid-cols-2">
+            {(['winner', 'loser'] as const).map(kind => {
+              const target = p[kind];
+              const next = linked(target);
+              const label = targetLabel(target, matches, lang, t);
+              return (
+                <div class="panel flex items-center justify-between gap-3 p-3">
+                  <div>
+                    <dt class="tabular-nums text-[0.7rem] uppercase text-muted">{t(kind === 'winner' ? 'match.winnerTo' : 'match.loserTo')}</dt>
+                    <dd class:list={['font-bold', kind === 'winner' && 'text-crimson']}>{label}</dd>
+                  </div>
+                  {next && (
+                    <a href={localePath(lang, `/matches/${next}`)} class="grid size-9 place-items-center bg-carbon hover:text-white" aria-label={label}>
+                      <ArrowRight class="size-4" aria-hidden="true" />
+                    </a>
+                  )}
+                </div>
+              );
+            })}
+          </dl>
+        )
+      }
+    </div>
+  </section>
+
+  <div class="wrap grid gap-6 py-10 lg:grid-cols-2">
+    <SkirmishCard match={m} names={names} lang={lang} />
+    <VetoTimeline match={m} names={names} lang={lang} />
+  </div>
+  <div class="wrap py-4">
+    <MapScoreboard match={m} names={names} lang={lang} />
+  </div>
+</BaseLayout>

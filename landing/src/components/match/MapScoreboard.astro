@@ -1,0 +1,85 @@
+---
+import { CirclePlay } from '@lucide/astro';
+import { useT, type Lang } from '../../i18n';
+import type { Match } from '../../lib/data';
+import EmptyState from '../ui/EmptyState.astro';
+
+interface Props {
+  match: Match;
+  names: [string, string];
+  lang: Lang;
+}
+const { match, names, lang } = Astro.props;
+const t = useT(lang);
+const maps = match.data.maps;
+const cols = ['K', 'D', 'A', 'ACS', 'ADR', 'KAST', 'FK'] as const;
+---
+
+<section aria-labelledby="scoreboard">
+  <h2 id="scoreboard" class="heading mb-4 text-lg">{t('match.scoreboardTitle')}</h2>
+  {
+    maps && maps.length ? (
+      <div class="space-y-8">
+        {maps.map((map, mi) => (
+          <article class="panel" aria-labelledby={`map-${mi}`}>
+            <header class="flex flex-wrap items-center justify-between gap-3 border-b border-line p-4">
+              <h3 id={`map-${mi}`} class="heading text-xl">
+                <span class="mr-2 tabular-nums text-sm text-muted">{mi + 1}</span>
+                {map.map}
+              </h3>
+              <p class="tabular-nums text-2xl" data-score>
+                {map.score[0]} : {map.score[1]}
+              </p>
+              {map.vodUrl && (
+                <a href={map.vodUrl} class="link inline-flex items-center gap-1 text-sm" rel="noopener noreferrer external" target="_blank">
+                  <CirclePlay class="size-4" aria-hidden="true" />
+                  {t('match.vod')}
+                </a>
+              )}
+            </header>
+            {[0, 1].map(side => (
+              <div class="overflow-x-auto">
+                <table class="data-table min-w-[40rem]" data-score>
+                  <caption class="px-3 pt-3 text-left font-semibold">{names[side]}</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">{t('match.player')}</th>
+                      <th scope="col">{t('match.agent')}</th>
+                      {cols.map(c => (
+                        <th scope="col" class="num">
+                          {c}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {map.players
+                      .filter(p => p.team === side)
+                      .sort((a, b) => b.acs - a.acs)
+                      .map(p => (
+                        <tr>
+                          <th scope="row" class="!text-sm !font-bold">
+                            {p.handle}
+                          </th>
+                          <td>{p.agent}</td>
+                          <td class="num">{p.k}</td>
+                          <td class="num">{p.d}</td>
+                          <td class="num">{p.a}</td>
+                          <td class="num">{Math.round(p.acs)}</td>
+                          <td class="num">{Math.round(p.adr)}</td>
+                          <td class="num">{p.kast}%</td>
+                          <td class="num">{p.fk}</td>
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+              </div>
+            ))}
+          </article>
+        ))}
+      </div>
+    ) : (
+      <EmptyState text={t('match.scoreboardPending')} />
+    )
+  }
+</section>

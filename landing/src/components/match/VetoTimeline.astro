@@ -1,0 +1,61 @@
+---
+import { Ban, Check, Shuffle } from '@lucide/astro';
+import { useT, type Lang } from '../../i18n';
+import { seasonConfig, type Match } from '../../lib/data';
+import ConfirmBadge from '../ui/ConfirmBadge.astro';
+import EmptyState from '../ui/EmptyState.astro';
+
+interface Props {
+  match: Match;
+  names: [string, string];
+  lang: Lang;
+}
+const { match, names, lang } = Astro.props;
+const t = useT(lang);
+const veto = match.data.veto;
+const season = seasonConfig(match.data.season);
+const icon = { ban: Ban, pick: Check, decider: Shuffle } as const;
+---
+
+<section class="panel p-5" aria-labelledby="veto">
+  <h2 id="veto" class="heading text-lg">{t('match.vetoTitle')}</h2>
+  {
+    veto ? (
+      <ol class="mt-5 grid gap-2">
+        {veto.map((step, i) => {
+          const Icon = icon[step.action];
+          return (
+            <li class:list={['grid grid-cols-[2rem_1fr_auto] items-center gap-3 border-l-2 bg-surface-2 px-3 py-2', step.action === 'ban' ? 'border-slate-muted' : 'border-crimson']} data-score>
+              <span class="tabular-nums text-xs text-muted">{String(i + 1).padStart(2, '0')}</span>
+              <span class="flex items-center gap-2">
+                <Icon class="size-4" aria-hidden="true" />
+                <span class="font-semibold text-lg ">{step.map}</span>
+                <span class="text-xs text-muted">
+                  {step.team !== null ? `${names[step.team]} · ` : ''}
+                  {t(`match.${step.action}`)}
+                </span>
+              </span>
+              {step.side && <span class="chip">{t('match.sidePick', { team: names[step.side.team], side: t(`match.${step.side.side}`) })}</span>}
+            </li>
+          );
+        })}
+      </ol>
+    ) : (
+      <>
+        <EmptyState class="mt-4" text={t('match.vetoPending')} />
+        <div class="mt-5">
+          <p class="mb-2 flex items-center gap-2 tabular-nums text-xs uppercase text-muted">
+            {t('match.mapPool')} <ConfirmBadge confirmed={season.mapPool.confirmed} lang={lang} />
+          </p>
+          <ul class="flex flex-wrap gap-2">
+            {season.mapPool.maps.map(map => (
+              <li class="bg-carbon px-3 py-1.5 font-semibold">
+                {map}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </>
+    )
+  }
+</section>

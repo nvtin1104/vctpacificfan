@@ -1,0 +1,268 @@
+[
+  {
+    "id": "gam-esports",
+    "name": "GAM Esports",
+    "tag": "GAM",
+    "region": "VN",
+    "country": "VN",
+    "colors": {
+      "primary": "#E8313A",
+      "secondary": "#F5C542"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/GAM_Esports",
+      "x": "https://twitter.com/GAMValorant",
+      "youtube": "https://www.youtube.com/gamesports",
+      "website": "https://gam.gg/"
+    },
+    "logo": "/images/teams/gam-esports.png",
+    "orgRegion": "PAC"
+  },
+  {
+    "id": "crazy-raccoon",
+    "name": "Crazy Raccoon",
+    "tag": "CR",
+    "region": "JP",
+    "country": "JP",
+    "colors": {
+      "primary": "#F2C94C",
+      "secondary": "#1B1B1B"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Crazy_Raccoon",
+      "x": "https://twitter.com/crazyraccoon406",
+      "youtube": "https://www.youtube.com/channel/UCV3h-YCXiKiMmVupdknm73Q",
+      "website": "http://crazyraccoon.jp/"
+    },
+    "logo": "/images/teams/crazy-raccoon.png",
+    "orgRegion": "PAC"
+  },
+  {
+    "id": "paper-rex",
+    "name": "Paper Rex",
+    "tag": "PRX",
+    "region": "SG",
+    "country": "SG",
+    "colors": {
+      "primary": "#F25CA2",
+      "secondary": "#FFFFFF"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Paper_Rex",
+      "x": "https://twitter.com/pprxteam",
+      "youtube": "https://www.youtube.com/channel/UCwlKnVP2b9m2riIqBFrAUfw",
+      "website": "https://pprx.team/"
+    },
+    "logo": "/images/teams/paper-rex.png",
+    "orgRegion": "PAC"
+  },
+  {
+    "id": "gen-g",
+    "name": "Gen.G Esports",
+    "tag": "GEN",
+    "region": "KR",
+    "country": "KR",
+    "colors": {
+      "primary": "#C9A64B",
+      "secondary": "#121212"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Gen.G_Esports",
+      "x": "https://twitter.com/geng_gold",
+      "youtube": "https://www.youtube.com/@geng_gold",
+      "website": "https://geng.gg/"
+    },
+    "logo": "/images/teams/gen-g.png",
+    "orgRegion": "PAC"
+  },
+  {
+    "id": "t1",
+    "name": "T1",
+    "tag": "T1",
+    "region": "KR",
+    "country": "KR",
+    "colors": {
+      "primary": "#E2012D",
+      "secondary": "#FFFFFF"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/T1",
+      "x": "https://twitter.com/T1",
+      "youtube": "https://www.youtube.com/@T1Valorant",
+      "website": "https://t1.gg/"
+    },
+    "logo": "/images/teams/t1.png",
+    "orgRegion": "PAC"
+  },
+  {
+    "id": "zeta-division",
+    "name": "ZETA DIVISION",
+    "tag": "ZETA",
+    "region": "JP",
+    "country": "JP",
+    "colors": {
+      "primary": "#E8E8E8",
+      "secondary": "#111111"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/ZETA_DIVISION",
+      "x": "https://twitter.com/zetadivision",
+      "youtube": "https://www.youtube.com/ZETADIVISION",
+      "website": "https://zetadivision.com/"
+    },
+    "logo": "/images/teams/zeta-division.png",
+    "orgRegion": "PAC"
+  },
+  {
+    "id": "rex-regum-qeon",
+    "name": "Rex Regum Qeon",
+    "tag": "RRQ",
+    "region": "ID",
+    "country": "ID",
+    "colors": {
+      "primary": "#F4A100",
+      "secondary": "#1A1A1A"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Rex_Regum_Qeon",
+      "x": "https://twitter.com/teamrrqofficial",
+      "youtube": "https://www.youtube.com/teamrrq",
+      "website": "https://teamrrq.com/"
+    },
+    "logo": "/images/teams/rex-regum-qeon.png",
+    "orgRegion": "PAC"
+  },
+  {
+    "id": "full-sense",
+    "name": "FULL SENSE",
+    "tag": "FS",
+    "region": "TH",
+    "country": "TH",
+    "colors": {
+      "primary": "#3B82F6",
+      "secondary": "#0B1220"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/FULL_SENSE",
+      "x": "https://twitter.com/fullsense_gg",
+      "youtube": "https://www.youtube.com/channel/UC7lxN7aiZz-Ri7XR3B0h6nQ",
+      "website": "https://www.fullsense.gg/"
+    },
+    "logo": "/images/teams/full-sense.png",
+    "orgRegion": "PAC"
+  },
+  {
+    "id": "fnatic",
+    "name": "Fnatic",
+    "tag": "FNC",
+    "region": "EU",
+    "orgRegion": "EMEA",
+    "country": "GB",
+    "colors": {
+      "primary": "#FF5800",
+      "secondary": "#000000"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Fnatic",
+      "x": "https://twitter.com/FNATIC",
+      "youtube": "https://www.youtube.com/fnaticTV",
+      "website": "https://fnatic.com"
+    },
+    "logo": "/images/teams/fnatic.png"
+  },
+  {
+    "id": "g2-esports",
+    "name": "G2 Esports",
+    "tag": "G2",
+    "region": "NA",
+    "orgRegion": "AMER",
+    "country": "DE",
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/G2_Esports",
+      "x": "https://twitter.com/G2esports",
+      "youtube": "https://www.youtube.com/FollowGamers2",
+      "website": "https://www.g2esports.com"
+    },
+    "logo": "/images/teams/g2-esports.png"
+  },
+  {
+    "id": "nrg",
+    "name": "NRG",
+    "tag": "NRG",
+    "region": "NA",
+    "orgRegion": "AMER",
+    "country": "US",
+    "colors": {
+      "primary": "#F84008",
+      "secondary": "#000000"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/NRG",
+      "x": "https://twitter.com/NRGgg",
+      "youtube": "https://www.youtube.com/nrgesports",
+      "website": "http://www.nrg.gg/"
+    },
+    "logo": "/images/teams/nrg.png"
+  },
+  {
+    "id": "sentinels",
+    "name": "Sentinels",
+    "tag": "SEN",
+    "region": "NA",
+    "orgRegion": "AMER",
+    "country": "US",
+    "colors": {
+      "primary": "#E80830",
+      "secondary": "#000000"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Sentinels",
+      "x": "https://twitter.com/Sentinels",
+      "youtube": "https://www.youtube.com/channel/UCNcWiCgpHVctNxLr3FD04PA",
+      "website": "http://www.sentinels.gg"
+    },
+    "logo": "/images/teams/sentinels.png"
+  },
+  {
+    "id": "loud",
+    "name": "LOUD",
+    "tag": "LOUD",
+    "region": "BR",
+    "orgRegion": "AMER",
+    "country": "BR",
+    "colors": {
+      "primary": "#10FF00",
+      "secondary": "#000000"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/LOUD",
+      "x": "https://twitter.com/loudgg",
+      "youtube": "https://www.youtube.com/@LOUDgg",
+      "website": "https://loud.gg"
+    },
+    "logo": "/images/teams/loud.png"
+  },
+  {
+    "id": "100-thieves",
+    "name": "100 Thieves",
+    "tag": "100T",
+    "region": "NA",
+    "orgRegion": "AMER",
+    "country": "US",
+    "colors": {
+      "primary": "#E83030",
+      "secondary": "#000000"
+    },
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/100_Thieves",
+      "x": "https://twitter.com/100Thieves",
+      "youtube": "https://www.youtube.com/100thieves",
+      "website": "https://www.100thieves.com"
+    },
+    "logo": "/images/teams/100-thieves.png"
+  }
+]

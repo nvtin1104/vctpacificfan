@@ -1,0 +1,18 @@
+# Static rules. Season rules (/<lang>/schedule → /<lang>/<current year>/schedule, …) are appended
+# at build time by scripts/season-redirects.mjs from src/data/seasons/*/season.json.
+
+# Region-style locale prefixes (as used by many esports sites) map to our short codes.
+/vi-VN/*            /vi/:splat              301
+/en-US/*            /en/:splat              301
+/en-GB/*            /en/:splat              301
+/ko-KR/*            /ko/:splat              301
+/ja-JP/*            /ja/:splat              301
+
+# Detail pages without a language prefix go to Vietnamese (the default locale).
+/tournaments/*      /vi/tournaments/:splat  301
+/matches/*          /vi/matches/:splat      301
+/teams/*            /vi/teams/:splat        301
+
+# Short aliases
+/:lang/stats        /:lang/statistics/      301
+/stats              /vi/statistics/         301

@@ -1,0 +1,22 @@
+---
+import { useT, type Lang } from '../../i18n';
+
+interface Props {
+  confirmed: boolean;
+  lang: Lang;
+  /** Hide the badge entirely when confirmed. */
+  onlyUnconfirmed?: boolean;
+}
+const { confirmed, lang, onlyUnconfirmed = true } = Astro.props;
+const t = useT(lang);
+---
+
+{
+  !confirmed ? (
+    <span class="chip chip-amber" title={t('rules.unconfirmedNote')}>
+      {t('common.unconfirmed')}
+    </span>
+  ) : (
+    !onlyUnconfirmed && <span class="chip chip-teal">{t('common.confirmed')}</span>
+  )
+}

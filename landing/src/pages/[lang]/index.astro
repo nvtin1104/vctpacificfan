@@ -1,0 +1,205 @@
+---
+import { ChevronRight } from '@lucide/astro';
+import { Picture } from 'astro:assets';
+import SeasonRoadmap from '../../components/tournament/SeasonRoadmap.astro';
+import Countdown from '../../components/ui/Countdown.astro';
+import StatusPill from '../../components/ui/StatusPill.astro';
+import TeamBadge from '../../components/ui/TeamBadge.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatDateRange, HTML_LANG, langPaths, loc, localePath, useT, type Lang } from '../../i18n';
+import { countryName, CURRENT_SEASON, featuredEvent, firstOfKind, seasonBanner, sectionPath, teamsOf, upcomingTournaments } from '../../lib/data';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const year = CURRENT_SEASON;
+const t = useT(lang, { year });
+// Home always shows the current season; the featured panel is its running or next Pacific event.
+const kickoff = await featuredEvent(year);
+const qualifier = await firstOfKind(year, 'kickoff-qualifier');
+const banner = seasonBanner(year);
+const upcoming = await upcomingTournaments(6, year);
+const partners = (await teamsOf(year)).filter(x => x.roster.data.status === 'partner').map(x => x.team);
+const openSlots = kickoff?.data.slots.filter(s => !s.team) ?? [];
+const month = (iso: string) => new Intl.DateTimeFormat(HTML_LANG[lang], { month: 'short', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
+const day = (iso: string) => Number(iso.slice(8, 10));
+const highlights = [
+  { title: t('home.h1Title'), text: t('home.h1Text') },
+  { title: t('home.h2Title'), text: t('home.h2Text') },
+  { title: t('home.h3Title'), text: t('home.h3Text') },
+];
+const website = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: t('meta.siteName'),
+  url: new URL(localePath(lang), Astro.site).href,
+  inLanguage: lang,
+  description: t('meta.description'),
+};
+---
+
+<BaseLayout lang={lang} path="/" title={t('meta.siteName')} description={t('meta.description')} jsonLd={[website]}>
+  <div class="wrap space-y-6 py-8">
+    {
+      banner && (
+        <a href={localePath(lang, sectionPath(year, 'tournaments'))} class="block overflow-hidden rounded-lg border border-line" aria-label={t('nav.allTournaments')}>
+          <Picture
+            src={banner.image}
+            alt={loc(banner.alt, lang)}
+            formats={['avif', 'webp']}
+            widths={[640, 960, 1280, 1920]}
+            sizes="(min-width: 1360px) 1294px, calc(100vw - 2rem)"
+            loading="eager"
+            fetchpriority="high"
+            class="block h-auto w-full"
+          />
+        </a>
+      )
+    }
+
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <h1 class="heading text-3xl md:text-[2.5rem]">{t('home.title')}</h1>
+        <p class="mt-1 max-w-2xl text-sm text-muted md:text-base">{t('home.lead')}</p>
+      </div>
+      <a href={localePath(lang, sectionPath(year, 'rules'))} class="panel flex items-center gap-3 px-4 py-3 text-sm">
+        <span>
+          <span class="block font-bold">{t('home.ctaRules')}</span>
+          <span class="block text-xs text-muted">{t('rules.modelTitle')}</span>
+        </span>
+        <ChevronRight class="size-4 text-muted" aria-hidden="true" />
+      </a>
+    </div>
+
+    <!-- Featured event (hidden for a season with no Pacific event yet) -->
+    {
+      kickoff && (
+    <section class="panel grid overflow-hidden lg:grid-cols-[1.1fr_1fr]" aria-labelledby="featured">
+      <div class="flex flex-col gap-5 p-6 md:p-8">
+        <div class="flex flex-wrap items-center gap-2">
+          <StatusPill status={kickoff.data.status} lang={lang} />
+          <span class="text-xs font-semibold text-muted">
+            {formatDateRange(kickoff.data.startDate, kickoff.data.endDate, lang)} · {loc(kickoff.data.location!.city, lang)}, {countryName(kickoff.data.location!.country, lang)}
+          </span>
+        </div>
+        <div>
+          <h2 id="featured" class="heading text-lg md:text-xl">{kickoff.data.name}</h2>
+          <p class="mt-2 max-w-xl text-sm text-muted">{loc(kickoff.data.description, lang)}</p>
+        </div>
+        <div class="panel-item w-fit px-4 py-3">
+          <p class="text-xs font-semibold text-muted">{t('ticker.seasonStart')}</p>
+          <Countdown to={`${kickoff.data.startDate}T00:00:00Z`} lang={lang} class="mt-1 text-2xl font-bold" />
+        </div>
+        <div class="mt-auto flex flex-wrap gap-2">
+          <a href={`${localePath(lang, `/tournaments/${kickoff.id}`)}#bracket`} class="btn btn-primary">{t('tournaments.bracket')}</a>
+          <a href={localePath(lang, sectionPath(year, 'schedule'))} class="btn btn-ghost">{t('home.ctaSchedule')}</a>
+        </div>
+      </div>
+      <div class="border-t border-line bg-carbon/60 p-6 md:p-8 lg:border-l lg:border-t-0">
+        <p class="eyebrow mb-3">{t('tournaments.slots')} · 12</p>
+        <ul class="grid grid-cols-3 gap-2 sm:grid-cols-4">
+          {
+            partners.map(team => (
+              <li>
+                <a href={localePath(lang, `/teams/${team.id}`)} class="panel-item flex flex-col items-center gap-2 px-2 py-3 text-center">
+                  <TeamBadge team={team} />
+                  <span class="w-full truncate text-xs font-semibold">{team.data.name}</span>
+                </a>
+              </li>
+            ))
+          }
+          {
+            openSlots.map(slot => (
+              <li>
+                <a href={qualifier ? localePath(lang, `/tournaments/${qualifier.id}`) : undefined} class="flex flex-col items-center gap-2 rounded border border-dashed border-line px-2 py-3 text-center hover:border-line-strong">
+                  <TeamBadge fallback="?" />
+                  <span class="w-full truncate text-xs text-muted">{loc(slot.label, lang)}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+      )
+    }
+
+    <div class="grid gap-6 lg:grid-cols-2">
+      <!-- Upcoming events, list style -->
+      <section class="panel overflow-hidden" aria-labelledby="events">
+        <div class="flex items-center justify-between p-5">
+          <h2 id="events" class="heading text-lg">{t('home.nextEvent')}</h2>
+          <a href={localePath(lang, sectionPath(year, 'tournaments'))} class="text-xs font-semibold text-muted hover:text-white">{t('common.viewAll')} →</a>
+        </div>
+        <ul>
+          {
+            upcoming.map(ev => (
+              <li class="border-t border-line">
+                <a href={localePath(lang, `/tournaments/${ev.id}`)} class="flex items-center gap-4 px-5 py-3.5 hover:bg-[#141414]">
+                  <span class="grid w-11 shrink-0 rounded bg-surface-3 py-1 text-center leading-tight">
+                    <span class="text-[0.625rem] font-semibold uppercase text-muted">{month(ev.data.startDate!)}</span>
+                    <span class="text-base font-bold tabular-nums">{day(ev.data.startDate!)}</span>
+                  </span>
+                  <span class="min-w-0 flex-1">
+                    <span class="block truncate text-sm font-bold">{ev.data.name}</span>
+                    <span class="block truncate text-xs text-muted">
+                      {ev.data.location ? `${loc(ev.data.location.city, lang)}, ${countryName(ev.data.location.country, lang)}` : t('common.tba')}
+                    </span>
+                  </span>
+                  <span class="hidden text-xs font-semibold text-muted sm:block">{t(`tier.${ev.data.tier}`)}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <!-- Partner teams, ranking-list style -->
+      <section class="panel overflow-hidden" aria-labelledby="partners">
+        <div class="flex items-center justify-between p-5">
+          <h2 id="partners" class="heading text-lg">{t('home.partners')}</h2>
+          <a href={localePath(lang, sectionPath(year, 'teams'))} class="text-xs font-semibold text-muted hover:text-white">{t('common.viewAll')} →</a>
+        </div>
+        <ul class="grid sm:grid-cols-2">
+          {
+            partners.map(team => (
+              <li class="border-t border-line sm:odd:border-r">
+                <a href={localePath(lang, `/teams/${team.id}`)} class="flex items-center gap-3 px-5 py-3 hover:bg-[#141414]">
+                  <TeamBadge team={team} size="sm" />
+                  <span class="min-w-0 flex-1 truncate text-sm font-bold">{team.data.name}</span>
+                  <span class="text-xs text-muted">{countryName(team.data.country, lang)}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </div>
+
+    <!-- Domestic → VCT Pacific → International flow -->
+    <section class="panel p-5 md:p-6" aria-labelledby="roadmap">
+      <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h2 id="roadmap" class="heading text-lg">{t('home.roadmap')}</h2>
+          <p class="mt-1 text-sm text-muted">{t('home.roadmapLead')}</p>
+        </div>
+        <a href={localePath(lang, sectionPath(year, 'tournaments'))} class="text-xs font-semibold text-muted hover:text-white">{t('nav.allTournaments')} →</a>
+      </div>
+      <SeasonRoadmap lang={lang} year={year} />
+    </section>
+
+    <section aria-labelledby="highlights">
+      <h2 id="highlights" class="heading mb-3 text-lg">{t('home.highlights')}</h2>
+      <div class="grid gap-3 md:grid-cols-3">
+        {
+          highlights.map(item => (
+            <a href={localePath(lang, sectionPath(year, 'rules'))} class="panel block p-5">
+              <h3 class="text-base font-bold">{item.title}</h3>
+              <p class="mt-1 text-sm text-muted">{item.text}</p>
+            </a>
+          ))
+        }
+      </div>
+      <p class="mt-6 text-xs text-slate-muted">{t('home.dataNote')}</p>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,52 @@
+---
+// Cloudflare Pages serves this for every unknown path. The language is read from the URL on the client.
+import '../styles/global.css';
+import Logo from '../components/layout/Logo.astro';
+import en from '../data/i18n/en.json';
+import ja from '../data/i18n/ja.json';
+import ko from '../data/i18n/ko.json';
+import vi from '../data/i18n/vi.json';
+import { LOCALES, localePath } from '../i18n';
+
+const dicts = { vi, en, ko, ja };
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>404 | VCT Pacific Fan Hub</title>
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body class="grid min-h-dvh place-items-center p-4">
+    <main class="panel w-full max-w-lg p-8">
+      <Logo size={56} />
+      <p class="heading mt-6 text-6xl text-crimson">404</p>
+      {
+        LOCALES.map(lang => (
+          <section data-lang={lang} lang={lang} hidden={lang !== 'en'} class="mt-4">
+            <h1 class="heading text-xl">{dicts[lang].notFound.title}</h1>
+            <p class="mt-2 text-muted">{dicts[lang].notFound.text}</p>
+            <a href={localePath(lang)} class="btn btn-primary mt-6">
+              {dicts[lang].notFound.home}
+            </a>
+          </section>
+        ))
+      }
+    </main>
+    <script is:inline>
+      (function () {
+        var m = location.pathname.match(/^\/(vi|en|ko|ja)(\/|$)/);
+        if (!m) return;
+        document.documentElement.lang = m[1];
+        document.querySelectorAll('[data-lang]').forEach(function (el) {
+          el.hidden = el.getAttribute('data-lang') !== m[1];
+        });
+      })();
+    </script>
+  </body>
+</html>

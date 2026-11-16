@@ -1,0 +1,72 @@
+---
+// Language picker at "/" (also the hreflang x-default). Redirects to the visitor's preferred language
+// on the client; crawlers and no-JS visitors get plain links to every language.
+import '../styles/global.css';
+import Logo from '../components/layout/Logo.astro';
+import { LANG_LABEL, LOCALES, localePath } from '../i18n';
+import vi from '../data/i18n/vi.json';
+import { CURRENT_SEASON, seasonBanner } from '../lib/data';
+import { absolute, alternates, fileOg, generatedOg } from '../lib/seo';
+
+const title = `VCT Pacific Fan Hub ${CURRENT_SEASON}`;
+const description = vi.meta.description.replaceAll('{year}', String(CURRENT_SEASON));
+const banner = seasonBanner(CURRENT_SEASON);
+const og = banner ? fileOg(banner.image, banner.alt.en) : generatedOg('/og/default.png');
+---
+
+<!doctype html>
+<html lang="vi-VN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={absolute(Astro.site, '/')} />
+    {alternates(Astro.site, '/').map(alt => <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />)}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VCT Pacific Fan Hub" />
+    <meta property="og:url" content={absolute(Astro.site, '/')} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={absolute(Astro.site, og.src)} />
+    <meta property="og:image:width" content={String(og.width)} />
+    <meta property="og:image:height" content={String(og.height)} />
+    <meta property="og:image:type" content={og.type} />
+    {og.alt && <meta property="og:image:alt" content={og.alt} />}
+    <meta name="twitter:image" content={absolute(Astro.site, og.src)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0a0e13" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <script is:inline>
+      (function () {
+        var supported = ['vi', 'en', 'ko', 'ja'];
+        var prefs = navigator.languages || [navigator.language || 'vi'];
+        for (var i = 0; i < prefs.length; i++) {
+          var code = String(prefs[i]).slice(0, 2).toLowerCase();
+          if (supported.indexOf(code) !== -1) return location.replace('/' + code + '/');
+        }
+        location.replace('/en/');
+      })();
+    </script>
+  </head>
+  <body class="grid min-h-dvh place-items-center p-4">
+    <main class="panel w-full max-w-md p-8 text-center">
+      <Logo size={72} class="mx-auto" />
+      <h1 class="heading mt-4 text-4xl">VCT Pacific <span class="text-crimson">Fan Hub</span></h1>
+      <p class="mt-2 text-sm text-muted">Chọn ngôn ngữ · Choose a language · 언어 선택 · 言語を選択</p>
+      <ul class="mt-6 grid grid-cols-2 gap-2">
+        {
+          LOCALES.map(lang => (
+            <li>
+              <a href={localePath(lang)} hreflang={lang} lang={lang} class="btn btn-ghost w-full justify-center">
+                {LANG_LABEL[lang]}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </body>
+</html>

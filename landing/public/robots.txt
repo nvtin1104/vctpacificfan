@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vctpacific.likecactus.com/sitemap-index.xml

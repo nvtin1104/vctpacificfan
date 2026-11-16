@@ -1,0 +1,272 @@
+---
+import { ExternalLink, Globe, Package, Star } from '@lucide/astro';
+import MatchCard from '../../../components/schedule/MatchCard.astro';
+import CountryFlag from '../../../components/ui/CountryFlag.astro';
+import EmptyState from '../../../components/ui/EmptyState.astro';
+import TeamBadge from '../../../components/ui/TeamBadge.astro';
+import TournamentCard from '../../../components/tournament/TournamentCard.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { LOCALES, useT, type Lang } from '../../../i18n';
+import { CURRENT_SEASON, countryName, db, journeyOf, orgRegionName, refId, resolvedRoster, rosterOf, sectionPath, seasonsOfTeam, teamIds, tournamentsOf } from '../../../lib/data';
+import { breadcrumbLd, teamLd } from '../../../lib/jsonld';
+import { ogImagePath } from '../../../lib/seo';
+
+export async function getStaticPaths() {
+  const { teams } = await db();
+  return LOCALES.flatMap(lang => teams.map(team => ({ params: { lang, teamSlug: team.id } })));
+}
+
+const lang = Astro.params.lang as Lang;
+const { team: teams, player: playersMap, matches } = await db();
+const team = teams.get(Astro.params.teamSlug!)!;
+const d = team.data;
+// One profile page per team; each season it played has its own roster, journey and matches (newest first).
+const years = await seasonsOfTeam(team.id);
+const seasons = await Promise.all(
+  years.map(async year => {
+    const r = (await rosterOf(team.id, year))!.data;
+    const joined = resolvedRoster(r, playersMap);
+    const starters = joined.filter(p => !p.sub);
+    return {
+      year,
+      t: useT(lang, { year }),
+      r,
+      players: [...starters, ...joined.filter(p => p.sub)],
+      openSeats: Math.max(0, 5 - starters.length),
+      journey: await journeyOf(team, year),
+      matches: matches.filter(m => m.data.season === year && teamIds(m).includes(team.id)),
+    };
+  }),
+);
+const latest = seasons[0];
+const latestYear = latest?.year ?? CURRENT_SEASON;
+const t = latest?.t ?? useT(lang, { year: CURRENT_SEASON });
+const invitedEvents = seasons.length === 0 ? (await tournamentsOf(CURRENT_SEASON)).filter(ev => ev.data.slots.some(s => refId(s.team) === team.id)) : [];
+const crumbs = [
+  { name: t('nav.home'), path: '/' },
+  { name: t('nav.teams'), path: sectionPath(latestYear, 'teams') },
+  { name: d.name, path: `/teams/${team.id}` },
+];
+const description = latest
+  ? `${d.name} (${d.tag}) - ${orgRegionName(d.orgRegion, lang)} ${latest.year}. ${t('teams.roster')}: ${latest.players.map(p => p.handle).join(', ') || t('common.tba')}.`
+  : `${d.name} (${d.tag}) - ${orgRegionName(d.orgRegion, lang)}.`;
+---
+
+<BaseLayout
+  lang={lang}
+  path={`/teams/${team.id}`}
+  title={d.name}
+  description={description}
+  ogImage={ogImagePath('team', team.id)}
+  jsonLd={[teamLd(team, latest?.players ?? [], Astro.site, lang, latest?.r.staff ?? []), breadcrumbLd(crumbs, Astro.site, lang)]}
+>
+  <section class="relative overflow-hidden border-b border-line" style={`--team:${d.colors.primary}`}>
+    <div class="wrap relative flex flex-col gap-6 py-12 md:flex-row md:items-end md:py-16">
+      <TeamBadge team={team} size="xl" />
+      <div class="flex-1">
+        <div class="flex flex-wrap gap-2">
+          {latest && <span class="chip chip-red">{latest.r.status === 'partner' ? t('teams.partners') : latest.r.status === 'invited' ? t('teams.international') : t('teams.openSlots')}</span>}
+          {latest && (latest.r.partnerSince === latest.year ? <span class="chip chip-amber">{t('teams.newPartner')}</span> : latest.r.partnerSince && <span class="chip">{t('teams.partnerSince', { year: latest.r.partnerSince })}</span>)}
+          <span class="chip inline-flex items-center gap-1.5"><Globe class="size-3.5 text-sky-400" aria-hidden="true" />{orgRegionName(d.orgRegion, lang)}</span>
+          <span class="chip inline-flex items-center gap-1.5"><CountryFlag code={d.country} />{countryName(d.country, lang)}</span>
+        </div>
+        <h1 class="heading mt-3 text-3xl md:text-[2.5rem]">{d.name}</h1>
+      </div>
+      {
+        d.socials.liquipedia && (
+          <a href={d.socials.liquipedia} class="btn btn-ghost" rel="noopener noreferrer external" target="_blank">
+            {t('common.liquipedia')} <ExternalLink class="size-4" aria-hidden="true" />
+          </a>
+        )
+      }
+    </div>
+  </section>
+
+  {
+    seasons.length === 0 && (
+      <section class="wrap py-12" aria-labelledby="invited-events">
+        <h2 id="invited-events" class="heading mb-6 text-xl">{t('teams.history')}</h2>
+        {
+          invitedEvents.length ? (
+            <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {invitedEvents.map(x => <TournamentCard tournament={x} lang={lang} />)}
+            </div>
+          ) : (
+            <EmptyState text={t('common.tba')} />
+          )
+        }
+      </section>
+    )
+  }
+
+  {
+    seasons.length > 1 && (
+      <nav class="wrap pt-6" aria-label={t('season.label')}>
+        <div class="inline-flex overflow-hidden rounded border border-line" role="tablist">
+          {seasons.map((season, i) => (
+            <button type="button" role="tab" class="season-pick px-4 py-2 text-sm font-bold" aria-selected={i === 0 ? 'true' : 'false'} data-season-pick={season.year}>
+              {season.year}
+            </button>
+          ))}
+        </div>
+      </nav>
+    )
+  }
+  {
+    seasons.map((season, i) => (
+      <div data-season-panel={season.year} hidden={i !== 0}>
+      <div class="wrap grid gap-12 py-12 lg:grid-cols-[2fr_1fr]">
+        <section aria-labelledby={`roster-${season.year}`}>
+          <h2 id={`roster-${season.year}`} class="heading text-xl">{season.t('teams.roster')}</h2>
+          <p class="mt-2 text-sm text-muted">{season.t('teams.rosterNote')}</p>
+          <div class="panel mt-5 overflow-x-auto">
+            <table class="data-table min-w-[32rem]">
+              <thead>
+                <tr>
+                  <th scope="col">{season.t('match.player')}</th>
+                  <th scope="col">{season.t('teams.role')}</th>
+                  <th scope="col">{season.t('teams.region')}</th>
+                  <th scope="col">{season.t('common.source')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  season.players.map(p => (
+                    <tr>
+                      <th scope="row" class="!text-left">
+                        <div class="flex items-center gap-3">
+                          {p.avatar ? (
+                            <img src={p.avatar} alt={p.handle} class="size-9 shrink-0 rounded-full border border-line bg-surface-2 object-cover" loading="lazy" decoding="async" />
+                          ) : (
+                            <span class="inline-grid size-9 shrink-0 place-items-center rounded-full border border-line bg-surface-2 text-xs font-bold text-muted" aria-hidden="true">
+                              {p.handle.slice(0, 1).toUpperCase()}
+                            </span>
+                          )}
+                          <div>
+                            <span class="flex items-center gap-2 font-bold text-bone">
+                              {p.handle}
+                              {p.igl && <Star class="size-4 text-amber" aria-label={season.t('teams.igl')} />}
+                            </span>
+                            {p.name && <span class="block font-sans text-xs text-muted">{p.name}</span>}
+                          </div>
+                        </div>
+                      </th>
+                      <td>
+                        {p.role ? season.t(`roles.${p.role}`) : '-'}
+                        {p.igl && <span class="chip chip-amber ml-2">IGL</span>}
+                        {p.sub && <span class="chip ml-2">{season.t('teams.sub')}</span>}
+                      </td>
+                      <td>
+                        {p.country ? (
+                          <span class="inline-flex items-center gap-2">
+                            <CountryFlag code={p.country} />
+                            <span>{countryName(p.country, lang)}</span>
+                          </span>
+                        ) : (
+                          '-'
+                        )}
+                      </td>
+                      <td>
+                        <span class:list={['chip', p.status === 'official' ? 'chip-teal' : 'chip-amber']}>{season.t(`common.${p.status}`)}</span>
+                      </td>
+                    </tr>
+                  ))
+                }
+                {
+                  Array.from({ length: season.openSeats }, () => (
+                    <tr class="text-muted">
+                      <th scope="row" class="!text-left">
+                        {season.t('teams.openRosterSlot')}
+                      </th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-3 tabular-nums text-xs text-muted">
+            {season.t('common.source')}: <a href={season.r.source.url} class="link" rel="noopener noreferrer external" target="_blank">{season.r.source.label}</a> · {season.t('common.asOf', { date: season.r.asOf })}
+          </p>
+        </section>
+
+        <aside class="space-y-8">
+          <section aria-labelledby={`staff-${season.year}`}>
+            <h2 id={`staff-${season.year}`} class="heading text-lg">{season.t('teams.staff')}</h2>
+            {
+              season.r.staff.length ? (
+                <ul class="mt-4 space-y-2">
+                  {season.r.staff.map(s => (
+                    <li class="panel flex items-center justify-between gap-3 p-3">
+                      <span>
+                        <span class="block font-bold">{s.handle}</span>
+                        <span class="block text-xs text-muted">{season.t(`teams.${s.position}`)}</span>
+                      </span>
+                      <span class:list={['chip', s.status === 'official' ? 'chip-teal' : 'chip-amber']}>{season.t(`common.${s.status}`)}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <EmptyState class="mt-4" text={season.t('common.tba')} />
+              )
+            }
+          </section>
+          <section class="panel p-5" aria-labelledby={`capsule-${season.year}`}>
+            <h2 id={`capsule-${season.year}`} class="heading flex items-center gap-2 text-lg"><Package class="size-5 text-muted" aria-hidden="true" />{season.t('teams.capsule')}</h2>
+            <p class="mt-2 text-sm text-muted">{season.r.capsule.name ?? season.t('teams.capsulePending')}</p>
+          </section>
+        </aside>
+      </div>
+
+      <section class="wrap py-6" aria-labelledby={`journey-${season.year}`}>
+        <h2 id={`journey-${season.year}`} class="heading mb-6 text-xl">{season.t('teams.history')}</h2>
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {[...season.journey.seeded, ...season.journey.circuit].map(x => <TournamentCard tournament={x} lang={lang} />)}
+        </div>
+      </section>
+
+      <section class="wrap py-12" aria-labelledby={`schedule-${season.year}`}>
+        <h2 id={`schedule-${season.year}`} class="heading mb-6 text-xl">{season.t('teams.schedule')}</h2>
+        {
+          season.matches.length ? (
+            <ul class="grid gap-2">
+              {season.matches.map(m => (
+                <MatchCard match={m} lang={lang} />
+              ))}
+            </ul>
+          ) : (
+            <EmptyState text={season.t('teams.noMatches')} />
+          )
+        }
+      </section>
+      </div>
+    ))
+  }
+</BaseLayout>
+
+<style>
+  .season-pick {
+    color: var(--color-muted);
+    background: var(--color-surface);
+  }
+  .season-pick + .season-pick {
+    border-left: 1px solid var(--color-line);
+  }
+  .season-pick[aria-selected='true'] {
+    color: var(--color-bone);
+    background: var(--color-surface-3);
+  }
+</style>
+
+<script>
+  // Season tabs on the team profile: every season is rendered statically; this only toggles which one shows.
+  for (const pick of document.querySelectorAll<HTMLButtonElement>('[data-season-pick]')) {
+    pick.addEventListener('click', () => {
+      const year = pick.dataset.seasonPick;
+      for (const other of document.querySelectorAll<HTMLButtonElement>('[data-season-pick]')) other.setAttribute('aria-selected', String(other === pick));
+      for (const panel of document.querySelectorAll<HTMLElement>('[data-season-panel]')) panel.hidden = panel.dataset.seasonPanel !== year;
+    });
+  }
+</script>

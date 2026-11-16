@@ -1,0 +1,14 @@
+---
+interface Props {
+  title?: string;
+  text: string;
+  class?: string;
+}
+const { title, text, class: className } = Astro.props;
+---
+
+<div class:list={['panel-item px-4 py-3.5 text-sm', className]}>
+  {title && <p class="font-bold text-bone">{title}</p>}
+  <p class="text-muted">{text}</p>
+  <slot />
+</div>

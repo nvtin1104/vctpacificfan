@@ -1,0 +1,140 @@
+---
+import { RotateCcw } from '@lucide/astro';
+import MatchCard from '../../../components/schedule/MatchCard.astro';
+import SpoilerToggle from '../../../components/schedule/SpoilerToggle.astro';
+import EmptyState from '../../../components/ui/EmptyState.astro';
+import LocalTime from '../../../components/ui/LocalTime.astro';
+import SectionTitle from '../../../components/ui/SectionTitle.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { HTML_LANG, useT, type Lang } from '../../../i18n';
+import { db, matchesOf, refId, seasonPath, seasonStaticPaths, teamsOf, tournamentsOf, type Match } from '../../../lib/data';
+import { breadcrumbLd } from '../../../lib/jsonld';
+
+export const getStaticPaths = () => seasonStaticPaths();
+const lang = Astro.params.lang as Lang;
+const year = Number(Astro.params.season);
+const t = useT(lang, { year });
+const { tournament } = await db();
+const matches = await matchesOf(year);
+const tournaments = await tournamentsOf(year);
+const teams = (await teamsOf(year)).map(x => x.team);
+const path = seasonPath(year, 'schedule');
+
+// Timed matches grouped by (UTC) day; matches without a published time grouped by event.
+const timed = new Map<string, Match[]>();
+const untimed = new Map<string, Match[]>();
+for (const m of matches) {
+  const key = m.data.startTime ? m.data.startTime.slice(0, 10) : refId(m.data.tournament)!;
+  const bucket = m.data.startTime ? timed : untimed;
+  bucket.set(key, [...(bucket.get(key) ?? []), m]);
+}
+
+const months = [...new Set(matches.map(m => (m.data.startTime ?? tournament.get(refId(m.data.tournament)!)?.data.startDate ?? '').slice(0, 7)).filter(Boolean))].sort();
+const monthLabel = (ym: string) => new Intl.DateTimeFormat(HTML_LANG[lang], { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${ym}-01T00:00:00Z`));
+const filterEvents = tournaments.filter(x => x.data.kind !== 'offseason' && (x.data.tier <= 2 && x.data.startDate || matches.some(m => refId(m.data.tournament) === x.id)));
+const statuses = ['live', 'upcoming', 'completed'] as const;
+---
+
+<BaseLayout
+  lang={lang}
+  path={path}
+  title={t('schedule.title')}
+  description={t('schedule.lead')}
+  jsonLd={[breadcrumbLd([{ name: t('nav.home'), path: '/' }, { name: t('nav.schedule'), path }], Astro.site, lang)]}
+>
+  <div class="wrap py-10">
+    <SectionTitle as="h1" title={t('schedule.title')} lead={t('schedule.lead')} />
+
+    <form class="z-30 mb-6 grid grid-cols-2 gap-3 border-b border-line bg-obsidian pb-4 pt-2 lg:sticky lg:top-16 lg:grid-cols-[repeat(5,minmax(0,1fr))_auto]" data-schedule-filters>
+      <label class="grid gap-1 text-xs text-muted">
+        {t('schedule.filterTier')}
+        <select name="tier" class="select">
+          <option value="">{t('schedule.all')}</option>
+          {[1, 2, 3].map(tier => <option value={tier}>{t(`tier.${tier as 1 | 2 | 3}`)}</option>)}
+        </select>
+      </label>
+      <label class="grid gap-1 text-xs text-muted">
+        {t('schedule.filterTournament')}
+        <select name="tournament" class="select">
+          <option value="">{t('schedule.all')}</option>
+          <option value="offseason">{t('ticker.offseason')}</option>
+          {filterEvents.map(x => <option value={x.id}>{x.data.shortName}</option>)}
+        </select>
+      </label>
+      <label class="grid gap-1 text-xs text-muted">
+        {t('schedule.filterTeam')}
+        <select name="team" class="select">
+          <option value="">{t('schedule.all')}</option>
+          {teams.map(x => <option value={x.id}>{x.data.name}</option>)}
+        </select>
+      </label>
+      <label class="grid gap-1 text-xs text-muted">
+        {t('schedule.filterStatus')}
+        <select name="status" class="select">
+          <option value="">{t('schedule.all')}</option>
+          {statuses.map(s => <option value={s}>{t(`status.${s}`)}</option>)}
+        </select>
+      </label>
+      <label class="grid gap-1 text-xs text-muted">
+        {t('schedule.filterMonth')}
+        <select name="month" class="select">
+          <option value="">{t('schedule.all')}</option>
+          {months.map(ym => <option value={ym}>{monthLabel(ym)}</option>)}
+        </select>
+      </label>
+      <div class="flex items-end gap-2">
+        <button type="reset" class="btn btn-ghost !px-3 !py-2 text-xs"><RotateCcw class="size-4" aria-hidden="true" />{t('schedule.reset')}</button>
+      </div>
+      <div class="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-3 col-span-2 lg:col-span-6">
+        <p class="tabular-nums text-xs text-muted">
+          <span data-count data-template={t('schedule.count')} aria-live="polite">{t('schedule.count', { n: matches.length })}</span>
+          <span aria-hidden="true"> · </span>
+          <span data-timezone data-template={t('schedule.timezone')}>{t('schedule.timezone', { tz: 'UTC' })}</span>
+        </p>
+        <SpoilerToggle lang={lang} />
+      </div>
+    </form>
+
+    <div class="space-y-4">
+      {
+        [...timed].map(([day, list]) => (
+          <section data-group aria-label={day} class="panel p-3 sm:p-4">
+            <h2 class="mb-3 text-base font-bold">
+              <LocalTime iso={`${day}T12:00:00Z`} lang={lang} mode="date" />
+            </h2>
+            <ul class="grid gap-2">
+              {list.map(m => (
+                <MatchCard match={m} lang={lang} />
+              ))}
+            </ul>
+          </section>
+        ))
+      }
+      {
+        [...untimed].map(([eventId, list]) => {
+          const event = tournament.get(eventId)!;
+          return (
+            <section data-group aria-labelledby={`unscheduled-${eventId}`} class="panel p-3 sm:p-4">
+              <h2 id={`unscheduled-${eventId}`} class="text-base font-bold">
+                {t('schedule.unscheduled')} · {event.data.name}
+              </h2>
+              <p class="mb-3 mt-0.5 text-xs text-muted">{t('schedule.unscheduledLead')}</p>
+              <ul class="grid gap-2">
+                {list.map(m => (
+                  <MatchCard match={m} lang={lang} showTournament={false} />
+                ))}
+              </ul>
+            </section>
+          );
+        })
+      }
+      <div data-no-results hidden>
+        <EmptyState text={t('schedule.noResults')} />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  import '../../../scripts/schedule';
+</script>

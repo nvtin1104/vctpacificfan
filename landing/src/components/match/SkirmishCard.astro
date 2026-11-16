@@ -1,0 +1,42 @@
+---
+import { Crosshair } from '@lucide/astro';
+import { useT, type Lang } from '../../i18n';
+import type { Match } from '../../lib/data';
+import EmptyState from '../ui/EmptyState.astro';
+
+interface Props {
+  match: Match;
+  names: [string, string];
+  lang: Lang;
+}
+const { match, names, lang } = Astro.props;
+const t = useT(lang);
+const s = match.data.skirmish;
+---
+
+<section class="panel p-5" aria-labelledby="skirmish">
+  <h2 id="skirmish" class="heading flex items-center gap-2 text-lg"><Crosshair class="size-5 text-muted" aria-hidden="true" />{t('match.skirmishTitle')}</h2>
+  <p class="mt-2 text-sm text-muted">{t('match.skirmishLead')}</p>
+  {
+    s ? (
+      <div class="mt-5 grid grid-cols-[1fr_auto_1fr] items-center gap-4 text-center">
+        <div>
+          <p class:list={['text-xl font-bold', s.winner === 0 && 'text-crimson']}>{s.players[0]}</p>
+          <p class="text-xs text-muted">{names[0]}</p>
+        </div>
+        <p class="tabular-nums text-3xl" data-score>
+          {s.score[0]}–{s.score[1]}
+        </p>
+        <div>
+          <p class:list={['text-xl font-bold', s.winner === 1 && 'text-crimson']}>{s.players[1]}</p>
+          <p class="text-xs text-muted">{names[1]}</p>
+        </div>
+        <p class="col-span-3 text-sm" data-score>
+          {t('match.skirmishChoice', { team: names[s.winner], choice: s.choice === 'map' ? t('match.choiceMap') : t('match.choiceSide') })}
+        </p>
+      </div>
+    ) : (
+      <EmptyState class="mt-5" text={t('match.skirmishPending')} />
+    )
+  }
+</section>

@@ -1,0 +1,178 @@
+---
+import { ChevronDown, Menu, X } from '@lucide/astro';
+import { localePath, stripLang, useT, type Lang } from '../../i18n';
+import { sectionPath, seasonOfPath, teamsOf, tournamentsOf } from '../../lib/data';
+import TeamBadge from '../ui/TeamBadge.astro';
+import LangSwitcher from './LangSwitcher.astro';
+import SeasonSwitcher from './SeasonSwitcher.astro';
+import Logo from './Logo.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const current = stripLang(Astro.url.pathname);
+// Menus follow the season of the page being viewed (current season elsewhere).
+const year = await seasonOfPath(current);
+const t = useT(lang, { year });
+const tournaments = await tournamentsOf(year);
+const teams = (await teamsOf(year)).map(x => x.team);
+const tiers = [2, 1, 3] as const;
+
+const links = [
+  { href: sectionPath(year, 'schedule'), section: 'schedule', label: t('nav.schedule') },
+  { href: sectionPath(year, 'statistics'), section: 'statistics', label: t('nav.statistics') },
+  { href: sectionPath(year, 'rules'), section: 'rules', label: t('nav.rules') },
+];
+// Active when the path has that section, in any season (/2027/schedule) or detail form (/tournaments/x).
+const isActive = (section: string) => current.split('/').includes(section);
+const navItem = 'flex h-16 items-center gap-1 px-3 text-[0.8125rem] font-bold uppercase text-muted hover:text-white aria-[current=page]:text-white';
+---
+
+<header class="relative border-b border-line bg-[#111]">
+  <div class="wrap flex h-16 items-center gap-4">
+    <a href={localePath(lang)} class="flex shrink-0 items-center gap-2" aria-label={t('meta.siteName')}>
+      <Logo size={36} />
+      <span class="hidden text-sm font-extrabold uppercase leading-tight sm:block">
+        VCT Pacific<br /><span class="text-[0.6875rem] font-semibold text-muted">Fan Hub {year}</span>
+      </span>
+    </a>
+
+    <nav class="ml-4 hidden flex-1 items-center lg:flex" aria-label="Main">
+      <div data-mega>
+        <button
+          type="button"
+          class={navItem}
+          aria-current={isActive('tournaments') ? 'page' : undefined}
+          aria-expanded="false"
+          aria-controls="mega-tournaments"
+          data-mega-trigger
+        >
+          {t('nav.tournaments')}
+          <ChevronDown class="size-3.5" aria-hidden="true" />
+        </button>
+        <div id="mega-tournaments" hidden class="absolute inset-x-0 top-full z-50 border-b border-line bg-[#1f1f1f]">
+          <div class="wrap grid grid-cols-3 gap-8 py-6">
+            {
+              tiers.map(tier => (
+                <div>
+                  <p class="eyebrow mb-2">{t(`tier.${tier}`)}</p>
+                  <ul>
+                    {tournaments
+                      .filter(x => x.data.tier === tier)
+                      .map(x => (
+                        <li>
+                          <a href={localePath(lang, `/tournaments/${x.id}`)} class="block py-1.5 text-sm font-semibold text-bone hover:underline">
+                            {x.data.name}
+                          </a>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              ))
+            }
+            <div class="col-span-3 border-t border-line pt-4 text-right">
+              <a href={localePath(lang, sectionPath(year, 'tournaments'))} class="link text-sm">{t('nav.allTournaments')} →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative" data-mega>
+        <button
+          type="button"
+          class={navItem}
+          aria-current={isActive('teams') ? 'page' : undefined}
+          aria-expanded="false"
+          aria-controls="mega-teams"
+          data-mega-trigger
+        >
+          {t('nav.teams')}
+          <ChevronDown class="size-3.5" aria-hidden="true" />
+        </button>
+        <div id="mega-teams" hidden class="absolute left-0 top-full z-50 w-[30rem] rounded-b-lg border border-t-0 border-line bg-[#1f1f1f] p-3">
+          <ul class="grid grid-cols-2 gap-1">
+            {
+              teams.map(team => (
+                <li>
+                  <a href={localePath(lang, `/teams/${team.id}`)} class="flex items-center gap-3 rounded p-2 hover:bg-surface-3">
+                    <TeamBadge team={team} size="sm" />
+                    <span class="text-sm font-semibold">{team.data.name}</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          <a href={localePath(lang, sectionPath(year, 'teams'))} class="link mt-2 inline-block px-2 text-sm">{t('common.viewAll')} →</a>
+        </div>
+      </div>
+
+      {
+        links.map(link => (
+          <a href={localePath(lang, link.href)} aria-current={isActive(link.section) ? 'page' : undefined} class={navItem}>
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="ml-auto flex items-center gap-1">
+      <a href={localePath(lang, sectionPath(year, 'schedule'))} class="btn btn-primary hidden !min-h-8 !rounded-xl !px-4 !py-1 sm:inline-flex">{t('nav.schedule')}</a>
+      <SeasonSwitcher lang={lang} year={year} id="season-desktop" />
+      <LangSwitcher lang={lang} id="lang-desktop" />
+      <button
+        type="button"
+        class="grid size-10 place-items-center text-bone lg:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-drawer"
+        aria-label={t('nav.menu')}
+        data-drawer-toggle
+      >
+        <Menu class="size-6" aria-hidden="true" />
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-drawer" hidden class="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-y-auto border-l border-line bg-[#1f1f1f] lg:hidden" role="dialog" aria-modal="true" aria-label={t('nav.menu')}>
+  <div class="flex h-16 items-center justify-end px-4">
+    <button type="button" class="grid size-10 place-items-center" aria-label={t('nav.close')} data-drawer-close>
+      <X class="size-6" aria-hidden="true" />
+    </button>
+  </div>
+  <nav class="space-y-6 px-6 pb-10" aria-label="Mobile">
+    <ul>
+      {
+        [{ href: '/', label: t('nav.home') }, { href: sectionPath(year, 'tournaments'), label: t('nav.tournaments') }, { href: sectionPath(year, 'teams'), label: t('nav.teams') }, ...links].map(link => (
+          <li>
+            <a href={localePath(lang, link.href)} class="block border-b border-line py-3 text-sm font-bold uppercase hover:text-white" data-drawer-close>
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    {
+      tiers.map(tier => (
+        <div>
+          <p class="eyebrow mb-1">{t(`tier.${tier}`)}</p>
+          <ul>
+            {tournaments
+              .filter(x => x.data.tier === tier)
+              .map(x => (
+                <li>
+                  <a href={localePath(lang, `/tournaments/${x.id}`)} class="block py-1.5 text-sm text-muted hover:text-white" data-drawer-close>
+                    {x.data.name}
+                  </a>
+                </li>
+              ))}
+          </ul>
+        </div>
+      ))
+    }
+  </nav>
+</div>
+
+<script>
+  import '../../scripts/header';
+</script>

@@ -1,0 +1,334 @@
+@import 'tailwindcss';
+
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/800.css';
+
+/*
+ * Flat dark esports look: near-black neutral surfaces, 1px hairline borders, small radii,
+ * one red accent, Inter everywhere. No glows, gradients or cut corners.
+ */
+@theme {
+  --color-obsidian: #0f1519; /* page background */
+  --color-carbon: #050505; /* strips, insets */
+  --color-surface: #0f0f0f; /* section panels */
+  --color-surface-2: #1c1c1c; /* rows, pills, inner cards */
+  --color-surface-3: #262626; /* hover / controls */
+  --color-line: #303030;
+  --color-line-strong: #404040;
+  --color-crimson: #ff4655; /* accent: live, active, highlights */
+  --color-crimson-deep: #d13639; /* red buttons */
+  --color-bone: #f9f9f9; /* primary text */
+  --color-muted: #a3a3a3; /* secondary text */
+  --color-slate-muted: #525252; /* tertiary text, disabled */
+  --color-steel: #8fa3b0; /* meta text */
+  --color-teal: #3ccf91;
+  --color-amber: #e0b54a;
+
+  --font-display: 'Inter', 'Noto Sans KR', 'Noto Sans JP', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Helvetica, Arial, sans-serif;
+  --font-sans: 'Inter', 'Noto Sans KR', 'Noto Sans JP', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Helvetica, Arial, sans-serif;
+  --font-mono: 'Inter', Helvetica, Arial, sans-serif;
+
+  --radius-card: 8px;
+  --radius-item: 4px;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html {
+    background: var(--color-obsidian);
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    background: var(--color-obsidian);
+    color: var(--color-bone);
+    font-family: var(--font-sans);
+    font-feature-settings: 'tnum' 0;
+    min-height: 100dvh;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Grid items default to min-width:auto, so a wide table inside an overflow-x wrapper would widen the
+     whole column on phones. Let every grid child shrink and keep scrolling inside its own wrapper. */
+  .grid > * {
+    min-width: 0;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-bone);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--color-crimson);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .wrap {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 768px) {
+    .wrap {
+      padding-inline: 2rem;
+    }
+  }
+
+  .panel {
+    position: relative;
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+  }
+  .panel-item {
+    background: var(--color-surface-2);
+    border-radius: var(--radius-item);
+  }
+  a.panel,
+  a.panel-item {
+    transition: border-color 120ms, background-color 120ms;
+  }
+  a.panel:hover {
+    border-color: var(--color-line-strong);
+    background: #141414;
+  }
+  a.panel-item:hover {
+    background: var(--color-surface-3);
+  }
+
+  /* Small uppercase label above titles. */
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .heading {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-item);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 120ms, border-color 120ms;
+  }
+  .btn-primary {
+    background: #fff;
+    color: var(--color-carbon);
+  }
+  .btn-primary:hover {
+    background: #e5e5e5;
+  }
+  .btn-red {
+    background: var(--color-crimson-deep);
+    color: #111;
+  }
+  .btn-red:hover {
+    background: var(--color-crimson);
+  }
+  .btn-ghost {
+    background: var(--color-surface);
+    color: var(--color-bone);
+    border: 1px solid var(--color-line-strong);
+  }
+  .btn-ghost:hover {
+    background: var(--color-surface-2);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+    background: var(--color-surface-2);
+    border: 1px solid transparent;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: var(--color-bone);
+    white-space: nowrap;
+  }
+  .chip-red {
+    border-color: var(--color-crimson);
+  }
+  .chip-amber {
+    color: var(--color-amber);
+  }
+  .chip-teal {
+    color: var(--color-teal);
+  }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .data-table th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    padding: 0.625rem 0.75rem;
+    border-bottom: 1px solid var(--color-line);
+    white-space: nowrap;
+  }
+  .data-table tbody th {
+    text-transform: none;
+    color: var(--color-bone);
+    font-size: 0.875rem;
+  }
+  .data-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .data-table tbody tr:last-child > * {
+    border-bottom: 0;
+  }
+  .data-table .num {
+    text-align: right;
+  }
+
+  .select {
+    appearance: none;
+    width: 100%;
+    min-height: 2.5rem;
+    background: var(--color-surface-2)
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23f9f9f9' stroke-width='2'%3E%3Cpath d='m2 4 4 4 4-4'/%3E%3C/svg%3E")
+      no-repeat right 0.75rem center;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-item);
+    color: var(--color-bone);
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+  .select:hover {
+    border-color: var(--color-line-strong);
+  }
+
+  .link {
+    color: var(--color-bone);
+    font-weight: 600;
+  }
+  .link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* Tab-style nav item with a red underline when active. */
+  .tab {
+    position: relative;
+    padding: 0.5rem 0.25rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .tab:hover,
+  .tab[aria-current] {
+    color: var(--color-bone);
+  }
+  .tab[aria-current]::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 -1px;
+    height: 3px;
+    background: var(--color-crimson);
+  }
+}
+
+/*
+ * Cross-document view transitions (MPA): header and season strip keep their place between pages, the
+ * selected-event indicator slides to the new tab, and only the page body cross-fades. Browsers without
+ * support simply navigate normally.
+ */
+@view-transition {
+  navigation: auto;
+}
+.vt-header {
+  view-transition-name: site-header;
+}
+.vt-strip {
+  view-transition-name: season-strip;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 180ms;
+}
+::view-transition-group(season-indicator) {
+  animation-duration: 320ms;
+  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+/* Strip and header are identical across pages: swap them instantly instead of cross-fading. */
+::view-transition-old(season-strip),
+::view-transition-new(season-strip),
+::view-transition-old(site-header),
+::view-transition-new(site-header) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(season-strip),
+::view-transition-old(site-header) {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
+
+/* Spoiler-free mode: <html data-spoilers="hidden"> masks every score until the viewer reveals it. */
+html[data-spoilers='hidden'] [data-score] {
+  color: transparent !important;
+  background: var(--color-surface-3);
+  border-radius: 2px;
+  user-select: none;
+}
+
+@keyframes live-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.live-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: var(--color-crimson);
+  animation: live-pulse 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

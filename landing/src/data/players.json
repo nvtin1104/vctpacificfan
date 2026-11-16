@@ -1,0 +1,489 @@
+[
+  {
+    "id": "crazyguy",
+    "handle": "crazyguy",
+    "name": "Ngô Công Anh",
+    "avatar": "/images/players/crazyguy.jpg",
+    "country": "VN",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Crazyguy"
+    }
+  },
+  {
+    "id": "meiy",
+    "handle": "Meiy",
+    "name": "Ibuki Seki",
+    "avatar": "/images/players/meiy.jpg",
+    "country": "JP",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Meiy"
+    }
+  },
+  {
+    "id": "akame",
+    "handle": "Akame",
+    "name": "Yu Gwang-hui",
+    "avatar": "/images/players/akame.jpg",
+    "country": "KR",
+    "role": "Initiator",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Akame"
+    }
+  },
+  {
+    "id": "clz",
+    "handle": "CLZ",
+    "name": "Hikaru Mizutani",
+    "avatar": "/images/players/clz.jpg",
+    "country": "JP",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/CLZ"
+    }
+  },
+  {
+    "id": "sugarz3ro",
+    "handle": "SugarZ3ro",
+    "name": "Shota Watanabe",
+    "avatar": "/images/players/sugarz3ro.jpg",
+    "country": "JP",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/SugarZ3ro"
+    }
+  },
+  {
+    "id": "aace",
+    "handle": "Aace",
+    "name": "Souta Ito",
+    "avatar": "/images/players/aace.jpg",
+    "country": "JP",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Aace"
+    }
+  },
+  {
+    "id": "invy",
+    "handle": "invy",
+    "name": "Adrian Jiggs Aisa Reyes",
+    "avatar": "/images/players/invy.jpg",
+    "country": "PH",
+    "role": null,
+    "socials": {}
+  },
+  {
+    "id": "f0rsaken",
+    "handle": "f0rsakeN",
+    "name": "Jason Susanto",
+    "avatar": "/images/players/f0rsaken.jpg",
+    "country": "ID",
+    "role": null,
+    "socials": {}
+  },
+  {
+    "id": "something",
+    "handle": "something",
+    "name": "Ilia Petrov",
+    "avatar": "/images/players/something.jpg",
+    "country": "RU",
+    "role": null,
+    "socials": {}
+  },
+  {
+    "id": "patmen",
+    "handle": "PatMen",
+    "name": null,
+    "country": null,
+    "role": null,
+    "socials": {}
+  },
+  {
+    "id": "t3xture",
+    "handle": "t3xture",
+    "name": "Kim Na-ra",
+    "avatar": "/images/players/t3xture.jpg",
+    "country": "KR",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/T3xture"
+    }
+  },
+  {
+    "id": "raxcal",
+    "handle": "RaxcaL",
+    "name": "Kim Min-seok",
+    "country": "KR",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/RaxcaL"
+    }
+  },
+  {
+    "id": "karon",
+    "handle": "Karon",
+    "name": "Kim Won-tae",
+    "avatar": "/images/players/karon.jpg",
+    "country": "KR",
+    "role": "Controller",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Karon"
+    }
+  },
+  {
+    "id": "dambi",
+    "handle": "Dambi",
+    "name": "Lee Hyuk-kyu",
+    "avatar": "/images/players/dambi.jpg",
+    "country": "KR",
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Dambi"
+    }
+  },
+  {
+    "id": "mako",
+    "handle": "MaKo",
+    "name": "Kim Myeong-kwan",
+    "avatar": "/images/players/mako.jpg",
+    "country": "KR",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/MaKo"
+    }
+  },
+  {
+    "id": "ray",
+    "handle": "Ray",
+    "name": "Oh Eun-hyuk",
+    "country": "KR",
+    "role": "Controller",
+    "socials": {}
+  },
+  {
+    "id": "izu",
+    "handle": "iZu",
+    "name": "Ham Woo-Joo",
+    "avatar": "/images/players/izu.jpg",
+    "country": "KR",
+    "role": null,
+    "socials": {}
+  },
+  {
+    "id": "stax",
+    "handle": "stax",
+    "name": "Kim Gu-taek",
+    "country": "KR",
+    "role": null,
+    "socials": {}
+  },
+  {
+    "id": "buzz",
+    "handle": "BuZz",
+    "name": "Yu Byung-chul",
+    "country": "KR",
+    "role": "Duelist",
+    "socials": {}
+  },
+  {
+    "id": "crashies",
+    "handle": "crashies",
+    "name": "Austin Roberts",
+    "country": "US",
+    "role": "Initiator",
+    "socials": {}
+  },
+  {
+    "id": "tenz",
+    "handle": "TenZ",
+    "name": "Tyson Van Ngo",
+    "country": "CA",
+    "role": null,
+    "socials": {}
+  },
+  {
+    "id": "ken",
+    "handle": "KEN",
+    "name": "Kim Yun-seung",
+    "country": "KR",
+    "role": "Flex",
+    "socials": {}
+  },
+  {
+    "id": "yatsuka",
+    "handle": "yatsuka",
+    "name": null,
+    "country": "JP",
+    "role": null,
+    "socials": {}
+  },
+  {
+    "id": "xffero",
+    "handle": "xffero",
+    "name": "David Sean Michael Monangin",
+    "avatar": "/images/players/xffero.jpg",
+    "country": "ID",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Xffero"
+    }
+  },
+  {
+    "id": "jemkin",
+    "handle": "Jemkin",
+    "name": "Maksim Batorov",
+    "avatar": "/images/players/jemkin.jpg",
+    "country": "RU",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Jemkin"
+    }
+  },
+  {
+    "id": "monyet",
+    "handle": "monyet",
+    "name": "I Made Adhi Cahya Nugraha",
+    "avatar": "/images/players/monyet.jpg",
+    "country": "ID",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Monyet"
+    }
+  },
+  {
+    "id": "kushy",
+    "handle": "Kushy",
+    "name": "Bryan Carlos Setiawan",
+    "avatar": "/images/players/kushy.jpg",
+    "country": "ID",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Kushy"
+    }
+  },
+  {
+    "id": "kr1stal",
+    "handle": "Kr1stal",
+    "name": "Savva Fedorov",
+    "avatar": "/images/players/kr1stal.jpg",
+    "country": "RU",
+    "role": "Initiator",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Kr1stal"
+    }
+  },
+  {
+    "id": "seph1roth",
+    "handle": "seph1roth",
+    "name": "Chinnakrit Phoojaroen",
+    "avatar": "/images/players/seph1roth.jpg",
+    "country": "TH",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Seph1roth"
+    }
+  },
+  {
+    "id": "leviathan",
+    "handle": "Leviathan",
+    "name": "Thanyathon Nakmee",
+    "avatar": "/images/players/leviathan.jpg",
+    "country": "TH",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Leviathan_(Thai_player)"
+    }
+  },
+  {
+    "id": "trent",
+    "handle": "trent",
+    "name": "Trent Cairns",
+    "avatar": "/images/players/trent.jpg",
+    "country": "US",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Trent"
+    }
+  },
+  {
+    "id": "leaf",
+    "handle": "leaf",
+    "name": "Nathan Orf",
+    "avatar": "/images/players/leaf.jpg",
+    "country": "US",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Leaf"
+    }
+  },
+  {
+    "id": "lukxo",
+    "handle": "lukxo",
+    "name": "Lucca Travaioli",
+    "avatar": "/images/players/lukxo.jpg",
+    "country": "BR",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Lukxo",
+      "x": "https://twitter.com/loud_lukxo"
+    }
+  },
+  {
+    "id": "darker",
+    "handle": "Darker",
+    "name": "Juan Sebastián Castro Cicuamia",
+    "avatar": "/images/players/darker.jpg",
+    "country": "CO",
+    "role": "Controller",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Darker",
+      "x": "https://twitter.com/DarkerVL"
+    }
+  },
+  {
+    "id": "erde",
+    "handle": "erde",
+    "name": "Roberto Daniel Lobos Parada",
+    "avatar": "/images/players/erde.jpg",
+    "country": "CL",
+    "role": "Controller",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Erde",
+      "x": "https://twitter.com/erdeatovich"
+    }
+  },
+  {
+    "id": "davih",
+    "handle": "DaviH",
+    "name": "David Cruz Fonseca",
+    "avatar": "/images/players/davih.jpg",
+    "country": "PT",
+    "role": "Initiator",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/DaviH",
+      "x": "https://twitter.com/DaviHIX"
+    }
+  },
+  {
+    "id": "johnqt",
+    "handle": "johnqt",
+    "name": "Mohamed Amine Ouarid",
+    "avatar": "/images/players/johnqt.jpg",
+    "country": "MA",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Johnqt",
+      "x": "https://twitter.com/1johnqt"
+    }
+  },
+  {
+    "id": "oxy",
+    "handle": "OXY",
+    "name": "Francis Hoang",
+    "avatar": "/images/players/oxy.jpg",
+    "country": "US",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/OXY",
+      "x": "https://twitter.com/Lft_Oxy"
+    }
+  },
+  {
+    "id": "brawk",
+    "handle": "brawk",
+    "name": "Brock Somerhalder",
+    "avatar": "/images/players/brawk.jpg",
+    "country": "US",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Brawk",
+      "x": "https://twitter.com/brawk"
+    }
+  },
+  {
+    "id": "canezerra",
+    "handle": "canezerra",
+    "name": "Alex Banyasz",
+    "avatar": "/images/players/canezerra.jpg",
+    "country": "US",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Canezerra",
+      "x": "https://twitter.com/canezerra"
+    }
+  },
+  {
+    "id": "zellsis",
+    "handle": "Zellsis",
+    "name": "Jordan Montemurro",
+    "avatar": "/images/players/zellsis.jpg",
+    "country": "US",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Zellsis",
+      "x": "https://twitter.com/zellsis"
+    }
+  },
+  {
+    "id": "ethan",
+    "handle": "Ethan",
+    "name": "Ethan Cole Arnold",
+    "avatar": "/images/players/ethan.jpg",
+    "country": "US",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Ethan",
+      "x": "https://twitter.com/ethanarnold"
+    }
+  },
+  {
+    "id": "mada",
+    "handle": "mada",
+    "name": "Adam Pampuch",
+    "avatar": "/images/players/mada.jpg",
+    "country": "CA",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Mada",
+      "x": "https://twitter.com/madafps"
+    }
+  },
+  {
+    "id": "skuba",
+    "handle": "skuba",
+    "name": "Logan Jenkins",
+    "avatar": "/images/players/skuba.jpg",
+    "country": "US",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Skuba",
+      "x": "https://twitter.com/skubacs"
+    }
+  },
+  {
+    "id": "kaajak",
+    "handle": "kaajak",
+    "name": "Kajetan Haremski",
+    "avatar": "/images/players/kaajak.jpg",
+    "country": "PL",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Kaajak",
+      "x": "https://twitter.com/kaajakval"
+    }
+  },
+  {
+    "id": "cloud",
+    "handle": "Cloud",
+    "name": "Kirill Nekhozhin",
+    "avatar": "/images/players/cloud.jpg",
+    "country": "RU",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Cloud",
+      "x": "https://twitter.com/cloudezeee"
+    }
+  }
+]

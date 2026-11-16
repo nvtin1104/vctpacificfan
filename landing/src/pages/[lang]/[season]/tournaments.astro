@@ -1,0 +1,93 @@
+---
+import SeasonRoadmap from '../../../components/tournament/SeasonRoadmap.astro';
+import TournamentCard from '../../../components/tournament/TournamentCard.astro';
+import SectionTitle from '../../../components/ui/SectionTitle.astro';
+import Sources from '../../../components/ui/Sources.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { useT, type Lang } from '../../../i18n';
+import { seasonConfig, seasonPath, seasonStaticPaths, tournamentsOf } from '../../../lib/data';
+import { breadcrumbLd } from '../../../lib/jsonld';
+
+export const getStaticPaths = () => seasonStaticPaths();
+const lang = Astro.params.lang as Lang;
+const year = Number(Astro.params.season);
+const t = useT(lang, { year });
+const tournaments = await tournamentsOf(year);
+const tiers = [1, 2, 3] as const;
+const path = seasonPath(year, 'tournaments');
+---
+
+<BaseLayout
+  lang={lang}
+  path={path}
+  title={t('tournaments.title')}
+  description={t('tournaments.lead')}
+  jsonLd={[breadcrumbLd([{ name: t('nav.home'), path: '/' }, { name: t('nav.tournaments'), path }], Astro.site, lang)]}
+>
+  <div class="wrap py-10">
+    <SectionTitle as="h1" eyebrow={t('nav.tournaments')} title={t('tournaments.title')} lead={t('tournaments.lead')} />
+
+    <section class="panel mt-8 p-5 md:p-8" aria-labelledby="roadmap">
+      <h2 id="roadmap" class="heading text-lg">{t('tournaments.roadmap')}</h2>
+      <p class="mb-8 mt-2 text-sm text-muted">{t('tournaments.roadmapHint')}</p>
+      <SeasonRoadmap lang={lang} year={year} />
+    </section>
+
+    <div class="mt-10 flex flex-wrap gap-2" role="group" aria-label={t('tournaments.title')}>
+      <button type="button" class="tier-filter btn btn-ghost !px-3.5 !py-1.5 text-xs" aria-pressed="true" data-tier-filter="all">
+        {t('tier.all')} <span class="tabular-nums text-muted">({tournaments.length})</span>
+      </button>
+      {
+        tiers.map(tier => {
+          const count = tournaments.filter(x => x.data.tier === tier).length;
+          return (
+            <button type="button" class="tier-filter btn btn-ghost !px-3.5 !py-1.5 text-xs" aria-pressed="false" data-tier-filter={String(tier)}>
+              {t(`tier.${tier}`)} <span class="tabular-nums text-muted">({count})</span>
+            </button>
+          );
+        })
+      }
+    </div>
+
+    {
+      tiers.map(tier => (
+        <section class="mt-8" aria-labelledby={`tier-list-${tier}`} data-tier-section={String(tier)}>
+          <h2 id={`tier-list-${tier}`} class="heading mb-5 text-xl">
+            {t(`tier.${tier}long`)}
+          </h2>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {tournaments
+              .filter(x => x.data.tier === tier)
+              .map(x => (
+                <TournamentCard tournament={x} lang={lang} />
+              ))}
+          </div>
+        </section>
+      ))
+    }
+
+    <Sources sources={seasonConfig(year).sources} lang={lang} />
+  </div>
+</BaseLayout>
+
+<style>
+  .tier-filter[aria-pressed='true'] {
+    border-color: var(--color-crimson);
+    background: color-mix(in srgb, var(--color-crimson) 14%, var(--color-surface-2));
+    color: var(--color-bone);
+  }
+</style>
+
+<script>
+  for (const btn of document.querySelectorAll<HTMLButtonElement>('[data-tier-filter]')) {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tierFilter;
+      for (const other of document.querySelectorAll<HTMLButtonElement>('[data-tier-filter]')) {
+        other.setAttribute('aria-pressed', String(other === btn));
+      }
+      for (const sec of document.querySelectorAll<HTMLElement>('[data-tier-section]')) {
+        sec.hidden = target !== 'all' && sec.dataset.tierSection !== target;
+      }
+    });
+  }
+</script>

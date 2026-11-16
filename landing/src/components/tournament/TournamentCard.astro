@@ -1,0 +1,51 @@
+---
+import { CalendarDays, MapPin, Users } from '@lucide/astro';
+import { formatDateRange, loc, localePath, useT, type Lang } from '../../i18n';
+import { countryName, regionName, type Tournament } from '../../lib/data';
+import ConfirmBadge from '../ui/ConfirmBadge.astro';
+import StatusPill from '../ui/StatusPill.astro';
+
+interface Props {
+  tournament: Tournament;
+  lang: Lang;
+  class?: string;
+}
+const { tournament, lang, class: className } = Astro.props;
+const t = useT(lang);
+const d = tournament.data;
+const dates = formatDateRange(d.startDate, d.endDate, lang);
+const place = d.location ? `${loc(d.location.city, lang)}, ${countryName(d.location.country, lang)}` : regionName(d.region, lang);
+---
+
+<a
+  href={localePath(lang, `/tournaments/${tournament.id}`)}
+  class:list={['panel group flex flex-col gap-3 p-5', className]}
+>
+  <div class="flex flex-wrap items-center gap-2">
+    <span class:list={['chip', d.tier === 1 ? 'chip-red' : d.tier === 2 ? 'chip-amber' : '']}>{t(`tier.${d.tier}`)}</span>
+    <StatusPill status={d.status} lang={lang} />
+    <ConfirmBadge confirmed={d.datesConfirmed} lang={lang} />
+  </div>
+  <h3 class="text-lg font-bold leading-snug">{d.name}</h3>
+  <dl class="mt-auto grid gap-1.5 text-sm text-muted">
+    <div class="flex items-center gap-2">
+      <dt class="sr-only">{t('common.dates')}</dt>
+      <CalendarDays class="size-4 text-muted" aria-hidden="true" />
+      <dd>{dates ?? t('common.tba')}</dd>
+    </div>
+    <div class="flex items-center gap-2">
+      <dt class="sr-only">{t('common.location')}</dt>
+      <MapPin class="size-4 text-muted" aria-hidden="true" />
+      <dd>{place}</dd>
+    </div>
+    {
+      d.format.teams && (
+        <div class="flex items-center gap-2">
+          <dt class="sr-only">{t('common.teams')}</dt>
+          <Users class="size-4 text-muted" aria-hidden="true" />
+          <dd>{d.format.teams}</dd>
+        </div>
+      )
+    }
+  </dl>
+</a>

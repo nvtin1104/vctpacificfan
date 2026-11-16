@@ -1,0 +1,16 @@
+---
+import { useT, type Lang } from '../../i18n';
+
+interface Props {
+  status: 'upcoming' | 'live' | 'completed' | 'ongoing';
+  lang: Lang;
+}
+const { status, lang } = Astro.props;
+const t = useT(lang);
+const live = status === 'live' || status === 'ongoing';
+---
+
+<span class:list={['chip', live && 'chip-red', status === 'completed' && 'text-muted']}>
+  {live && <span class="live-dot" aria-hidden="true" />}
+  {t(`status.${status}`)}
+</span>

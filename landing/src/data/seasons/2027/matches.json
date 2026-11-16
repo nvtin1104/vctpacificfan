@@ -1,0 +1,1292 @@
+[
+  {
+    "id": "ko27-u1-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "upper",
+    "round": "upper-r1",
+    "order": 0,
+    "stage": {
+      "vi": "Nhánh trên – Vòng 1",
+      "en": "Upper Bracket Round 1",
+      "ko": "상위 브래킷 1라운드",
+      "ja": "アッパーブラケット ラウンド1"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Bốc thăm #1",
+          "en": "Draw slot #1",
+          "ko": "추첨 #1",
+          "ja": "抽選枠 #1"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Bốc thăm #2",
+          "en": "Draw slot #2",
+          "ko": "추첨 #2",
+          "ja": "抽選枠 #2"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-u1-2",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "upper",
+    "round": "upper-r1",
+    "order": 1,
+    "stage": {
+      "vi": "Nhánh trên – Vòng 1",
+      "en": "Upper Bracket Round 1",
+      "ko": "상위 브래킷 1라운드",
+      "ja": "アッパーブラケット ラウンド1"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Bốc thăm #3",
+          "en": "Draw slot #3",
+          "ko": "추첨 #3",
+          "ja": "抽選枠 #3"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Bốc thăm #4",
+          "en": "Draw slot #4",
+          "ko": "추첨 #4",
+          "ja": "抽選枠 #4"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-u1-3",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "upper",
+    "round": "upper-r1",
+    "order": 2,
+    "stage": {
+      "vi": "Nhánh trên – Vòng 1",
+      "en": "Upper Bracket Round 1",
+      "ko": "상위 브래킷 1라운드",
+      "ja": "アッパーブラケット ラウンド1"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Bốc thăm #5",
+          "en": "Draw slot #5",
+          "ko": "추첨 #5",
+          "ja": "抽選枠 #5"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Bốc thăm #6",
+          "en": "Draw slot #6",
+          "ko": "추첨 #6",
+          "ja": "抽選枠 #6"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-u1-4",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "upper",
+    "round": "upper-r1",
+    "order": 3,
+    "stage": {
+      "vi": "Nhánh trên – Vòng 1",
+      "en": "Upper Bracket Round 1",
+      "ko": "상위 브래킷 1라운드",
+      "ja": "アッパーブラケット ラウンド1"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Bốc thăm #7",
+          "en": "Draw slot #7",
+          "ko": "추첨 #7",
+          "ja": "抽選枠 #7"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Bốc thăm #8",
+          "en": "Draw slot #8",
+          "ko": "추첨 #8",
+          "ja": "抽選枠 #8"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-u2-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "upper",
+    "round": "upper-r2",
+    "order": 4,
+    "stage": {
+      "vi": "Nhánh trên – Vòng 2",
+      "en": "Upper Bracket Round 2",
+      "ko": "상위 브래킷 2라운드",
+      "ja": "アッパーブラケット ラウンド2"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Hạt giống 1",
+          "en": "Seed 1",
+          "ko": "1번 시드",
+          "ja": "シード1"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng UB R1 #1",
+          "en": "Winner UB R1 #1",
+          "ko": "UB R1 #1 승자",
+          "ja": "UB R1 #1 勝者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-u2-2",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "upper",
+    "round": "upper-r2",
+    "order": 5,
+    "stage": {
+      "vi": "Nhánh trên – Vòng 2",
+      "en": "Upper Bracket Round 2",
+      "ko": "상위 브래킷 2라운드",
+      "ja": "アッパーブラケット ラウンド2"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Hạt giống 2",
+          "en": "Seed 2",
+          "ko": "2번 시드",
+          "ja": "シード2"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng UB R1 #2",
+          "en": "Winner UB R1 #2",
+          "ko": "UB R1 #2 승자",
+          "ja": "UB R1 #2 勝者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-u2-3",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "upper",
+    "round": "upper-r2",
+    "order": 6,
+    "stage": {
+      "vi": "Nhánh trên – Vòng 2",
+      "en": "Upper Bracket Round 2",
+      "ko": "상위 브래킷 2라운드",
+      "ja": "アッパーブラケット ラウンド2"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Hạt giống 3",
+          "en": "Seed 3",
+          "ko": "3번 시드",
+          "ja": "シード3"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng UB R1 #3",
+          "en": "Winner UB R1 #3",
+          "ko": "UB R1 #3 승자",
+          "ja": "UB R1 #3 勝者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-u2-4",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "upper",
+    "round": "upper-r2",
+    "order": 7,
+    "stage": {
+      "vi": "Nhánh trên – Vòng 2",
+      "en": "Upper Bracket Round 2",
+      "ko": "상위 브래킷 2라운드",
+      "ja": "アッパーブラケット ラウンド2"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Hạt giống 4",
+          "en": "Seed 4",
+          "ko": "4번 시드",
+          "ja": "シード4"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng UB R1 #4",
+          "en": "Winner UB R1 #4",
+          "ko": "UB R1 #4 승자",
+          "ja": "UB R1 #4 勝者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-u3-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "upper",
+    "round": "upper-r3",
+    "order": 8,
+    "stage": {
+      "vi": "Nhánh trên – Vòng 3",
+      "en": "Upper Bracket Round 3",
+      "ko": "상위 브래킷 3라운드",
+      "ja": "アッパーブラケット ラウンド3"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng UB R2 #1",
+          "en": "Winner UB R2 #1",
+          "ko": "UB R2 #1 승자",
+          "ja": "UB R2 #1 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng UB R2 #2",
+          "en": "Winner UB R2 #2",
+          "ko": "UB R2 #2 승자",
+          "ja": "UB R2 #2 勝者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-u3-2",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "upper",
+    "round": "upper-r3",
+    "order": 9,
+    "stage": {
+      "vi": "Nhánh trên – Vòng 3",
+      "en": "Upper Bracket Round 3",
+      "ko": "상위 브래킷 3라운드",
+      "ja": "アッパーブラケット ラウンド3"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng UB R2 #3",
+          "en": "Winner UB R2 #3",
+          "ko": "UB R2 #3 승자",
+          "ja": "UB R2 #3 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng UB R2 #4",
+          "en": "Winner UB R2 #4",
+          "ko": "UB R2 #4 승자",
+          "ja": "UB R2 #4 勝者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-u4-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "upper",
+    "round": "upper-r4",
+    "order": 10,
+    "stage": {
+      "vi": "Chung kết nhánh trên",
+      "en": "Upper Bracket Final",
+      "ko": "상위 브래킷 결승",
+      "ja": "アッパーブラケット決勝"
+    },
+    "format": "Bo5",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng UB R3 #1",
+          "en": "Winner UB R3 #1",
+          "ko": "UB R3 #1 승자",
+          "ja": "UB R3 #1 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng UB R3 #2",
+          "en": "Winner UB R3 #2",
+          "ko": "UB R3 #2 승자",
+          "ja": "UB R3 #2 勝者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-m1-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "middle",
+    "round": "middle-r1",
+    "order": 11,
+    "stage": {
+      "vi": "Nhánh giữa – Vòng 1",
+      "en": "Middle Bracket Round 1",
+      "ko": "중위 브래킷 1라운드",
+      "ja": "ミドルブラケット ラウンド1"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua UB R2 #1",
+          "en": "Loser UB R2 #1",
+          "ko": "UB R2 #1 패자",
+          "ja": "UB R2 #1 敗者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua UB R1 #4",
+          "en": "Loser UB R1 #4",
+          "ko": "UB R1 #4 패자",
+          "ja": "UB R1 #4 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-m1-2",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "middle",
+    "round": "middle-r1",
+    "order": 12,
+    "stage": {
+      "vi": "Nhánh giữa – Vòng 1",
+      "en": "Middle Bracket Round 1",
+      "ko": "중위 브래킷 1라운드",
+      "ja": "ミドルブラケット ラウンド1"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua UB R2 #2",
+          "en": "Loser UB R2 #2",
+          "ko": "UB R2 #2 패자",
+          "ja": "UB R2 #2 敗者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua UB R1 #3",
+          "en": "Loser UB R1 #3",
+          "ko": "UB R1 #3 패자",
+          "ja": "UB R1 #3 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-m1-3",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "middle",
+    "round": "middle-r1",
+    "order": 13,
+    "stage": {
+      "vi": "Nhánh giữa – Vòng 1",
+      "en": "Middle Bracket Round 1",
+      "ko": "중위 브래킷 1라운드",
+      "ja": "ミドルブラケット ラウンド1"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua UB R2 #3",
+          "en": "Loser UB R2 #3",
+          "ko": "UB R2 #3 패자",
+          "ja": "UB R2 #3 敗者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua UB R1 #2",
+          "en": "Loser UB R1 #2",
+          "ko": "UB R1 #2 패자",
+          "ja": "UB R1 #2 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-m1-4",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "middle",
+    "round": "middle-r1",
+    "order": 14,
+    "stage": {
+      "vi": "Nhánh giữa – Vòng 1",
+      "en": "Middle Bracket Round 1",
+      "ko": "중위 브래킷 1라운드",
+      "ja": "ミドルブラケット ラウンド1"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua UB R2 #4",
+          "en": "Loser UB R2 #4",
+          "ko": "UB R2 #4 패자",
+          "ja": "UB R2 #4 敗者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua UB R1 #1",
+          "en": "Loser UB R1 #1",
+          "ko": "UB R1 #1 패자",
+          "ja": "UB R1 #1 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-m2-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "middle",
+    "round": "middle-r2",
+    "order": 15,
+    "stage": {
+      "vi": "Nhánh giữa – Vòng 2",
+      "en": "Middle Bracket Round 2",
+      "ko": "중위 브래킷 2라운드",
+      "ja": "ミドルブラケット ラウンド2"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng MB R1 #1",
+          "en": "Winner MB R1 #1",
+          "ko": "MB R1 #1 승자",
+          "ja": "MB R1 #1 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng MB R1 #2",
+          "en": "Winner MB R1 #2",
+          "ko": "MB R1 #2 승자",
+          "ja": "MB R1 #2 勝者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-m2-2",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "middle",
+    "round": "middle-r2",
+    "order": 16,
+    "stage": {
+      "vi": "Nhánh giữa – Vòng 2",
+      "en": "Middle Bracket Round 2",
+      "ko": "중위 브래킷 2라운드",
+      "ja": "ミドルブラケット ラウンド2"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng MB R1 #3",
+          "en": "Winner MB R1 #3",
+          "ko": "MB R1 #3 승자",
+          "ja": "MB R1 #3 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng MB R1 #4",
+          "en": "Winner MB R1 #4",
+          "ko": "MB R1 #4 승자",
+          "ja": "MB R1 #4 勝者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-m3-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "middle",
+    "round": "middle-r3",
+    "order": 17,
+    "stage": {
+      "vi": "Nhánh giữa – Vòng 3",
+      "en": "Middle Bracket Round 3",
+      "ko": "중위 브래킷 3라운드",
+      "ja": "ミドルブラケット ラウンド3"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng MB R2 #1",
+          "en": "Winner MB R2 #1",
+          "ko": "MB R2 #1 승자",
+          "ja": "MB R2 #1 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua UB R3 #2",
+          "en": "Loser UB R3 #2",
+          "ko": "UB R3 #2 패자",
+          "ja": "UB R3 #2 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-m3-2",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "middle",
+    "round": "middle-r3",
+    "order": 18,
+    "stage": {
+      "vi": "Nhánh giữa – Vòng 3",
+      "en": "Middle Bracket Round 3",
+      "ko": "중위 브래킷 3라운드",
+      "ja": "ミドルブラケット ラウンド3"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng MB R2 #2",
+          "en": "Winner MB R2 #2",
+          "ko": "MB R2 #2 승자",
+          "ja": "MB R2 #2 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua UB R3 #1",
+          "en": "Loser UB R3 #1",
+          "ko": "UB R3 #1 패자",
+          "ja": "UB R3 #1 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-m4-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "middle",
+    "round": "middle-r4",
+    "order": 19,
+    "stage": {
+      "vi": "Nhánh giữa – Vòng 4",
+      "en": "Middle Bracket Round 4",
+      "ko": "중위 브래킷 4라운드",
+      "ja": "ミドルブラケット ラウンド4"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng MB R3 #1",
+          "en": "Winner MB R3 #1",
+          "ko": "MB R3 #1 승자",
+          "ja": "MB R3 #1 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng MB R3 #2",
+          "en": "Winner MB R3 #2",
+          "ko": "MB R3 #2 승자",
+          "ja": "MB R3 #2 勝者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-m5-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "middle",
+    "round": "middle-r5",
+    "order": 20,
+    "stage": {
+      "vi": "Chung kết nhánh giữa",
+      "en": "Middle Bracket Final",
+      "ko": "중위 브래킷 결승",
+      "ja": "ミドルブラケット決勝"
+    },
+    "format": "Bo5",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng MB R4 #1",
+          "en": "Winner MB R4 #1",
+          "ko": "MB R4 #1 승자",
+          "ja": "MB R4 #1 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua UB Final",
+          "en": "Loser UB Final",
+          "ko": "UB Final 패자",
+          "ja": "UB Final 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-l1-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "lower",
+    "round": "lower-r1",
+    "order": 21,
+    "stage": {
+      "vi": "Nhánh dưới – Vòng 1",
+      "en": "Lower Bracket Round 1",
+      "ko": "하위 브래킷 1라운드",
+      "ja": "ロワーブラケット ラウンド1"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua MB R1 #1",
+          "en": "Loser MB R1 #1",
+          "ko": "MB R1 #1 패자",
+          "ja": "MB R1 #1 敗者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua MB R1 #2",
+          "en": "Loser MB R1 #2",
+          "ko": "MB R1 #2 패자",
+          "ja": "MB R1 #2 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-l1-2",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "lower",
+    "round": "lower-r1",
+    "order": 22,
+    "stage": {
+      "vi": "Nhánh dưới – Vòng 1",
+      "en": "Lower Bracket Round 1",
+      "ko": "하위 브래킷 1라운드",
+      "ja": "ロワーブラケット ラウンド1"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua MB R1 #3",
+          "en": "Loser MB R1 #3",
+          "ko": "MB R1 #3 패자",
+          "ja": "MB R1 #3 敗者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua MB R1 #4",
+          "en": "Loser MB R1 #4",
+          "ko": "MB R1 #4 패자",
+          "ja": "MB R1 #4 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-l2-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "lower",
+    "round": "lower-r2",
+    "order": 23,
+    "stage": {
+      "vi": "Nhánh dưới – Vòng 2",
+      "en": "Lower Bracket Round 2",
+      "ko": "하위 브래킷 2라운드",
+      "ja": "ロワーブラケット ラウンド2"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng LB R1 #1",
+          "en": "Winner LB R1 #1",
+          "ko": "LB R1 #1 승자",
+          "ja": "LB R1 #1 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua MB R2 #2",
+          "en": "Loser MB R2 #2",
+          "ko": "MB R2 #2 패자",
+          "ja": "MB R2 #2 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-l2-2",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "lower",
+    "round": "lower-r2",
+    "order": 24,
+    "stage": {
+      "vi": "Nhánh dưới – Vòng 2",
+      "en": "Lower Bracket Round 2",
+      "ko": "하위 브래킷 2라운드",
+      "ja": "ロワーブラケット ラウンド2"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng LB R1 #2",
+          "en": "Winner LB R1 #2",
+          "ko": "LB R1 #2 승자",
+          "ja": "LB R1 #2 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua MB R2 #1",
+          "en": "Loser MB R2 #1",
+          "ko": "MB R2 #1 패자",
+          "ja": "MB R2 #1 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-l3-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "lower",
+    "round": "lower-r3",
+    "order": 25,
+    "stage": {
+      "vi": "Nhánh dưới – Vòng 3",
+      "en": "Lower Bracket Round 3",
+      "ko": "하위 브래킷 3라운드",
+      "ja": "ロワーブラケット ラウンド3"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng LB R2 #1",
+          "en": "Winner LB R2 #1",
+          "ko": "LB R2 #1 승자",
+          "ja": "LB R2 #1 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua MB R3 #2",
+          "en": "Loser MB R3 #2",
+          "ko": "MB R3 #2 패자",
+          "ja": "MB R3 #2 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-l3-2",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "lower",
+    "round": "lower-r3",
+    "order": 26,
+    "stage": {
+      "vi": "Nhánh dưới – Vòng 3",
+      "en": "Lower Bracket Round 3",
+      "ko": "하위 브래킷 3라운드",
+      "ja": "ロワーブラケット ラウンド3"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng LB R2 #2",
+          "en": "Winner LB R2 #2",
+          "ko": "LB R2 #2 승자",
+          "ja": "LB R2 #2 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua MB R3 #1",
+          "en": "Loser MB R3 #1",
+          "ko": "MB R3 #1 패자",
+          "ja": "MB R3 #1 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-l4-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "lower",
+    "round": "lower-r4",
+    "order": 27,
+    "stage": {
+      "vi": "Nhánh dưới – Vòng 4",
+      "en": "Lower Bracket Round 4",
+      "ko": "하위 브래킷 4라운드",
+      "ja": "ロワーブラケット ラウンド4"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng LB R3 #1",
+          "en": "Winner LB R3 #1",
+          "ko": "LB R3 #1 승자",
+          "ja": "LB R3 #1 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng LB R3 #2",
+          "en": "Winner LB R3 #2",
+          "ko": "LB R3 #2 승자",
+          "ja": "LB R3 #2 勝者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-l5-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "lower",
+    "round": "lower-r5",
+    "order": 28,
+    "stage": {
+      "vi": "Nhánh dưới – Vòng 5",
+      "en": "Lower Bracket Round 5",
+      "ko": "하위 브래킷 5라운드",
+      "ja": "ロワーブラケット ラウンド5"
+    },
+    "format": "Bo3",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng LB R4 #1",
+          "en": "Winner LB R4 #1",
+          "ko": "LB R4 #1 승자",
+          "ja": "LB R4 #1 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua MB R4 #1",
+          "en": "Loser MB R4 #1",
+          "ko": "MB R4 #1 패자",
+          "ja": "MB R4 #1 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "ko27-l6-1",
+    "tournament": "vct-pacific-2027-kickoff",
+    "section": "lower",
+    "round": "lower-r6",
+    "order": 29,
+    "stage": {
+      "vi": "Chung kết nhánh dưới",
+      "en": "Lower Bracket Final",
+      "ko": "하위 브래킷 결승",
+      "ja": "ロワーブラケット決勝"
+    },
+    "format": "Bo5",
+    "startTime": null,
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thắng LB R5 #1",
+          "en": "Winner LB R5 #1",
+          "ko": "LB R5 #1 승자",
+          "ja": "LB R5 #1 勝者"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Thua MB Final",
+          "en": "Loser MB Final",
+          "ko": "MB Final 패자",
+          "ja": "MB Final 敗者"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  }
+]
