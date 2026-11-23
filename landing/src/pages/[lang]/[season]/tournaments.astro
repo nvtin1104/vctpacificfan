@@ -13,6 +13,8 @@ const lang = Astro.params.lang as Lang;
 const year = Number(Astro.params.season);
 const t = useT(lang, { year });
 const tournaments = await tournamentsOf(year);
+const circuitTournaments = tournaments.filter(x => x.data.kind !== 'offseason');
+const offseasonTournaments = tournaments.filter(x => x.data.kind === 'offseason');
 const tiers = [1, 2, 3] as const;
 const path = seasonPath(year, 'tournaments');
 ---
@@ -39,13 +41,20 @@ const path = seasonPath(year, 'tournaments');
       </button>
       {
         tiers.map(tier => {
-          const count = tournaments.filter(x => x.data.tier === tier).length;
+          const count = circuitTournaments.filter(x => x.data.tier === tier).length;
           return (
             <button type="button" class="tier-filter btn btn-ghost !px-3.5 !py-1.5 text-xs" aria-pressed="false" data-tier-filter={String(tier)}>
               {t(`tier.${tier}`)} <span class="tabular-nums text-muted">({count})</span>
             </button>
           );
         })
+      }
+      {
+        offseasonTournaments.length > 0 && (
+          <button type="button" class="tier-filter btn btn-ghost !px-3.5 !py-1.5 text-xs" aria-pressed="false" data-tier-filter="offseason">
+            {t('ticker.offseason')} <span class="tabular-nums text-muted">({offseasonTournaments.length})</span>
+          </button>
+        )
       }
     </div>
 
@@ -56,7 +65,7 @@ const path = seasonPath(year, 'tournaments');
             {t(`tier.${tier}long`)}
           </h2>
           <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {tournaments
+            {circuitTournaments
               .filter(x => x.data.tier === tier)
               .map(x => (
                 <TournamentCard tournament={x} lang={lang} />
@@ -64,6 +73,21 @@ const path = seasonPath(year, 'tournaments');
           </div>
         </section>
       ))
+    }
+
+    {
+      offseasonTournaments.length > 0 && (
+        <section class="mt-8" aria-labelledby="tier-list-offseason" data-tier-section="offseason">
+          <h2 id="tier-list-offseason" class="heading mb-5 text-xl">
+            {t('offseason.title')}
+          </h2>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {offseasonTournaments.map(x => (
+              <TournamentCard tournament={x} lang={lang} />
+            ))}
+          </div>
+        </section>
+      )
     }
 
     <Sources sources={seasonConfig(year).sources} lang={lang} />

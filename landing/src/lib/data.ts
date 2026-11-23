@@ -196,6 +196,7 @@ export async function feedersOf(id: string) {
 export async function journeyOf(team: Team, year: number) {
   const list = await tournamentsOf(year);
   const seeded = list.filter(t => t.data.slots.some(s => refId(s.team) === team.id));
+  if (team.data.orgRegion !== 'PAC') return { seeded, circuit: [] };
   const domestic = list.filter(t => t.data.kind === 'regional' && t.data.region === team.data.region);
   const wild = list.find(t => t.data.kind === 'wild-card');
   const circuit = domestic.length ? domestic : wild ? [wild] : [];
@@ -230,8 +231,10 @@ export async function upcomingTournaments(limit = 4, year = CURRENT_SEASON) {
     .slice(0, limit);
 }
 
-/** The season's headline event: the Pacific event that is running or comes next (else the last one). */
+/** The season's headline event: the Pacific circuit event that is running or comes next (else the last one). */
 export async function featuredEvent(year = CURRENT_SEASON) {
-  const pacific = (await tournamentsOf(year)).filter(t => t.data.tier === 2 && t.data.startDate).sort((a, b) => a.data.startDate!.localeCompare(b.data.startDate!));
+  const pacific = (await tournamentsOf(year))
+    .filter(t => t.data.tier === 2 && t.data.kind !== 'offseason' && t.data.startDate)
+    .sort((a, b) => a.data.startDate!.localeCompare(b.data.startDate!));
   return pacific.find(t => t.data.status !== 'completed') ?? pacific.at(-1);
 }

@@ -145,7 +145,9 @@ const website = {
                       {ev.data.location ? `${loc(ev.data.location.city, lang)}, ${countryName(ev.data.location.country, lang)}` : t('common.tba')}
                     </span>
                   </span>
-                  <span class="hidden text-xs font-semibold text-muted sm:block">{t(`tier.${ev.data.tier}`)}</span>
+                  <span class="hidden text-xs font-semibold text-muted sm:block">
+                    {ev.data.kind === 'offseason' ? t('ticker.offseason') : t(`tier.${ev.data.tier}`)}
+                  </span>
                 </a>
               </li>
             ))
