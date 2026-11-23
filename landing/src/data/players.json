@@ -71,8 +71,11 @@
     "name": "Adrian Jiggs Aisa Reyes",
     "avatar": "/images/players/invy.jpg",
     "country": "PH",
-    "role": null,
-    "socials": {}
+    "role": "Initiator",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Invy",
+      "x": "https://twitter.com/invyvlr"
+    }
   },
   {
     "id": "f0rsaken",
@@ -80,8 +83,11 @@
     "name": "Jason Susanto",
     "avatar": "/images/players/f0rsaken.jpg",
     "country": "ID",
-    "role": null,
-    "socials": {}
+    "role": "Controller",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/F0rsakeN",
+      "x": "https://twitter.com/jasonsusantoo"
+    }
   },
   {
     "id": "something",
@@ -89,16 +95,23 @@
     "name": "Ilia Petrov",
     "avatar": "/images/players/something.jpg",
     "country": "RU",
-    "role": null,
-    "socials": {}
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Something",
+      "x": "https://twitter.com/smthlikeyou11"
+    }
   },
   {
     "id": "patmen",
     "handle": "PatMen",
-    "name": null,
-    "country": null,
-    "role": null,
-    "socials": {}
+    "name": "Patrick Mendoza",
+    "avatar": "/images/players/patmen.jpg",
+    "country": "PH",
+    "role": "Controller",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/PatMen",
+      "x": "https://twitter.com/patmenvlr"
+    }
   },
   {
     "id": "t3xture",
@@ -115,10 +128,12 @@
     "id": "raxcal",
     "handle": "RaxcaL",
     "name": "Kim Min-seok",
+    "avatar": "/images/players/raxcal.jpg",
     "country": "KR",
-    "role": null,
+    "role": "Sentinel",
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/RaxcaL"
+      "liquipedia": "https://liquipedia.net/valorant/RaxcaL",
+      "x": "https://twitter.com/raxcal_vlrt"
     }
   },
   {
@@ -160,7 +175,9 @@
     "name": "Oh Eun-hyuk",
     "country": "KR",
     "role": "Controller",
-    "socials": {}
+    "socials": {
+      "x": "https://twitter.com/rayvlrt"
+    }
   },
   {
     "id": "izu",
@@ -169,39 +186,58 @@
     "avatar": "/images/players/izu.jpg",
     "country": "KR",
     "role": null,
-    "socials": {}
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/IZu",
+      "x": "https://twitter.com/izu_vlrt"
+    }
   },
   {
     "id": "stax",
     "handle": "stax",
     "name": "Kim Gu-taek",
+    "avatar": "/images/players/stax.jpg",
     "country": "KR",
-    "role": null,
-    "socials": {}
+    "role": "Initiator",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Stax",
+      "x": "https://twitter.com/staxvlrt"
+    }
   },
   {
     "id": "buzz",
     "handle": "BuZz",
     "name": "Yu Byung-chul",
+    "avatar": "/images/players/buzz.jpg",
     "country": "KR",
     "role": "Duelist",
-    "socials": {}
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/BuZz",
+      "x": "https://twitter.com/buzz_kr"
+    }
   },
   {
     "id": "crashies",
     "handle": "crashies",
     "name": "Austin Roberts",
+    "avatar": "/images/players/crashies.jpg",
     "country": "US",
     "role": "Initiator",
-    "socials": {}
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Crashies",
+      "x": "https://twitter.com/crashies"
+    }
   },
   {
     "id": "tenz",
     "handle": "TenZ",
     "name": "Tyson Van Ngo",
+    "avatar": "/images/players/tenz.jpg",
     "country": "CA",
     "role": null,
-    "socials": {}
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/TenZ",
+      "x": "https://twitter.com/tenzofficial"
+    }
   },
   {
     "id": "ken",
@@ -214,10 +250,14 @@
   {
     "id": "yatsuka",
     "handle": "yatsuka",
-    "name": null,
+    "name": "Kazuya Ikeda",
+    "avatar": "/images/players/yatsuka.jpg",
     "country": "JP",
-    "role": null,
-    "socials": {}
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Yatsuka",
+      "x": "https://twitter.com/yatsuka_07"
+    }
   },
   {
     "id": "xffero",
@@ -236,7 +276,7 @@
     "name": "Maksim Batorov",
     "avatar": "/images/players/jemkin.jpg",
     "country": "RU",
-    "role": null,
+    "role": "Duelist",
     "socials": {
       "liquipedia": "https://liquipedia.net/valorant/Jemkin"
     }
@@ -484,6 +524,256 @@
     "socials": {
       "liquipedia": "https://liquipedia.net/valorant/Cloud",
       "x": "https://twitter.com/cloudezeee"
+    }
+  },
+  {
+    "id": "primmie",
+    "handle": "primmie",
+    "name": "Papaphat Sriprapha",
+    "avatar": "/images/players/primmie.jpg",
+    "country": "TH",
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Primmie",
+      "x": "https://twitter.com/snowfake769437"
+    }
+  },
+  {
+    "id": "killua",
+    "handle": "Killua",
+    "name": "Tanate Teerasawad",
+    "avatar": "/images/players/killua.jpg",
+    "country": "TH",
+    "role": "Initiator",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Killua"
+    }
+  },
+  {
+    "id": "jitboys",
+    "handle": "JitBoyS",
+    "name": "Jittana Nokngam",
+    "avatar": "/images/players/jitboys.jpg",
+    "country": "TH",
+    "role": "Controller",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/JitBoyS"
+    }
+  },
+  {
+    "id": "marteen",
+    "handle": "marteen",
+    "name": "Martin Pátek",
+    "avatar": "/images/players/marteen.jpg",
+    "country": "CZ",
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Marteen",
+      "x": "https://twitter.com/imthemarteen"
+    }
+  },
+  {
+    "id": "minny",
+    "handle": "Minny",
+    "name": "Patrik Hušek",
+    "avatar": "/images/players/minny.jpg",
+    "country": "CZ",
+    "role": "Sentinel",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Minny",
+      "x": "https://twitter.com/minnyfn"
+    }
+  },
+  {
+    "id": "valyn",
+    "handle": "valyn",
+    "name": "Jacob Batio",
+    "avatar": "/images/players/valyn.jpg",
+    "country": "US",
+    "role": "Controller",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Valyn",
+      "x": "https://twitter.com/valynfps"
+    }
+  },
+  {
+    "id": "kingg",
+    "handle": "kiNgg",
+    "name": "Francisco Aravena",
+    "avatar": "/images/players/kingg.jpg",
+    "country": "CL",
+    "role": "Controller",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/KiNgg",
+      "x": "https://twitter.com/kinggfps"
+    }
+  },
+  {
+    "id": "sato",
+    "handle": "Sato",
+    "name": "Eduardo Kenzo Nagahama Sato",
+    "avatar": "/images/players/sato.jpg",
+    "country": "BR",
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Sato",
+      "x": "https://twitter.com/sato_pequeno"
+    }
+  },
+  {
+    "id": "hyunmin",
+    "handle": "HYUNMIN",
+    "name": "Song Hyun-min",
+    "avatar": "/images/players/hyunmin.jpg",
+    "country": "KR",
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/HYUNMIN",
+      "x": "https://twitter.com/hyunminval"
+    }
+  },
+  {
+    "id": "eeiu",
+    "handle": "eeiu",
+    "name": "Daniel Vucenovic",
+    "avatar": "/images/players/eeiu.jpg",
+    "country": "CA",
+    "role": "Initiator",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Eeiu",
+      "x": "https://twitter.com/777eeiu"
+    }
+  },
+  {
+    "id": "zekken",
+    "handle": "zekken",
+    "name": "Zachary Patrone",
+    "avatar": "/images/players/zekken.jpg",
+    "country": "US",
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Zekken",
+      "x": "https://twitter.com/zekkenval"
+    }
+  },
+  {
+    "id": "keiko",
+    "handle": "keiko",
+    "name": "Georgio Sanassy",
+    "avatar": "/images/players/keiko.jpg",
+    "country": "GB",
+    "role": "Controller",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Keiko",
+      "x": "https://twitter.com/keikofps"
+    }
+  },
+  {
+    "id": "tkzin",
+    "handle": "tkzin",
+    "name": "Enzo Zimiani",
+    "avatar": "/images/players/tkzin.jpg",
+    "country": "BR",
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Tkzin",
+      "x": "https://twitter.com/tkzinvlr"
+    }
+  },
+  {
+    "id": "artzin",
+    "handle": "artzin",
+    "name": "Arthur Araujo",
+    "avatar": "/images/players/artzin.jpg",
+    "country": "BR",
+    "role": "Controller",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/ArtziN",
+      "x": "https://twitter.com/1artzin"
+    }
+  },
+  {
+    "id": "basic",
+    "handle": "basic",
+    "name": "Luis Henrique Ferlin Tessaro",
+    "avatar": "/images/players/basic.jpg",
+    "country": "BR",
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Basic",
+      "x": "https://twitter.com/basicvlr"
+    }
+  },
+  {
+    "id": "cortezia",
+    "handle": "cortezia",
+    "name": "Gabriel Cortez",
+    "avatar": "/images/players/cortezia.jpg",
+    "country": "BR",
+    "role": "Sentinel",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Cortezia",
+      "x": "https://twitter.com/corteziafps"
+    }
+  },
+  {
+    "id": "vora",
+    "handle": "vora",
+    "name": "Jordan Pulwer",
+    "avatar": "/images/players/vora.jpg",
+    "country": "CA",
+    "role": "Initiator",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Vora",
+      "x": "https://twitter.com/vorazune"
+    }
+  },
+  {
+    "id": "timotino",
+    "handle": "Timotino",
+    "name": "Timothée Lavigne Dupont",
+    "avatar": "/images/players/timotino.jpg",
+    "country": "CA",
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Timotino",
+      "x": "https://twitter.com/timotino7"
+    }
+  },
+  {
+    "id": "bang",
+    "handle": "bang",
+    "name": "Sean Bezerra",
+    "avatar": "/images/players/bang.jpg",
+    "country": "US",
+    "role": "Controller",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Bang",
+      "x": "https://twitter.com/bangzerra"
+    }
+  },
+  {
+    "id": "cryocells",
+    "handle": "Cryocells",
+    "name": "Matthew Panganiban",
+    "avatar": "/images/players/cryocells.jpg",
+    "country": "US",
+    "role": "Sentinel",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Cryocells",
+      "x": "https://twitter.com/cryocells_"
+    }
+  },
+  {
+    "id": "asuna",
+    "handle": "Asuna",
+    "name": "Peter Mazuryk",
+    "avatar": "/images/players/asuna.jpg",
+    "country": "US",
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Asuna",
+      "x": "https://twitter.com/asunaa"
     }
   }
 ]

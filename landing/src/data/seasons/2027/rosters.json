@@ -23,7 +23,7 @@
       "label": "VCT Rostermania 2027 (vct.today) & Liquipedia",
       "url": "https://liquipedia.net/valorant/GAM_Esports"
     },
-    "asOf": "2026-11-13"
+    "asOf": "2026-11-23"
   },
   {
     "id": "crazy-raccoon-2027",
@@ -119,7 +119,7 @@
       "label": "VCT Rostermania 2027 (vct.today) & Liquipedia",
       "url": "https://liquipedia.net/valorant/Crazy_Raccoon"
     },
-    "asOf": "2026-11-13"
+    "asOf": "2026-11-23"
   },
   {
     "id": "paper-rex-2027",
@@ -133,31 +133,38 @@
     "roster": [
       {
         "player": "invy",
-        "role": null,
+        "role": "Initiator",
         "igl": false,
         "sub": false,
         "status": "official"
       },
       {
         "player": "f0rsaken",
-        "role": null,
+        "role": "Controller",
         "igl": false,
         "sub": false,
         "status": "official"
       },
       {
         "player": "something",
-        "role": null,
+        "role": "Duelist",
         "igl": false,
         "sub": false,
         "status": "official"
       },
       {
         "player": "patmen",
-        "role": null,
+        "role": "Controller",
         "igl": false,
         "sub": false,
-        "status": "reported"
+        "status": "official"
+      },
+      {
+        "player": "primmie",
+        "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "official"
       }
     ],
     "staff": [
@@ -252,10 +259,10 @@
       }
     ],
     "source": {
-      "label": "Liquipedia - Paper Rex",
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - Paper Rex",
       "url": "https://liquipedia.net/valorant/Paper_Rex"
     },
-    "asOf": "2026-11-13"
+    "asOf": "2026-11-23"
   },
   {
     "id": "gen-g-2027",
@@ -269,14 +276,7 @@
     "roster": [
       {
         "player": "t3xture",
-        "role": null,
-        "igl": false,
-        "sub": false,
-        "status": "official"
-      },
-      {
-        "player": "raxcal",
-        "role": null,
+        "role": "Duelist",
         "igl": false,
         "sub": false,
         "status": "official"
@@ -297,7 +297,7 @@
       },
       {
         "player": "mako",
-        "role": null,
+        "role": "Controller",
         "igl": false,
         "sub": false,
         "status": "official"
@@ -307,7 +307,7 @@
         "role": "Controller",
         "igl": false,
         "sub": false,
-        "status": "reported"
+        "status": "official"
       }
     ],
     "staff": [
@@ -380,10 +380,10 @@
       }
     ],
     "source": {
-      "label": "Liquipedia - Gen.G Esports",
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - Gen.G Esports",
       "url": "https://liquipedia.net/valorant/Gen.G_Esports"
     },
-    "asOf": "2026-11-13"
+    "asOf": "2026-11-23"
   },
   {
     "id": "t1-2027",
@@ -404,7 +404,7 @@
       },
       {
         "player": "stax",
-        "role": null,
+        "role": "Initiator",
         "igl": false,
         "sub": false,
         "status": "official"
@@ -435,10 +435,10 @@
       {
         "handle": "Sacy",
         "position": "head-coach",
-        "status": "reported"
+        "status": "official"
       },
       {
-        "handle": "sungmin",
+        "handle": "Sungmin",
         "position": "coach",
         "status": "official"
       }
@@ -506,10 +506,10 @@
       }
     ],
     "source": {
-      "label": "Liquipedia - T1",
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - T1",
       "url": "https://liquipedia.net/valorant/T1"
     },
-    "asOf": "2026-11-13"
+    "asOf": "2026-11-23"
   },
   {
     "id": "zeta-division-2027",
@@ -530,7 +530,7 @@
       },
       {
         "player": "yatsuka",
-        "role": null,
+        "role": "Duelist",
         "igl": false,
         "sub": false,
         "status": "reported"
@@ -538,17 +538,81 @@
     ],
     "staff": [
       {
-        "handle": "ryota-",
-        "position": "head-coach",
+        "handle": "XQQ",
+        "position": "coach",
+        "status": "official"
+      },
+      {
+        "handle": "gya9",
+        "position": "analyst",
         "status": "official"
       }
     ],
-    "history": [],
+    "history": [
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Stage 2",
+        "placement": "7th - 8th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Pacific_League/Stage_2"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026: Pacific Qualifier",
+        "placement": "4th"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Stage 1",
+        "placement": "9th - 10th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Pacific_League/Stage_1"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Kickoff",
+        "placement": "9th - 10th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Pacific_League/Kickoff"
+      },
+      {
+        "year": 2025,
+        "event": "Red Bull Home Ground 2025",
+        "placement": "3rd",
+        "url": "https://liquipedia.net/valorant/Red_Bull/Home_Ground/2025"
+      },
+      {
+        "year": 2025,
+        "event": "SOOP VALORANT League 2025",
+        "placement": "7th - 8th",
+        "url": "https://liquipedia.net/valorant/SOOP/VALORANT_LEAGUE/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Stage 2",
+        "placement": "9th - 10th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Pacific_League/Stage_2"
+      },
+      {
+        "year": 2025,
+        "event": "Hero Esports Asian Champions League 2025",
+        "placement": "6th"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Stage 1",
+        "placement": "9th - 10th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Pacific_League/Stage_1"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Kickoff",
+        "placement": "9th - 12th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Pacific_League/Kickoff"
+      }
+    ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today)",
-      "url": "https://vct.today/pacific"
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - ZETA DIVISION",
+      "url": "https://liquipedia.net/valorant/ZETA_DIVISION"
     },
-    "asOf": "2026-11-12"
+    "asOf": "2026-11-23"
   },
   {
     "id": "rex-regum-qeon-2027",
@@ -569,6 +633,20 @@
       },
       {
         "player": "jemkin",
+        "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "monyet",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "kushy",
         "role": null,
         "igl": false,
         "sub": false,
@@ -582,18 +660,85 @@
         "status": "reported"
       }
     ],
-    "history": [],
+    "history": [
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Stage 2",
+        "placement": "9th - 12th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Pacific_League/Stage_2"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026",
+        "placement": "13th - 16th",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2026"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Stage 1",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Pacific_League/Stage_1"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Pacific Kickoff",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Pacific_League/Kickoff"
+      },
+      {
+        "year": 2025,
+        "event": "SOOP VALORANT League 2025",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/SOOP/VALORANT_LEAGUE/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Champions 2025",
+        "placement": "9th - 12th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Champions"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Stage 2",
+        "placement": "2nd",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Pacific_League/Stage_2"
+      },
+      {
+        "year": 2025,
+        "event": "Esports World Cup 2025",
+        "placement": "9th - 12th",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VALORANT Masters Toronto 2025",
+        "placement": "7th - 8th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Stage_2/Masters"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Stage 1",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Pacific_League/Stage_1"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Pacific Kickoff",
+        "placement": "7th - 8th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Pacific_League/Kickoff"
+      }
+    ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today)",
-      "url": "https://vct.today/pacific"
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - Rex Regum Qeon",
+      "url": "https://liquipedia.net/valorant/Rex_Regum_Qeon"
     },
-    "asOf": "2026-11-12"
+    "asOf": "2026-11-23"
   },
   {
     "id": "full-sense-2027",
     "team": "full-sense",
     "status": "partner",
-    "partnerSince": null,
+    "partnerSince": 2026,
     "capsule": {
       "name": null,
       "confirmed": false
@@ -602,15 +747,22 @@
       {
         "player": "seph1roth",
         "role": null,
+        "igl": true,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "killua",
+        "role": "Initiator",
         "igl": false,
         "sub": false,
         "status": "official"
       },
       {
-        "player": "leviathan",
-        "role": null,
+        "player": "jitboys",
+        "role": "Controller",
         "igl": false,
-        "sub": true,
+        "sub": false,
         "status": "official"
       },
       {
@@ -619,28 +771,25 @@
         "igl": false,
         "sub": false,
         "status": "reported"
+      },
+      {
+        "player": "leviathan",
+        "role": null,
+        "igl": false,
+        "sub": true,
+        "status": "official"
       }
     ],
     "staff": [
       {
-        "handle": "FrosT",
+        "handle": "Crws",
         "position": "head-coach",
-        "status": "official"
-      },
-      {
-        "handle": "sushiboys",
-        "position": "coach",
         "status": "official"
       },
       {
         "handle": "THEE",
         "position": "coach",
         "status": "official"
-      },
-      {
-        "handle": "Crws",
-        "position": "head-coach",
-        "status": "reported"
       }
     ],
     "history": [
@@ -701,10 +850,10 @@
       }
     ],
     "source": {
-      "label": "Liquipedia - FULL SENSE",
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - FULL SENSE",
       "url": "https://liquipedia.net/valorant/FULL_SENSE"
     },
-    "asOf": "2026-11-13"
+    "asOf": "2026-11-23"
   },
   {
     "id": "g2-esports-2027",
@@ -729,12 +878,38 @@
         "igl": false,
         "sub": false,
         "status": "official"
+      },
+      {
+        "player": "kingg",
+        "role": "Controller",
+        "igl": true,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "sato",
+        "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "hyunmin",
+        "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "official"
       }
     ],
     "staff": [
       {
         "handle": "JoshRT",
         "position": "head-coach",
+        "status": "official"
+      },
+      {
+        "handle": "shhhack",
+        "position": "coach",
         "status": "official"
       },
       {
@@ -842,10 +1017,10 @@
       }
     ],
     "source": {
-      "label": "Liquipedia - G2 Esports",
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - G2 Esports",
       "url": "https://liquipedia.net/valorant/G2_Esports"
     },
-    "asOf": "2026-11-13"
+    "asOf": "2026-11-23"
   },
   {
     "id": "loud-2027",
@@ -858,32 +1033,39 @@
     },
     "roster": [
       {
-        "player": "lukxo",
-        "role": null,
-        "igl": false,
-        "sub": false,
-        "status": "official"
-      },
-      {
-        "player": "darker",
-        "role": "Controller",
-        "igl": false,
-        "sub": false,
-        "status": "official"
-      },
-      {
-        "player": "erde",
-        "role": "Controller",
-        "igl": true,
-        "sub": false,
-        "status": "official"
-      },
-      {
         "player": "davih",
         "role": "Initiator",
         "igl": false,
         "sub": false,
         "status": "official"
+      },
+      {
+        "player": "tkzin",
+        "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "artzin",
+        "role": "Controller",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "basic",
+        "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "cortezia",
+        "role": "Sentinel",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
       }
     ],
     "staff": [
@@ -949,10 +1131,10 @@
       }
     ],
     "source": {
-      "label": "Liquipedia - LOUD",
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - LOUD",
       "url": "https://liquipedia.net/valorant/LOUD"
     },
-    "asOf": "2026-11-13"
+    "asOf": "2026-11-23"
   },
   {
     "id": "sentinels-2027",
@@ -973,14 +1155,14 @@
       },
       {
         "player": "oxy",
-        "role": null,
+        "role": "Duelist",
         "igl": false,
         "sub": false,
         "status": "official"
       },
       {
         "player": "brawk",
-        "role": null,
+        "role": "Initiator",
         "igl": false,
         "sub": false,
         "status": "official"
@@ -988,6 +1170,13 @@
       {
         "player": "canezerra",
         "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "keiko",
+        "role": "Controller",
         "igl": false,
         "sub": false,
         "status": "official"
@@ -1099,10 +1288,10 @@
       }
     ],
     "source": {
-      "label": "Liquipedia - Sentinels",
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - Sentinels",
       "url": "https://liquipedia.net/valorant/Sentinels"
     },
-    "asOf": "2026-11-13"
+    "asOf": "2026-11-23"
   },
   {
     "id": "nrg-2027",
@@ -1134,6 +1323,20 @@
         "igl": false,
         "sub": false,
         "status": "official"
+      },
+      {
+        "player": "eeiu",
+        "role": "Initiator",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "zekken",
+        "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
       }
     ],
     "staff": [
@@ -1241,10 +1444,10 @@
       }
     ],
     "source": {
-      "label": "Liquipedia - NRG",
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - NRG",
       "url": "https://liquipedia.net/valorant/NRG"
     },
-    "asOf": "2026-11-13"
+    "asOf": "2026-11-23"
   },
   {
     "id": "fnatic-2027",
@@ -1269,9 +1472,36 @@
         "igl": false,
         "sub": false,
         "status": "official"
+      },
+      {
+        "player": "valyn",
+        "role": "Controller",
+        "igl": true,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "marteen",
+        "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "minny",
+        "role": "Sentinel",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
       }
     ],
-    "staff": [],
+    "staff": [
+      {
+        "handle": "ANGE1",
+        "position": "head-coach",
+        "status": "reported"
+      }
+    ],
     "history": [
       {
         "year": 2026,
@@ -1353,9 +1583,146 @@
       }
     ],
     "source": {
-      "label": "Liquipedia - Fnatic",
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - Fnatic",
       "url": "https://liquipedia.net/valorant/Fnatic"
     },
-    "asOf": "2026-11-13"
+    "asOf": "2026-11-23"
+  },
+  {
+    "id": "100-thieves-2027",
+    "team": "100-thieves",
+    "status": "invited",
+    "partnerSince": null,
+    "capsule": {
+      "name": null,
+      "confirmed": false
+    },
+    "roster": [
+      {
+        "player": "vora",
+        "role": "Initiator",
+        "igl": true,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "timotino",
+        "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "bang",
+        "role": "Controller",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "cryocells",
+        "role": "Sentinel",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      },
+      {
+        "player": "asuna",
+        "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "official"
+      }
+    ],
+    "staff": [
+      {
+        "handle": "Nbs",
+        "position": "head-coach",
+        "status": "official"
+      },
+      {
+        "handle": "d00mbr0s",
+        "position": "coach",
+        "status": "official"
+      },
+      {
+        "handle": "Kaimera",
+        "position": "coach",
+        "status": "official"
+      }
+    ],
+    "history": [
+      {
+        "year": 2026,
+        "event": "VALORANT Champions 2026",
+        "placement": "3rd",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Champions"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Stage 2",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Stage_2"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026",
+        "placement": "1st",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2026"
+      },
+      {
+        "year": 2026,
+        "event": "Esports World Cup 2026: Americas Qualifier",
+        "placement": "1st - 2nd",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2026/Americas"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Stage 1",
+        "placement": "4th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Stage_1"
+      },
+      {
+        "year": 2026,
+        "event": "VCT 2026: Americas Kickoff",
+        "placement": "5th",
+        "url": "https://liquipedia.net/valorant/VCT/2026/Americas_League/Kickoff"
+      },
+      {
+        "year": 2025,
+        "event": "Sentinels Invitational 2025",
+        "placement": "3rd",
+        "url": "https://liquipedia.net/valorant/Sentinels_Invitational/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Stage 2",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Stage_2"
+      },
+      {
+        "year": 2025,
+        "event": "Esports World Cup 2025",
+        "placement": "13th - 16th",
+        "url": "https://liquipedia.net/valorant/Esports_World_Cup/2025"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Stage 1",
+        "placement": "5th - 6th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Stage_1"
+      },
+      {
+        "year": 2025,
+        "event": "VCT 2025: Americas Kickoff",
+        "placement": "9th - 12th",
+        "url": "https://liquipedia.net/valorant/VCT/2025/Americas_League/Kickoff"
+      }
+    ],
+    "source": {
+      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - 100 Thieves",
+      "url": "https://liquipedia.net/valorant/100_Thieves"
+    },
+    "asOf": "2026-11-23"
   }
 ]
