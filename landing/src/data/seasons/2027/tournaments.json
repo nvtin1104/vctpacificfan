@@ -242,10 +242,10 @@
     "status": "upcoming",
     "format": {
       "summary": {
-        "vi": "12 đội (8 Partner + 4 Open Qualifier), LAN. Top 3 giành vé Masters Seoul. Nhánh Triple-Elimination (Upper/Middle/Lower) dựng theo thể thức Kickoff 2025–2026, chờ Riot xác nhận cho 2027.",
-        "en": "12 teams (8 Partners + 4 Open Qualifiers), LAN. Top 3 qualify for Masters Seoul. Triple-elimination bracket (Upper/Middle/Lower) modelled on the 2025–2026 Kickoff format; 2027 confirmation pending.",
-        "ko": "12팀(파트너 8 + 오픈 예선 4), LAN. 상위 3팀 마스터스 서울 진출. 트리플 엘리미네이션(상위/중위/하위) 대진은 2025–2026 킥오프 방식을 기반으로 했으며 2027년 방식은 확정 대기 중.",
-        "ja": "12チーム（パートナー8＋オープン予選4）、LAN。上位3チームがMasters Seoulへ。トリプルエリミネーション（アッパー／ミドル／ロワー）は2025–2026キックオフ形式を基にしたもので、2027年の確定待ち。"
+        "vi": "12 đội thi đấu LAN tại Bangkok: 8 đội Partner (suất đảm bảo duy nhất trong năm) + 4 đội từ Vòng Loại Kickoff (Hàn Quốc 1, Nhật Bản 1, Đông Nam Á 1, VLCC Kickoff 1). Top 3 giành vé dự Masters Seoul và nhận đặc cách vào thẳng Playoffs khu vực kế tiếp; mỗi đội từ Vòng Loại Mở góp mặt nhận hỗ trợ cố định $100,000.",
+        "en": "12 teams on LAN in Bangkok: 8 Partner teams (their only guaranteed berth of the year) + 4 teams from the Kickoff Qualifiers (Korea 1, Japan 1, Southeast Asia 1, Kickoff LCQ 1). Top 3 qualify for Masters Seoul and earn a direct seed into their next Regional Playoffs; each Open Qualifier team appearing receives a fixed $100,000 stipend.",
+        "ko": "방콕 LAN 12팀: 파트너 8팀(연중 유일한 보장 시드) + 킥오프 예선 통과 4팀(한국 1, 일본 1, 동남아 1, 킥오프 LCQ 1). 상위 3팀은 마스터스 서울에 진출하며 다음 지역 플레이오프에 직행하고, 오픈 예선 출신 출전 팀은 $100,000 고정 지원금을 받습니다.",
+        "ja": "バンコクLAN 12チーム：パートナー8チーム（年間唯一の保証枠）＋Kickoff予選通過4チーム（韓国1、日本1、東南アジア1、Kickoff LCQ 1）。上位3チームがMasters Seoulへ進出し次回の地域プレイオフにシードされ、オープン予選から出場した各チームには固定支援金$100,000が支給されます。"
       },
       "teams": 12,
       "confirmed": false
@@ -336,40 +336,40 @@
         "team": null,
         "from": "vct-pacific-2027-kickoff-qualifier",
         "label": {
-          "vi": "Open Qualifier #1",
-          "en": "Open Qualifier #1",
-          "ko": "오픈 예선 #1",
-          "ja": "オープン予選 #1"
+          "vi": "Vòng loại Kickoff Hàn Quốc",
+          "en": "Kickoff Korea Qualifier",
+          "ko": "킥오프 한국 예선",
+          "ja": "Kickoff 韓国予選"
         }
       },
       {
         "team": null,
         "from": "vct-pacific-2027-kickoff-qualifier",
         "label": {
-          "vi": "Open Qualifier #2",
-          "en": "Open Qualifier #2",
-          "ko": "오픈 예선 #2",
-          "ja": "オープン予選 #2"
+          "vi": "Vòng loại Kickoff Nhật Bản",
+          "en": "Kickoff Japan Qualifier",
+          "ko": "킥오프 일본 예선",
+          "ja": "Kickoff 日本予選"
         }
       },
       {
         "team": null,
         "from": "vct-pacific-2027-kickoff-qualifier",
         "label": {
-          "vi": "Open Qualifier #3",
-          "en": "Open Qualifier #3",
-          "ko": "오픈 예선 #3",
-          "ja": "オープン予選 #3"
+          "vi": "Vòng loại Kickoff Đông Nam Á",
+          "en": "Kickoff SEA Qualifier",
+          "ko": "킥오프 동남아 예선",
+          "ja": "Kickoff 東南アジア予選"
         }
       },
       {
         "team": null,
         "from": "vct-pacific-2027-kickoff-qualifier",
         "label": {
-          "vi": "Open Qualifier #4",
-          "en": "Open Qualifier #4",
-          "ko": "오픈 예선 #4",
-          "ja": "オープン予選 #4"
+          "vi": "VLCC Kickoff (SA / OCE / #2 SEA)",
+          "en": "Kickoff LCQ (SA / OCE / #2 SEA)",
+          "ko": "킥오프 LCQ (남아시아·오세아니아·동남아 2위)",
+          "ja": "Kickoff LCQ（南アジア・オセアニア・東南アジア2位）"
         }
       }
     ],
@@ -392,6 +392,10 @@
       "ja": "VCT Pacific 2027の開幕戦、バンコク、2027年1月11日〜31日。初めてオープン予選の4チームがパートナー8チームと対等に、ソウル行き3枠を争います。"
     },
     "sources": [
+      {
+        "label": "VALORANT Esports - Giới Thiệu VCT Pacific 2027 (VCT Pacific 2027 Primer)",
+        "url": "https://valorantesports.com/vi-VN/news/vct-pacific-2027-primer"
+      },
       {
         "label": "Sports Kyunghyang - VCT Pacific 2027 format (2026-10-28)",
         "url": "https://sports.khan.co.kr/en/article/202610281645007/"
@@ -433,10 +437,10 @@
     "status": "upcoming",
     "format": {
       "summary": {
-        "vi": "12 đội: 11 suất theo khu vực (Hàn 3, Nhật 3, Wild Card 2, Thái Lan 1, Indonesia 1, Việt Nam 1) + 1 suất LCQ. Đội Partner không được vào thẳng - phải giành suất qua giải khu vực. Chi tiết nhánh đấu chờ Riot công bố.",
-        "en": "12 teams: 11 regional berths (Korea 3, Japan 3, Wild Card 2, Thailand 1, Indonesia 1, Vietnam 1) + 1 LCQ berth. Partner teams are not seeded in - they must earn a berth through their regional competition. Bracket details TBA.",
-        "ko": "12팀: 지역별 11장(한국 3, 일본 3, 와일드카드 2, 태국 1, 인도네시아 1, 베트남 1) + LCQ 1장. 파트너 팀도 자동 진출이 아니며 지역 대회를 통해 출전권을 따야 합니다. 대진 방식은 발표 예정.",
-        "ja": "12チーム：地域枠11（韓国3、日本3、ワイルドカード2、タイ1、インドネシア1、ベトナム1）＋LCQ枠1。パートナーチームも自動出場ではなく、地域大会で出場権を獲得する必要があります。ブラケット詳細は発表待ち。"
+        "vi": "12 đội thi đấu LAN: 11 suất trực tiếp từ Vòng Playoffs 6 khu vực (Hàn Quốc 3, Nhật Bản 3, Đông Nam Á 2, Thái Lan 1, Indonesia 1, Việt Nam 1) + 1 suất từ Vòng Loại Cuối Cùng (VLCC 8 đội). Đội Partner không được vào thẳng mà phải vượt qua Vòng Playoffs khu vực; mỗi đội từ Vòng Loại Mở góp mặt nhận hỗ trợ cố định $100,000.",
+        "en": "12 teams on LAN: 11 direct berths from 6 Regional Playoffs (Korea 3, Japan 3, Southeast Asia 2, Thailand 1, Indonesia 1, Vietnam 1) + 1 berth from the 8-team Pacific Cup LCQ. Partner teams are not seeded in - they must qualify through their Regional Playoffs; each Open Qualifier team receives a fixed $100,000 stipend.",
+        "ko": "LAN 12팀: 6개 지역 플레이오프 직행 11장(한국 3, 일본 3, 동남아 2, 태국 1, 인도네시아 1, 베트남 1) + 8팀 규모 퍼시픽 컵 LCQ 1장. 파트너 팀도 자동 진출 없이 지역 플레이오프를 통과해야 하며, 오픈 예선 통과 팀은 $100,000 고정 지원금을 받습니다.",
+        "ja": "LAN 12チーム：6地域のプレイオフ直行11枠（韓国3、日本3、東南アジア2、タイ1、インドネシア1、ベトナム1）＋8チームによるPacific Cup LCQ 1枠。パートナーチームもシードなしで地域プレイオフを勝ち抜く必要があり、オープン予選からの出場チームには固定支援金$100,000が支給されます。"
       },
       "teams": 12,
       "confirmed": false
@@ -507,20 +511,20 @@
         "team": null,
         "from": "vct-2027-pacific-wild-card",
         "label": {
-          "vi": "Wild Card (PH, MY, SG, phần còn lại SEA, Nam Á, châu Đại Dương) #1",
-          "en": "Wild Card #1",
-          "ko": "와일드카드 #1",
-          "ja": "ワイルドカード #1"
+          "vi": "Đông Nam Á (SEA) #1",
+          "en": "Southeast Asia (SEA) #1",
+          "ko": "동남아시아 (SEA) #1",
+          "ja": "東南アジア (SEA) #1"
         }
       },
       {
         "team": null,
         "from": "vct-2027-pacific-wild-card",
         "label": {
-          "vi": "Wild Card (PH, MY, SG, phần còn lại SEA, Nam Á, châu Đại Dương) #2",
-          "en": "Wild Card #2",
-          "ko": "와일드카드 #2",
-          "ja": "ワイルドカード #2"
+          "vi": "Đông Nam Á (SEA) #2",
+          "en": "Southeast Asia (SEA) #2",
+          "ko": "동남아시아 (SEA) #2",
+          "ja": "東南アジア (SEA) #2"
         }
       },
       {
@@ -584,6 +588,10 @@
     },
     "sources": [
       {
+        "label": "VALORANT Esports - Giới Thiệu VCT Pacific 2027 (VCT Pacific 2027 Primer)",
+        "url": "https://valorantesports.com/vi-VN/news/vct-pacific-2027-primer"
+      },
+      {
         "label": "Sports Kyunghyang - VCT Pacific 2027 format (2026-10-28)",
         "url": "https://sports.khan.co.kr/en/article/202610281645007/"
       },
@@ -616,10 +624,10 @@
     "status": "upcoming",
     "format": {
       "summary": {
-        "vi": "12 đội: 11 suất theo khu vực (Hàn 3, Nhật 3, Wild Card 2, Thái Lan 1, Indonesia 1, Việt Nam 1) + 1 suất LCQ. Đội Partner không được vào thẳng - phải giành suất qua giải khu vực. Chi tiết nhánh đấu chờ Riot công bố.",
-        "en": "12 teams: 11 regional berths (Korea 3, Japan 3, Wild Card 2, Thailand 1, Indonesia 1, Vietnam 1) + 1 LCQ berth. Partner teams are not seeded in - they must earn a berth through their regional competition. Bracket details TBA.",
-        "ko": "12팀: 지역별 11장(한국 3, 일본 3, 와일드카드 2, 태국 1, 인도네시아 1, 베트남 1) + LCQ 1장. 파트너 팀도 자동 진출이 아니며 지역 대회를 통해 출전권을 따야 합니다. 대진 방식은 발표 예정.",
-        "ja": "12チーム：地域枠11（韓国3、日本3、ワイルドカード2、タイ1、インドネシア1、ベトナム1）＋LCQ枠1。パートナーチームも自動出場ではなく、地域大会で出場権を獲得する必要があります。ブラケット詳細は発表待ち。"
+        "vi": "12 đội thi đấu LAN: 11 suất trực tiếp từ Vòng Playoffs 6 khu vực (Hàn Quốc 3, Nhật Bản 3, Đông Nam Á 2, Thái Lan 1, Indonesia 1, Việt Nam 1) + 1 suất từ Vòng Loại Cuối Cùng (VLCC 8 đội). Đội Partner không được vào thẳng mà phải vượt qua Vòng Playoffs khu vực; mỗi đội từ Vòng Loại Mở góp mặt nhận hỗ trợ cố định $100,000.",
+        "en": "12 teams on LAN: 11 direct berths from 6 Regional Playoffs (Korea 3, Japan 3, Southeast Asia 2, Thailand 1, Indonesia 1, Vietnam 1) + 1 berth from the 8-team Pacific Cup LCQ. Partner teams are not seeded in - they must qualify through their Regional Playoffs; each Open Qualifier team receives a fixed $100,000 stipend.",
+        "ko": "LAN 12팀: 6개 지역 플레이오프 직행 11장(한국 3, 일본 3, 동남아 2, 태국 1, 인도네시아 1, 베트남 1) + 8팀 규모 퍼시픽 컵 LCQ 1장. 파트너 팀도 자동 진출 없이 지역 플레이오프를 통과해야 하며, 오픈 예선 통과 팀은 $100,000 고정 지원금을 받습니다.",
+        "ja": "LAN 12チーム：6地域のプレイオフ直行11枠（韓国3、日本3、東南アジア2、タイ1、インドネシア1、ベトナム1）＋8チームによるPacific Cup LCQ 1枠。パートナーチームもシードなしで地域プレイオフを勝ち抜く必要があり、オープン予選からの出場チームには固定支援金$100,000が支給されます。"
       },
       "teams": 12,
       "confirmed": false
@@ -690,20 +698,20 @@
         "team": null,
         "from": "vct-2027-pacific-wild-card",
         "label": {
-          "vi": "Wild Card (PH, MY, SG, phần còn lại SEA, Nam Á, châu Đại Dương) #1",
-          "en": "Wild Card #1",
-          "ko": "와일드카드 #1",
-          "ja": "ワイルドカード #1"
+          "vi": "Đông Nam Á (SEA) #1",
+          "en": "Southeast Asia (SEA) #1",
+          "ko": "동남아시아 (SEA) #1",
+          "ja": "東南アジア (SEA) #1"
         }
       },
       {
         "team": null,
         "from": "vct-2027-pacific-wild-card",
         "label": {
-          "vi": "Wild Card (PH, MY, SG, phần còn lại SEA, Nam Á, châu Đại Dương) #2",
-          "en": "Wild Card #2",
-          "ko": "와일드카드 #2",
-          "ja": "ワイルドカード #2"
+          "vi": "Đông Nam Á (SEA) #2",
+          "en": "Southeast Asia (SEA) #2",
+          "ko": "동남아시아 (SEA) #2",
+          "ja": "東南アジア (SEA) #2"
         }
       },
       {
@@ -767,6 +775,10 @@
     },
     "sources": [
       {
+        "label": "VALORANT Esports - Giới Thiệu VCT Pacific 2027 (VCT Pacific 2027 Primer)",
+        "url": "https://valorantesports.com/vi-VN/news/vct-pacific-2027-primer"
+      },
+      {
         "label": "Sports Kyunghyang - VCT Pacific 2027 format (2026-10-28)",
         "url": "https://sports.khan.co.kr/en/article/202610281645007/"
       },
@@ -790,10 +802,10 @@
     "status": "upcoming",
     "format": {
       "summary": {
-        "vi": "Nhiều đợt Open Qualifier → Play-In → Playoffs. Đội thắng đợt đầu đi Play-In; đội xếp cao ở các đợt sau vào thẳng Playoffs; đội bị loại sớm vẫn có cơ hội ở đợt sau.",
-        "en": "Multiple Open Qualifier waves → Play-In → Playoffs. First-wave qualifiers go to the Play-In; high finishers in later waves go straight to Playoffs; teams knocked out early get another chance.",
-        "ko": "여러 차례 오픈 예선 → 플레이인 → 플레이오프. 1차 통과 팀은 플레이인, 이후 차수 상위 팀은 플레이오프 직행, 조기 탈락 팀도 다음 차수에서 재도전 가능.",
-        "ja": "複数回のオープン予選 → プレイイン → プレイオフ。第1回通過チームはプレイインへ、以降の回の上位はプレイオフへ直行、早期敗退チームも次の回で再挑戦可能。"
+        "vi": "Vòng loại mở dẫn vào Playoffs Kickoff tại 3 khu vực: Hàn Quốc (1 suất), Nhật Bản (1 suất), Đông Nam Á (1 suất), cùng giải VLCC Kickoff gồm 4 đội (2 đội Nam Á, 1 đội Châu Đại Dương và Á quân Playoffs Kickoff Đông Nam Á) tranh suất thứ 4 tới Bangkok.",
+        "en": "Open qualifiers leading into regional Kickoff Playoffs across Korea (1 berth), Japan (1 berth), and Southeast Asia (1 berth), plus a 4-team Kickoff LCQ (2 South Asia teams, 1 Oceania team, and the SEA Kickoff Playoffs runner-up) for the 4th ticket to Bangkok.",
+        "ko": "한국(1장), 일본(1장), 동남아시아(1장) 지역별 킥오프 플레이오프와 4팀 규모의 킥오프 LCQ(남아시아 2팀, 오세아니아 1팀, 동남아 킥오프 플레이오프 준우승팀)를 통해 방콕행 4장의 티켓을 결정합니다.",
+        "ja": "韓国（1枠）、日本（1枠）、東南アジア（1枠）の地域別Kickoffプレイオフに加え、4チームによるKickoff LCQ（南アジア2チーム、オセアニア1チーム、東南アジアKickoffプレイオフ準優勝チーム）でバンコク行き4枠を決定します。"
       },
       "teams": null,
       "confirmed": true
@@ -813,12 +825,16 @@
       }
     ],
     "description": {
-      "vi": "Vòng loại mở toàn khu vực Pacific, bắt đầu từ tháng 11/2026. Lịch chi tiết chờ Riot công bố.",
-      "en": "Region-wide open qualifiers for Pacific, starting November 2026. Detailed schedule TBA.",
-      "ko": "퍼시픽 전역 오픈 예선, 2026년 11월 시작. 세부 일정 발표 예정.",
-      "ja": "Pacific全域のオープン予選、2026年11月開始。詳細日程は発表待ち。"
+      "vi": "Hệ thống Vòng loại VCT Pacific Kickoff 2027 khởi tranh cuối năm 2026 tại Hàn Quốc, Nhật Bản, Đông Nam Á và VLCC (Nam Á / Châu Đại Dương / #2 SEA).",
+      "en": "The VCT Pacific 2027 Kickoff Qualifier circuit starting late 2026 across Korea, Japan, Southeast Asia, and the Kickoff LCQ (South Asia / Oceania / #2 SEA).",
+      "ko": "2026년 말 시작되는 VCT 퍼시픽 2027 킥오프 예선 (한국, 일본, 동남아시아 및 킥오프 LCQ).",
+      "ja": "2026年末に開幕するVCT Pacific 2027 Kickoff予選（韓国、日本、東南アジア、Kickoff LCQ）。"
     },
     "sources": [
+      {
+        "label": "VALORANT Esports - Giới Thiệu VCT Pacific 2027 (VCT Pacific 2027 Primer)",
+        "url": "https://valorantesports.com/vi-VN/news/vct-pacific-2027-primer"
+      },
       {
         "label": "Sports Kyunghyang - VCT Pacific 2027 format (2026-10-28)",
         "url": "https://sports.khan.co.kr/en/article/202610281645007/"
@@ -843,12 +859,12 @@
     "status": "upcoming",
     "format": {
       "summary": {
-        "vi": "Giải khu vực Hàn Quốc: 3 suất vào mỗi Cup.",
-        "en": "South Korea regional competition: 3 berth(s) per Cup.",
-        "ko": "대한민국 지역 대회: 컵마다 3장.",
-        "ja": "韓国地域大会：各Cupに3枠。"
+        "vi": "Giải khu vực Hàn Quốc: Vòng Loại Mở → Vòng Play-Ins (8 đội) → Vòng Playoffs (8 đội), chọn 3 suất trực tiếp vào mỗi Pacific Cup. Đội dự Masters ngay trước đó được đặc cách vào thẳng Top 4 Playoffs.",
+        "en": "South Korea regional competition: Open Qualifiers → Play-Ins (8 teams) → Playoffs (8 teams), awarding 3 direct berths per Pacific Cup. Teams reaching the preceding Masters are seeded directly into the Playoffs top 4.",
+        "ko": "대한민국 지역 대회: 오픈 예선 → 플레이인(8팀) → 플레이오프(8팀)를 통해 컵마다 직행 3장을 선발합니다. 직전 마스터스 진출 팀은 플레이오프 상위 4시드에 직행합니다.",
+        "ja": "韓国地域大会：オープン予選 → プレイイン（8チーム）→ プレイオフ（8チーム）で各Cupへの直行3枠を決定。直前のMasters出場チームはプレイオフ上位4枠へシードされます。"
       },
-      "teams": null,
+      "teams": 8,
       "confirmed": true
     },
     "prizePool": null,
@@ -883,6 +899,10 @@
     },
     "sources": [
       {
+        "label": "VALORANT Esports - Giới Thiệu VCT Pacific 2027 (VCT Pacific 2027 Primer)",
+        "url": "https://valorantesports.com/vi-VN/news/vct-pacific-2027-primer"
+      },
+      {
         "label": "Sports Kyunghyang - VCT Pacific 2027 format (2026-10-28)",
         "url": "https://sports.khan.co.kr/en/article/202610281645007/"
       },
@@ -906,12 +926,12 @@
     "status": "upcoming",
     "format": {
       "summary": {
-        "vi": "Giải khu vực Nhật Bản: 3 suất vào mỗi Cup.",
-        "en": "Japan regional competition: 3 berth(s) per Cup.",
-        "ko": "일본 지역 대회: 컵마다 3장.",
-        "ja": "日本地域大会：各Cupに3枠。"
+        "vi": "Giải khu vực Nhật Bản: Vòng Loại Mở → Vòng Play-Ins (8 đội) → Vòng Playoffs (8 đội), chọn 3 suất trực tiếp vào mỗi Pacific Cup. Đội dự Masters ngay trước đó được đặc cách vào thẳng Top 4 Playoffs.",
+        "en": "Japan regional competition: Open Qualifiers → Play-Ins (8 teams) → Playoffs (8 teams), awarding 3 direct berths per Pacific Cup. Teams reaching the preceding Masters are seeded directly into the Playoffs top 4.",
+        "ko": "일본 지역 대회: 오픈 예선 → 플레이인(8팀) → 플레이오프(8팀)를 통해 컵마다 직행 3장을 선발합니다. 직전 마스터스 진출 팀은 플레이오프 상위 4시드에 직행합니다.",
+        "ja": "日本地域大会：オープン予選 → プレイイン（8チーム）→ プレイオフ（8チーム）で各Cupへの直行3枠を決定。直前のMasters出場チームはプレイオフ上位4枠へシードされます。"
       },
-      "teams": null,
+      "teams": 8,
       "confirmed": true
     },
     "prizePool": null,
@@ -946,6 +966,10 @@
     },
     "sources": [
       {
+        "label": "VALORANT Esports - Giới Thiệu VCT Pacific 2027 (VCT Pacific 2027 Primer)",
+        "url": "https://valorantesports.com/vi-VN/news/vct-pacific-2027-primer"
+      },
+      {
         "label": "Sports Kyunghyang - VCT Pacific 2027 format (2026-10-28)",
         "url": "https://sports.khan.co.kr/en/article/202610281645007/"
       },
@@ -957,8 +981,8 @@
   },
   {
     "id": "vct-2027-pacific-wild-card",
-    "name": "VCT 2027 Pacific Wild Card",
-    "shortName": "Wild Card",
+    "name": "VCT 2027 Southeast Asia",
+    "shortName": "Southeast Asia",
     "kind": "wild-card",
     "tier": 3,
     "region": "WILD",
@@ -969,12 +993,12 @@
     "status": "upcoming",
     "format": {
       "summary": {
-        "vi": "Giải khu vực Wild Card (PH, MY, SG, phần còn lại SEA, Nam Á, châu Đại Dương): 2 suất vào mỗi Cup.",
-        "en": "Wild Card (PH, MY, SG, rest of SEA, South Asia, Oceania) regional competition: 2 berth(s) per Cup.",
-        "ko": "와일드카드 (필리핀·말레이시아·싱가포르·기타 동남아·남아시아·오세아니아) 지역 대회: 컵마다 2장.",
-        "ja": "ワイルドカード（フィリピン・マレーシア・シンガポール・その他東南アジア・南アジア・オセアニア）地域大会：各Cupに2枠。"
+        "vi": "Giải khu vực Đông Nam Á (SEA): Vòng Loại Mở → Vòng Play-Ins (8 đội) → Vòng Playoffs (8 đội), chọn 2 suất trực tiếp (#1 SEA, #2 SEA) vào mỗi Pacific Cup.",
+        "en": "Southeast Asia (SEA) regional competition: Open Qualifiers → Play-Ins (8 teams) → Playoffs (8 teams), awarding 2 direct berths (#1 SEA, #2 SEA) to each Pacific Cup.",
+        "ko": "동남아시아(SEA) 지역 대회: 오픈 예선 → 플레이인(8팀) → 플레이오프(8팀)를 거쳐 각 퍼시픽 컵 직행 티켓 2장(#1 SEA, #2 SEA)을 배분합니다.",
+        "ja": "東南アジア（SEA）地域大会：オープン予選 → プレイイン（8チーム）→ プレイオフ（8チーム）を経て、各Pacific Cupへの直行2枠（#1 SEA、#2 SEA）を決定します。"
       },
-      "teams": null,
+      "teams": 8,
       "confirmed": true
     },
     "prizePool": null,
@@ -1002,12 +1026,16 @@
       }
     ],
     "description": {
-      "vi": "Hệ thống thi đấu quốc nội Wild Card (PH, MY, SG, phần còn lại SEA, Nam Á, châu Đại Dương) năm 2027 - nơi cả đội Partner lẫn đội Tier 2 tranh suất vào Pacific Cup.",
-      "en": "The 2027 Wild Card (PH, MY, SG, rest of SEA, South Asia, Oceania) domestic circuit - where Partners and Tier 2 teams alike fight for Pacific Cup berths.",
-      "ko": "2027 와일드카드 (필리핀·말레이시아·싱가포르·기타 동남아·남아시아·오세아니아) 지역 리그 - 파트너와 티어 2 팀이 함께 퍼시픽 컵 출전권을 다툽니다.",
-      "ja": "2027年ワイルドカード（フィリピン・マレーシア・シンガポール・その他東南アジア・南アジア・オセアニア）の国内大会 - パートナーとTier 2チームが共にPacific Cup出場権を争います。"
+      "vi": "Hệ thống thi đấu khu vực Đông Nam Á (SEA) năm 2027 gồm Vòng Loại Mở, Vòng Play-Ins (8 đội) và Vòng Playoffs (8 đội) tranh 2 suất trực tiếp vào mỗi giải Pacific Cup.",
+      "en": "The 2027 Southeast Asia (SEA) regional circuit featuring Open Qualifiers, an 8-team Play-In, and an 8-team Playoffs for 2 direct Pacific Cup berths.",
+      "ko": "오픈 예선, 8팀 플레이인, 8팀 플레이오프로 구성된 2027 동남아시아(SEA) 지역 서킷 (퍼시픽 컵 직행 2장).",
+      "ja": "オープン予選、8チームのプレイイン、8チームのプレイオフで構成される2027年東南アジア（SEA）地域サーキット（Pacific Cup直行2枠）。"
     },
     "sources": [
+      {
+        "label": "VALORANT Esports - Giới Thiệu VCT Pacific 2027 (VCT Pacific 2027 Primer)",
+        "url": "https://valorantesports.com/vi-VN/news/vct-pacific-2027-primer"
+      },
       {
         "label": "Sports Kyunghyang - VCT Pacific 2027 format (2026-10-28)",
         "url": "https://sports.khan.co.kr/en/article/202610281645007/"
@@ -1032,12 +1060,12 @@
     "status": "upcoming",
     "format": {
       "summary": {
-        "vi": "Giải khu vực Thái Lan: 1 suất vào mỗi Cup. Các đội top không giành vé được đi tiếp LCQ.",
-        "en": "Thailand regional competition: 1 berth(s) per Cup. Top non-qualifying teams move on to the LCQ.",
-        "ko": "태국 지역 대회: 컵마다 1장. 출전권을 놓친 상위 팀은 LCQ로.",
-        "ja": "タイ地域大会：各Cupに1枠。出場権を逃した上位チームはLCQへ。"
+        "vi": "Giải khu vực Thái Lan: Vòng Loại Mở → Vòng Play-Ins (8 đội) → Vòng Playoffs (8 đội). Hạng 1 (#1 TH) vào thẳng Pacific Cup; Hạng 2 và Hạng 3 (#2 TH, #3 TH) tiến vào Vòng Loại Cuối Cùng (VLCC Thái Bình Dương).",
+        "en": "Thailand regional competition: Open Qualifiers → Play-Ins (8 teams) → Playoffs (8 teams). 1st place (#1 TH) qualifies directly for the Pacific Cup; 2nd and 3rd place (#2 TH, #3 TH) advance to the Pacific Cup LCQ.",
+        "ko": "태국 지역 대회: 오픈 예선 → 플레이인(8팀) → 플레이오프(8팀). 1위(#1 TH)는 퍼시픽 컵 직행, 2위·3위(#2 TH, #3 TH)는 퍼시픽 컵 LCQ로 진출합니다.",
+        "ja": "タイ地域大会：オープン予選 → プレイイン（8チーム）→ プレイオフ（8チーム）。1位（#1 TH）がPacific Cupへ直行し、2位・3位（#2 TH、#3 TH）はPacific Cup LCQへ進出します。"
       },
-      "teams": null,
+      "teams": 8,
       "confirmed": true
     },
     "prizePool": null,
@@ -1065,12 +1093,12 @@
       },
       {
         "tournament": "vct-pacific-2027-lcq",
-        "spots": null,
+        "spots": 2,
         "note": {
-          "vi": "Đội top chưa có vé",
-          "en": "Top non-qualifiers",
-          "ko": "출전권 없는 상위 팀",
-          "ja": "出場権のない上位チーム"
+          "vi": "Hạng 2 & Hạng 3 (#2-TH, #3-TH)",
+          "en": "2nd & 3rd place (#2 TH, #3 TH)",
+          "ko": "2위·3위 (#2 TH, #3 TH)",
+          "ja": "2位・3位（#2 TH、#3 TH）"
         }
       }
     ],
@@ -1081,6 +1109,10 @@
       "ja": "2027年タイの国内大会 - パートナーとTier 2チームが共にPacific Cup出場権を争います。"
     },
     "sources": [
+      {
+        "label": "VALORANT Esports - Giới Thiệu VCT Pacific 2027 (VCT Pacific 2027 Primer)",
+        "url": "https://valorantesports.com/vi-VN/news/vct-pacific-2027-primer"
+      },
       {
         "label": "Sports Kyunghyang - VCT Pacific 2027 format (2026-10-28)",
         "url": "https://sports.khan.co.kr/en/article/202610281645007/"
@@ -1105,12 +1137,12 @@
     "status": "upcoming",
     "format": {
       "summary": {
-        "vi": "Giải khu vực Indonesia: 1 suất vào mỗi Cup. Các đội top không giành vé được đi tiếp LCQ.",
-        "en": "Indonesia regional competition: 1 berth(s) per Cup. Top non-qualifying teams move on to the LCQ.",
-        "ko": "인도네시아 지역 대회: 컵마다 1장. 출전권을 놓친 상위 팀은 LCQ로.",
-        "ja": "インドネシア地域大会：各Cupに1枠。出場権を逃した上位チームはLCQへ。"
+        "vi": "Giải khu vực Indonesia: Vòng Loại Mở → Vòng Play-Ins (8 đội) → Vòng Playoffs (8 đội). Hạng 1 (#1 ID) vào thẳng Pacific Cup; Hạng 2 và Hạng 3 (#2 ID, #3 ID) tiến vào Vòng Loại Cuối Cùng (VLCC Thái Bình Dương).",
+        "en": "Indonesia regional competition: Open Qualifiers → Play-Ins (8 teams) → Playoffs (8 teams). 1st place (#1 ID) qualifies directly for the Pacific Cup; 2nd and 3rd place (#2 ID, #3 ID) advance to the Pacific Cup LCQ.",
+        "ko": "인도네시아 지역 대회: 오픈 예선 → 플레이인(8팀) → 플레이오프(8팀). 1위(#1 ID)는 퍼시픽 컵 직행, 2위·3위(#2 ID, #3 ID)는 퍼시픽 컵 LCQ로 진출합니다.",
+        "ja": "インドネシア地域大会：オープン予選 → プレイイン（8チーム）→ プレイオフ（8チーム）。1位（#1 ID）がPacific Cupへ直行し、2位・3位（#2 ID、#3 ID）はPacific Cup LCQへ進出します。"
       },
-      "teams": null,
+      "teams": 8,
       "confirmed": true
     },
     "prizePool": null,
@@ -1138,12 +1170,12 @@
       },
       {
         "tournament": "vct-pacific-2027-lcq",
-        "spots": null,
+        "spots": 2,
         "note": {
-          "vi": "Đội top chưa có vé",
-          "en": "Top non-qualifiers",
-          "ko": "출전권 없는 상위 팀",
-          "ja": "出場権のない上位チーム"
+          "vi": "Hạng 2 & Hạng 3 (#2-ID, #3-ID)",
+          "en": "2nd & 3rd place (#2 ID, #3 ID)",
+          "ko": "2위·3위 (#2 ID, #3 ID)",
+          "ja": "2位・3位（#2 ID、#3 ID）"
         }
       }
     ],
@@ -1154,6 +1186,10 @@
       "ja": "2027年インドネシアの国内大会 - パートナーとTier 2チームが共にPacific Cup出場権を争います。"
     },
     "sources": [
+      {
+        "label": "VALORANT Esports - Giới Thiệu VCT Pacific 2027 (VCT Pacific 2027 Primer)",
+        "url": "https://valorantesports.com/vi-VN/news/vct-pacific-2027-primer"
+      },
       {
         "label": "Sports Kyunghyang - VCT Pacific 2027 format (2026-10-28)",
         "url": "https://sports.khan.co.kr/en/article/202610281645007/"
@@ -1178,12 +1214,12 @@
     "status": "upcoming",
     "format": {
       "summary": {
-        "vi": "Giải khu vực Việt Nam: 1 suất vào mỗi Cup. Các đội top không giành vé được đi tiếp LCQ.",
-        "en": "Vietnam regional competition: 1 berth(s) per Cup. Top non-qualifying teams move on to the LCQ.",
-        "ko": "베트남 지역 대회: 컵마다 1장. 출전권을 놓친 상위 팀은 LCQ로.",
-        "ja": "ベトナム地域大会：各Cupに1枠。出場権を逃した上位チームはLCQへ。"
+        "vi": "Giải khu vực Việt Nam: Vòng Loại Mở → Vòng Play-Ins (8 đội) → Vòng Playoffs (8 đội). Nhà vô địch (#1 VN) vào thẳng Pacific Cup; Á quân (#2 VN) tiến vào Vòng Loại Cuối Cùng (VLCC Thái Bình Dương).",
+        "en": "Vietnam regional competition: Open Qualifiers → Play-Ins (8 teams) → Playoffs (8 teams). 1st place (#1 VN) qualifies directly for the Pacific Cup; runner-up (#2 VN) advances to the Pacific Cup LCQ.",
+        "ko": "베트남 지역 대회: 오픈 예선 → 플레이인(8팀) → 플레이오프(8팀). 우승팀(#1 VN)은 퍼시픽 컵 직행, 준우승팀(#2 VN)은 퍼시픽 컵 LCQ로 진출합니다.",
+        "ja": "ベトナム地域大会：オープン予選 → プレイイン（8チーム）→ プレイオフ（8チーム）。1位（#1 VN）がPacific Cupへ直行し、2位（#2 VN）はPacific Cup LCQへ進出します。"
       },
-      "teams": null,
+      "teams": 8,
       "confirmed": true
     },
     "prizePool": null,
@@ -1211,12 +1247,12 @@
       },
       {
         "tournament": "vct-pacific-2027-lcq",
-        "spots": null,
+        "spots": 1,
         "note": {
-          "vi": "Đội top chưa có vé",
-          "en": "Top non-qualifiers",
-          "ko": "출전권 없는 상위 팀",
-          "ja": "出場権のない上位チーム"
+          "vi": "Á quân Playoffs (#2 VN)",
+          "en": "Playoffs runner-up (#2 VN)",
+          "ko": "플레이오프 2위 (#2 VN)",
+          "ja": "プレイオフ2位（#2 VN）"
         }
       }
     ],
@@ -1227,6 +1263,10 @@
       "ja": "2027年ベトナムの国内大会 - パートナーとTier 2チームが共にPacific Cup出場権を争います。"
     },
     "sources": [
+      {
+        "label": "VALORANT Esports - Giới Thiệu VCT Pacific 2027 (VCT Pacific 2027 Primer)",
+        "url": "https://valorantesports.com/vi-VN/news/vct-pacific-2027-primer"
+      },
       {
         "label": "Sports Kyunghyang - VCT Pacific 2027 format (2026-10-28)",
         "url": "https://sports.khan.co.kr/en/article/202610281645007/"
@@ -1251,12 +1291,12 @@
     "status": "upcoming",
     "format": {
       "summary": {
-        "vi": "1 suất vào mỗi Cup, dành cho các đội top Thái Lan, Indonesia, Việt Nam chưa giành vé.",
-        "en": "1 berth per Cup for top non-qualifying teams from Thailand, Indonesia and Vietnam.",
-        "ko": "태국·인도네시아·베트남에서 출전권을 놓친 상위 팀이 컵마다 1장을 두고 경쟁.",
-        "ja": "タイ・インドネシア・ベトナムで出場権を逃した上位チームが各Cup 1枠を争う。"
+        "vi": "8 đội tranh 1 suất cuối cùng (#1 LCQ) vào mỗi Pacific Cup: Hạng 2 & 3 Thái Lan (#2-3 TH), Hạng 2 & 3 Indonesia (#2-3 ID), Á quân Việt Nam (#2 VN), Hạng 1 & 2 Nam Á (#1-2 SA) và Hạng 1 Châu Đại Dương (#1 OCE).",
+        "en": "8 teams fight for the final berth (#1 LCQ) into each Pacific Cup: Thailand #2 & #3, Indonesia #2 & #3, Vietnam #2, South Asia #1 & #2, and Oceania #1.",
+        "ko": "8팀이 각 퍼시픽 컵 마지막 1장(#1 LCQ)을 두고 경쟁: 태국 2·3위, 인도네시아 2·3위, 베트남 2위, 남아시아 1·2위, 오세아니아 1위.",
+        "ja": "8チームが各Pacific Cup最後の1枠（#1 LCQ）を争う：タイ2・3位、インドネシア2・3位、ベトナム2位、南アジア1・2位、オセアニア1位。"
       },
-      "teams": null,
+      "teams": 8,
       "confirmed": true
     },
     "prizePool": null,
@@ -1265,30 +1305,80 @@
         "team": null,
         "from": "vct-2027-thailand",
         "label": {
-          "vi": "Đội top chưa có vé",
-          "en": "Top non-qualifier",
-          "ko": "출전권 없는 상위 팀",
-          "ja": "出場権のない上位チーム"
+          "vi": "Thái Lan #2 (#2 TH)",
+          "en": "Thailand #2 (#2 TH)",
+          "ko": "태국 2위 (#2 TH)",
+          "ja": "タイ2位 (#2 TH)"
+        }
+      },
+      {
+        "team": null,
+        "from": "vct-2027-thailand",
+        "label": {
+          "vi": "Thái Lan #3 (#3 TH)",
+          "en": "Thailand #3 (#3 TH)",
+          "ko": "태국 3위 (#3 TH)",
+          "ja": "タイ3位 (#3 TH)"
         }
       },
       {
         "team": null,
         "from": "vct-2027-indonesia",
         "label": {
-          "vi": "Đội top chưa có vé",
-          "en": "Top non-qualifier",
-          "ko": "출전권 없는 상위 팀",
-          "ja": "出場権のない上位チーム"
+          "vi": "Indonesia #2 (#2 ID)",
+          "en": "Indonesia #2 (#2 ID)",
+          "ko": "인도네시아 2위 (#2 ID)",
+          "ja": "インドネシア2位 (#2 ID)"
+        }
+      },
+      {
+        "team": null,
+        "from": "vct-2027-indonesia",
+        "label": {
+          "vi": "Indonesia #3 (#3 ID)",
+          "en": "Indonesia #3 (#3 ID)",
+          "ko": "인도네시아 3위 (#3 ID)",
+          "ja": "インドネシア3位 (#3 ID)"
         }
       },
       {
         "team": null,
         "from": "vct-2027-vietnam",
         "label": {
-          "vi": "Đội top chưa có vé",
-          "en": "Top non-qualifier",
-          "ko": "출전권 없는 상위 팀",
-          "ja": "出場権のない上位チーム"
+          "vi": "Việt Nam #2 (#2 VN)",
+          "en": "Vietnam #2 (#2 VN)",
+          "ko": "베트남 2위 (#2 VN)",
+          "ja": "ベトナム2位 (#2 VN)"
+        }
+      },
+      {
+        "team": null,
+        "from": null,
+        "label": {
+          "vi": "Nam Á #1 (#1 SA)",
+          "en": "South Asia #1 (#1 SA)",
+          "ko": "남아시아 1위 (#1 SA)",
+          "ja": "南アジア1位 (#1 SA)"
+        }
+      },
+      {
+        "team": null,
+        "from": null,
+        "label": {
+          "vi": "Nam Á #2 (#2 SA)",
+          "en": "South Asia #2 (#2 SA)",
+          "ko": "남아시아 2위 (#2 SA)",
+          "ja": "南アジア2位 (#2 SA)"
+        }
+      },
+      {
+        "team": null,
+        "from": null,
+        "label": {
+          "vi": "Châu Đại Dương #1 (#1 OCE)",
+          "en": "Oceania #1 (#1 OCE)",
+          "ko": "오세아니아 1위 (#1 OCE)",
+          "ja": "オセアニア1位 (#1 OCE)"
         }
       }
     ],
@@ -1315,12 +1405,16 @@
       }
     ],
     "description": {
-      "vi": "Cơ hội cuối để vào Pacific Cup cho các khu vực chỉ có 1 suất.",
-      "en": "The last chance into a Pacific Cup for the single-berth regions.",
-      "ko": "출전권이 1장뿐인 지역을 위한 퍼시픽 컵 마지막 기회.",
-      "ja": "1枠のみの地域のための、Pacific Cupへの最後のチャンス。"
+      "vi": "Vòng Loại Cuối Cùng (VLCC Thái Bình Dương) diễn ra ngay sau Vòng Playoffs khu vực, quy tụ 8 đội từ Thái Lan, Indonesia, Việt Nam, Nam Á và Châu Đại Dương để tranh tấm vé thứ 12 vào Pacific Cup.",
+      "en": "Held right after the Regional Playoffs, the 8-team Pacific Cup LCQ brings together contenders from Thailand, Indonesia, Vietnam, South Asia, and Oceania for the 12th and final Pacific Cup berth.",
+      "ko": "지역 플레이오프 직후 열리는 8팀 규모의 퍼시픽 컵 LCQ로, 태국·인도네시아·베트남·남아시아·오세아니아 대표들이 12번째 컵 출전권을 다툽니다.",
+      "ja": "地域プレイオフ直後に開催される8チームのPacific Cup LCQ。タイ、インドネシア、ベトナム、南アジア、オセアニアの代表が12枠目のCup出場権を争います。"
     },
     "sources": [
+      {
+        "label": "VALORANT Esports - Giới Thiệu VCT Pacific 2027 (VCT Pacific 2027 Primer)",
+        "url": "https://valorantesports.com/vi-VN/news/vct-pacific-2027-primer"
+      },
       {
         "label": "Sports Kyunghyang - VCT Pacific 2027 format (2026-10-28)",
         "url": "https://sports.khan.co.kr/en/article/202610281645007/"

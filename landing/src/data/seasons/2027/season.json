@@ -11,7 +11,7 @@
       "ja": "VCT Pacific 2027 ロードマップ：バンコクのキックオフ、Masters Seoul、マニラのCup、Masters Valencia、東京のCup、Champions Austin"
     }
   },
-  "asOf": "2026-11-12",
+  "asOf": "2026-11-23",
   "mapPool": {
     "maps": [
       "Abyss",
@@ -49,6 +49,10 @@
     }
   ],
   "sources": [
+    {
+      "label": "VALORANT Esports - Giới Thiệu VCT Pacific 2027 (VCT Pacific 2027 Primer)",
+      "url": "https://valorantesports.com/vi-VN/news/vct-pacific-2027-primer"
+    },
     {
       "label": "VALORANT Esports - No Guaranteed Paths: Inside the New VCT 2027",
       "url": "https://valorantesports.com/en-US/news/no-guaranteed-paths-inside-the-new-vct-2027"
