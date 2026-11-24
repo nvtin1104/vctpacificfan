@@ -4,8 +4,8 @@ import EmptyState from '../../../components/ui/EmptyState.astro';
 import SectionTitle from '../../../components/ui/SectionTitle.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { localePath, useT, type Lang } from '../../../i18n';
-import { db, refId, seasonPath, seasonStaticPaths, statisticsOf, tournamentsOf } from '../../../lib/data';
-import { breadcrumbLd } from '../../../lib/jsonld';
+import { db, refId, seasonConfig, seasonPath, seasonStaticPaths, statisticsOf, tournamentsOf } from '../../../lib/data';
+import { breadcrumbLd, datasetLd } from '../../../lib/jsonld';
 
 export const getStaticPaths = () => seasonStaticPaths();
 const lang = Astro.params.lang as Lang;
@@ -38,9 +38,20 @@ const defaultTab = statTabs.find(tab => tab.stat !== null)?.id ?? statTabs[0]?.i
 <BaseLayout
   lang={lang}
   path={path}
-  title={t('stats.title')}
-  description={t('stats.lead')}
-  jsonLd={[breadcrumbLd([{ name: t('nav.home'), path: '/' }, { name: t('nav.statistics'), path }], Astro.site, lang)]}
+  title={t('seo.statisticsTitle')}
+  description={t('seo.statisticsDescription')}
+  jsonLd={[
+    datasetLd({
+      site: Astro.site,
+      lang,
+      path,
+      name: t('seo.statisticsTitle'),
+      description: t('seo.statisticsDescription'),
+      dateModified: seasonConfig(year).asOf,
+      siteName: t('meta.siteName'),
+    }),
+    breadcrumbLd([{ name: t('nav.home'), path: '/' }, { name: t('nav.statistics'), path }], Astro.site, lang),
+  ]}
 >
   <div class="wrap py-12 md:py-16">
     <SectionTitle as="h1" eyebrow={t('nav.statistics')} title={t('stats.title')} lead={t('stats.lead')} />

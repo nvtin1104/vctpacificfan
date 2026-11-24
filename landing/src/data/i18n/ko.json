@@ -6,6 +6,27 @@
     "unofficial": "비공식 팬 사이트",
     "skip": "본문으로 건너뛰기"
   },
+  "seo": {
+    "homeTitle": "VCT Pacific Fan Hub {year} - 경기 일정, 대진표 & 로스터",
+    "homeDescription": "VCT 퍼시픽 {year} 트래커: 현지 시간 경기 일정, 인터랙티브 대진표, 파트너 및 오픈 예선 팀 로스터, 선수 통계와 {year} 방식 해설을 확인하세요.",
+    "scheduleTitle": "VCT 퍼시픽 {year} 경기 일정 & 결과",
+    "scheduleDescription": "VCT 퍼시픽 {year} 전체 경기 일정과 결과. 티어, 대회, 팀, 상태별 필터링과 기기 시간대 자동 변환 및 스포일러 방지 기능을 제공합니다.",
+    "teamsTitle": "VCT 퍼시픽 {year} 참가 팀 & 로스터",
+    "teamsDescription": "VCT 퍼시픽 {year} 파트너 8팀과 오픈 예선 참가 팀의 최신 로스터, 코칭 스태프, 시즌 여정 및 경기 일정을 한눈에 확인하세요.",
+    "tournamentsTitle": "VCT 퍼시픽 {year} 대회 생태계 & 로드맵",
+    "tournamentsDescription": "VCT 퍼시픽 {year} 3단계 대회 구조: 지역 예선, 방콕 킥오프, 퍼시픽 컵, 마스터스 서울, 마스터스 발렌시아, 챔피언스 오스틴.",
+    "statisticsTitle": "VCT 퍼시픽 {year} 통계 - 요원, 맵 & 선수 순위",
+    "statisticsDescription": "VCT 퍼시픽 {year} 통계 허브: 요원 픽률·승률, 맵별 공격/수비 승률 및 ACS, K/D, KAST, ADR 기준 선수 순위표를 확인하세요.",
+    "rulesTitle": "VCT 퍼시픽 {year} 대회 방식 해설 - 오픈 시대",
+    "rulesDescription": "VCT {year} 방식 완벽 정리: 파트너 8팀 + 오픈 예선 4팀, 로스터 3/5 유지 규정, 오픈 팀 지원금, 1v1 스커미시 및 맵 풀 안내.",
+    "offseasonTitle": "VCT 퍼시픽 {year} 오프시즌 대회",
+    "offseasonDescription": "VCT 퍼시픽 {year} 시즌 개막에 앞서 열리는 글로벌 초청전 및 APAC 오프시즌 서킷 대회 일정과 참가 정보를 확인하세요.",
+    "teamTitle": "{name} ({tag}) - {year} 로스터 & 경기 일정",
+    "teamDescription": "{name} ({tag}) VCT 퍼시픽 {year} 팀 프로필 ({region}). 로스터: {roster}. 코칭 스태프, 대회 여정과 일정을 확인하세요.",
+    "tournamentTitle": "{name} - 일정 & 대진표",
+    "matchTitle": "{a} vs {b} - {event}",
+    "matchDescription": "{a} vs {b} ({format}) - {stage}, {event}. 경기 시간, 1v1 스커미시 결과, 맵 밴픽 타임라인 및 선수 스코어보드."
+  },
   "nav": {
     "home": "홈",
     "tournaments": "대회",
@@ -255,7 +276,10 @@
     "skirmishStep3": "승리 팀이 맵/진영 우선권",
     "capsuleTitle": "{year} 팀 캡슐",
     "capsuleText": "파트너 팀은 디지털 아이템 판매 수익을 계속 분배받습니다. {year} 팀 캡슐은 아직 공개되지 않았으며, 공개되면 이 페이지가 업데이트됩니다.",
-    "unconfirmedNote": "'예정'으로 표시된 항목은 Riot이 공식 확정하지 않은 정보입니다."
+    "unconfirmedNote": "'예정'으로 표시된 항목은 Riot이 공식 확정하지 않은 정보입니다.",
+    "roadshowsAlt": "VCT 퍼시픽 {year} 로드쇼 개최 도시: 방콕, 마닐라, 도쿄",
+    "pathToCupsAlt": "VCT {year} 오픈 예선에서 퍼시픽 컵으로 이어지는 진출 경로",
+    "lcqAlt": "퍼시픽 컵 최종 선발전(LCQ) {year} 지역별 시드 배분"
   },
   "footer": {
     "disclaimer": "VCT Pacific Fan Hub는 팬이 만든 사이트로, Riot Games와 제휴·후원·보증 관계가 없습니다.",

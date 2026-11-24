@@ -11,7 +11,16 @@ import { absolute, alternates, fileOg, generatedOg } from '../lib/seo';
 const title = `VCT Pacific Fan Hub ${CURRENT_SEASON}`;
 const description = vi.meta.description.replaceAll('{year}', String(CURRENT_SEASON));
 const banner = seasonBanner(CURRENT_SEASON);
-const og = banner ? fileOg(banner.image, banner.alt.en) : generatedOg('/og/default.png');
+const og = banner ? fileOg(banner.image, banner.alt.en) : generatedOg('/og/default.png', title);
+const rootUrl = absolute(Astro.site, '/');
+const website = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'VCT Pacific Fan Hub',
+  url: rootUrl,
+  inLanguage: ['vi-VN', 'en-US', 'ko-KR', 'ja-JP'],
+  description,
+};
 ---
 
 <!doctype html>
@@ -21,11 +30,12 @@ const og = banner ? fileOg(banner.image, banner.alt.en) : generatedOg('/og/defau
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={absolute(Astro.site, '/')} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href={rootUrl} />
     {alternates(Astro.site, '/').map(alt => <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />)}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="VCT Pacific Fan Hub" />
-    <meta property="og:url" content={absolute(Astro.site, '/')} />
+    <meta property="og:url" content={rootUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={absolute(Astro.site, og.src)} />
@@ -33,12 +43,18 @@ const og = banner ? fileOg(banner.image, banner.alt.en) : generatedOg('/og/defau
     <meta property="og:image:height" content={String(og.height)} />
     <meta property="og:image:type" content={og.type} />
     {og.alt && <meta property="og:image:alt" content={og.alt} />}
-    <meta name="twitter:image" content={absolute(Astro.site, og.src)} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#0a0e13" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absolute(Astro.site, og.src)} />
+    {og.alt && <meta name="twitter:image:alt" content={og.alt} />}
+    <meta name="theme-color" content="#0f1519" />
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <script type="application/ld+json" set:html={JSON.stringify(website).replace(/</g, '\\u003c')} />
     <script is:inline>
       (function () {
         var supported = ['vi', 'en', 'ko', 'ja'];

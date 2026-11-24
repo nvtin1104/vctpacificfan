@@ -6,6 +6,27 @@
     "unofficial": "Unofficial fan site",
     "skip": "Skip to content"
   },
+  "seo": {
+    "homeTitle": "VCT Pacific Fan Hub {year} - Schedule, Brackets & Rosters",
+    "homeDescription": "Track VCT Pacific {year}: local-time match schedule, interactive brackets, Partner & Open Qualifier team rosters, player stats and the {year} format explained.",
+    "scheduleTitle": "VCT Pacific {year} Schedule & Match Results",
+    "scheduleDescription": "Full VCT Pacific {year} match schedule and results, filterable by tier, tournament, team and status with automatic local time zone conversion.",
+    "teamsTitle": "VCT Pacific {year} Teams & Rosters",
+    "teamsDescription": "All 8 Partner teams and Open Qualifier contenders in VCT Pacific {year}, featuring active rosters, coaching staff, tournament paths and team schedules.",
+    "tournamentsTitle": "VCT Pacific {year} Tournament Ecosystem",
+    "tournamentsDescription": "Explore all three tiers of VCT Pacific {year}: domestic qualifiers, Kickoff Bangkok, Pacific Cups, Masters Seoul, Masters Valencia and Champions Austin.",
+    "statisticsTitle": "VCT Pacific {year} Statistics - Agents, Maps & Players",
+    "statisticsDescription": "VCT Pacific {year} stats hub: agent pick and win rates, attack/defense map win splits and player leaderboards ranked by ACS, K/D, KAST and ADR.",
+    "rulesTitle": "VCT Pacific {year} Format Explained - The Open Era",
+    "rulesDescription": "Complete guide to the VCT {year} format: 8 Partners + 4 Open Qualifiers, 3/5 roster continuity rule, open team stipends and 1v1 Skirmish priority.",
+    "offseasonTitle": "VCT Pacific {year} Offseason Tournaments",
+    "offseasonDescription": "Global invitationals and APAC circuit tournaments taking place during the offseason ahead of the VCT Pacific {year} season.",
+    "teamTitle": "{name} ({tag}) - {year} Roster & Schedule",
+    "teamDescription": "{name} ({tag}) VCT Pacific {year} profile ({region}). Roster: {roster}. View coaching staff, season journey and upcoming match schedule.",
+    "tournamentTitle": "{name} - Schedule & Bracket",
+    "matchTitle": "{a} vs {b} - {event}",
+    "matchDescription": "{a} vs {b} ({format}) - {stage}, {event}. View local match time, 1v1 Skirmish result, map veto timeline and player scoreboards."
+  },
   "nav": {
     "home": "Home",
     "tournaments": "Tournaments",
@@ -255,7 +276,10 @@
     "skirmishStep3": "Winner gets map/side priority",
     "capsuleTitle": "{year} Team Capsules",
     "capsuleText": "Partner teams keep receiving a share of digital item revenue. The {year} Team Capsules have not been revealed yet - this page will update when they are.",
-    "unconfirmedNote": "Items marked \"Projected\" have not been officially confirmed by Riot."
+    "unconfirmedNote": "Items marked \"Projected\" have not been officially confirmed by Riot.",
+    "roadshowsAlt": "VCT Pacific {year} Roadshows host cities: Bangkok, Manila and Tokyo",
+    "pathToCupsAlt": "Path to Pacific Cups from Open Qualifiers in VCT {year}",
+    "lcqAlt": "Pacific Cup Last Chance Qualifier (LCQ) {year} regional slot breakdown"
   },
   "footer": {
     "disclaimer": "VCT Pacific Fan Hub is a fan-made site. It is not affiliated with, sponsored or endorsed by Riot Games.",

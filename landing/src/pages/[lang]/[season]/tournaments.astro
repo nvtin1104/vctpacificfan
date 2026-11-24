@@ -6,7 +6,7 @@ import Sources from '../../../components/ui/Sources.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { useT, type Lang } from '../../../i18n';
 import { seasonConfig, seasonPath, seasonStaticPaths, tournamentsOf } from '../../../lib/data';
-import { breadcrumbLd } from '../../../lib/jsonld';
+import { breadcrumbLd, collectionPageLd } from '../../../lib/jsonld';
 
 export const getStaticPaths = () => seasonStaticPaths();
 const lang = Astro.params.lang as Lang;
@@ -22,9 +22,19 @@ const path = seasonPath(year, 'tournaments');
 <BaseLayout
   lang={lang}
   path={path}
-  title={t('tournaments.title')}
-  description={t('tournaments.lead')}
-  jsonLd={[breadcrumbLd([{ name: t('nav.home'), path: '/' }, { name: t('nav.tournaments'), path }], Astro.site, lang)]}
+  title={t('seo.tournamentsTitle')}
+  description={t('seo.tournamentsDescription')}
+  jsonLd={[
+    collectionPageLd({
+      site: Astro.site,
+      lang,
+      path,
+      name: t('seo.tournamentsTitle'),
+      description: t('seo.tournamentsDescription'),
+      items: tournaments.map(ev => ({ name: ev.data.name, path: `/tournaments/${ev.id}` })),
+    }),
+    breadcrumbLd([{ name: t('nav.home'), path: '/' }, { name: t('nav.tournaments'), path }], Astro.site, lang),
+  ]}
 >
   <div class="wrap py-10">
     <SectionTitle as="h1" eyebrow={t('nav.tournaments')} title={t('tournaments.title')} lead={t('tournaments.lead')} />

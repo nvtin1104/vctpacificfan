@@ -30,3 +30,7 @@
 /sitemap*
   ! Cache-Control
   Cache-Control: public, max-age=3600
+
+/images/*
+  ! Cache-Control
+  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000

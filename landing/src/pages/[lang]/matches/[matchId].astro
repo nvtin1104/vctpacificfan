@@ -32,23 +32,34 @@ const crumbs = [
   { name: event.data.shortName, path: `/tournaments/${event.id}` },
   { name: title, path: `/matches/${m.id}` },
 ];
+const metaDescription = t('seo.matchDescription', {
+  a: names[0],
+  b: names[1],
+  format: m.data.format,
+  stage: loc(m.data.stage, lang),
+  event: event.data.name,
+});
 ---
 
 <BaseLayout
   lang={lang}
   path={`/matches/${m.id}`}
-  title={`${title} · ${event.data.shortName}`}
-  description={`${loc(m.data.stage, lang)} · ${m.data.format} · ${event.data.name}`}
+  title={t('seo.matchTitle', { a: names[0], b: names[1], event: event.data.shortName })}
+  description={metaDescription}
   ogImage={ogImagePath('match', m.id)}
-  jsonLd={[matchLd(m, event, teams, Astro.site, lang), breadcrumbLd(crumbs, Astro.site, lang)]}
+  ogImageAlt={`${title} - ${event.data.name}`}
+  jsonLd={[matchLd(m, event, teams, Astro.site, lang, metaDescription), breadcrumbLd(crumbs, Astro.site, lang)]}
 >
   <section class="border-b border-line">
     <div class="wrap py-10 md:py-14">
-      <nav class="mb-6 flex flex-wrap items-center gap-2 tabular-nums text-xs uppercase text-muted" aria-label="Breadcrumb">
+      <nav class="mb-4 flex flex-wrap items-center gap-2 tabular-nums text-xs uppercase text-muted" aria-label="Breadcrumb">
+        <a href={localePath(lang)} class="hover:text-white">{t('nav.home')}</a>
+        <span aria-hidden="true">/</span>
         <a href={localePath(lang, `/tournaments/${event.id}`)} class="hover:text-white">{event.data.name}</a>
         <span aria-hidden="true">/</span>
         <span>{loc(m.data.stage, lang)}</span>
       </nav>
+      <h1 class="heading mb-6 text-2xl md:text-3xl">{title}</h1>
 
       <div class="grid items-center gap-6 md:grid-cols-[1fr_auto_1fr]">
         {

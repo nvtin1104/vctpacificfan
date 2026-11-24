@@ -8,6 +8,7 @@ import TeamBadge from '../../components/ui/TeamBadge.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { formatDateRange, HTML_LANG, langPaths, loc, localePath, useT, type Lang } from '../../i18n';
 import { countryName, CURRENT_SEASON, featuredEvent, firstOfKind, seasonBanner, sectionPath, teamsOf, upcomingTournaments } from '../../lib/data';
+import { organizationLd, websiteLd } from '../../lib/jsonld';
 
 export const getStaticPaths = langPaths;
 const lang = Astro.params.lang as Lang;
@@ -27,17 +28,16 @@ const highlights = [
   { title: t('home.h2Title'), text: t('home.h2Text') },
   { title: t('home.h3Title'), text: t('home.h3Text') },
 ];
-const website = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: t('meta.siteName'),
-  url: new URL(localePath(lang), Astro.site).href,
-  inLanguage: lang,
-  description: t('meta.description'),
-};
+const homeDesc = t('seo.homeDescription');
 ---
 
-<BaseLayout lang={lang} path="/" title={t('meta.siteName')} description={t('meta.description')} jsonLd={[website]}>
+<BaseLayout
+  lang={lang}
+  path="/"
+  title={t('seo.homeTitle')}
+  description={homeDesc}
+  jsonLd={[websiteLd(Astro.site, lang, t('meta.siteName'), homeDesc), organizationLd(Astro.site, t('meta.siteName'), homeDesc)]}
+>
   <div class="wrap space-y-6 py-8">
     {
       banner && (
@@ -110,10 +110,17 @@ const website = {
           {
             openSlots.map(slot => (
               <li>
-                <a href={qualifier ? localePath(lang, `/tournaments/${qualifier.id}`) : undefined} class="flex flex-col items-center gap-2 rounded border border-dashed border-line px-2 py-3 text-center hover:border-line-strong">
-                  <TeamBadge fallback="?" />
-                  <span class="w-full truncate text-xs text-muted">{loc(slot.label, lang)}</span>
-                </a>
+                {qualifier ? (
+                  <a href={localePath(lang, `/tournaments/${qualifier.id}`)} class="flex flex-col items-center gap-2 rounded border border-dashed border-line px-2 py-3 text-center hover:border-line-strong">
+                    <TeamBadge fallback="?" />
+                    <span class="w-full truncate text-xs text-muted">{loc(slot.label, lang)}</span>
+                  </a>
+                ) : (
+                  <div class="flex flex-col items-center gap-2 rounded border border-dashed border-line px-2 py-3 text-center">
+                    <TeamBadge fallback="?" />
+                    <span class="w-full truncate text-xs text-muted">{loc(slot.label, lang)}</span>
+                  </div>
+                )}
               </li>
             ))
           }

@@ -6,7 +6,7 @@ import EmptyState from '../../../components/ui/EmptyState.astro';
 import TeamBadge from '../../../components/ui/TeamBadge.astro';
 import TournamentCard from '../../../components/tournament/TournamentCard.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { LOCALES, useT, type Lang } from '../../../i18n';
+import { LOCALES, localePath, useT, type Lang } from '../../../i18n';
 import { CURRENT_SEASON, countryName, db, journeyOf, orgRegionName, refId, resolvedRoster, rosterOf, sectionPath, seasonsOfTeam, teamIds, tournamentsOf } from '../../../lib/data';
 import { breadcrumbLd, teamLd } from '../../../lib/jsonld';
 import { ogImagePath } from '../../../lib/seo';
@@ -47,21 +47,36 @@ const crumbs = [
   { name: t('nav.teams'), path: sectionPath(latestYear, 'teams') },
   { name: d.name, path: `/teams/${team.id}` },
 ];
-const description = latest
-  ? `${d.name} (${d.tag}) - ${orgRegionName(d.orgRegion, lang)} ${latest.year}. ${t('teams.roster')}: ${latest.players.map(p => p.handle).join(', ') || t('common.tba')}.`
-  : `${d.name} (${d.tag}) - ${orgRegionName(d.orgRegion, lang)}.`;
+const metaTitle = t('seo.teamTitle', { name: d.name, tag: d.tag, year: latestYear });
+const description = t('seo.teamDescription', {
+  name: d.name,
+  tag: d.tag,
+  region: orgRegionName(d.orgRegion, lang),
+  year: latestYear,
+  roster: latest?.players.map(p => p.handle).join(', ') || t('common.tba'),
+});
 ---
 
 <BaseLayout
   lang={lang}
   path={`/teams/${team.id}`}
-  title={d.name}
+  title={metaTitle}
   description={description}
   ogImage={ogImagePath('team', team.id)}
-  jsonLd={[teamLd(team, latest?.players ?? [], Astro.site, lang, latest?.r.staff ?? []), breadcrumbLd(crumbs, Astro.site, lang)]}
+  ogImageAlt={metaTitle}
+  jsonLd={[teamLd(team, latest?.players ?? [], Astro.site, lang, latest?.r.staff ?? [], description), breadcrumbLd(crumbs, Astro.site, lang)]}
 >
   <section class="relative overflow-hidden border-b border-line" style={`--team:${d.colors.primary}`}>
-    <div class="wrap relative flex flex-col gap-6 py-12 md:flex-row md:items-end md:py-16">
+    <div class="wrap relative pt-8">
+      <nav class="flex flex-wrap items-center gap-2 tabular-nums text-xs uppercase text-muted" aria-label="Breadcrumb">
+        <a href={localePath(lang)} class="hover:text-white">{t('nav.home')}</a>
+        <span aria-hidden="true">/</span>
+        <a href={localePath(lang, sectionPath(latestYear, 'teams'))} class="hover:text-white">{t('nav.teams')}</a>
+        <span aria-hidden="true">/</span>
+        <span>{d.name}</span>
+      </nav>
+    </div>
+    <div class="wrap relative flex flex-col gap-6 pb-12 pt-6 md:flex-row md:items-end md:pb-16 md:pt-8">
       <TeamBadge team={team} size="xl" />
       <div class="flex-1">
         <div class="flex flex-wrap gap-2">
@@ -136,7 +151,7 @@ const description = latest
                       <th scope="row" class="!text-left">
                         <div class="flex items-center gap-3">
                           {p.avatar ? (
-                            <img src={p.avatar} alt={p.handle} class="size-9 shrink-0 rounded-full border border-line bg-surface-2 object-cover" loading="lazy" decoding="async" />
+                            <img src={p.avatar} alt={p.handle} width="36" height="36" class="size-9 shrink-0 rounded-full border border-line bg-surface-2 object-cover" loading="lazy" decoding="async" />
                           ) : (
                             <span class="inline-grid size-9 shrink-0 place-items-center rounded-full border border-line bg-surface-2 text-xs font-bold text-muted" aria-hidden="true">
                               {p.handle.slice(0, 1).toUpperCase()}

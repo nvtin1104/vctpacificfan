@@ -6,6 +6,27 @@
     "unofficial": "Trang fan không chính thức",
     "skip": "Bỏ qua tới nội dung"
   },
+  "seo": {
+    "homeTitle": "VCT Pacific Fan Hub {year} - Lịch thi đấu, Nhánh đấu & Đội hình",
+    "homeDescription": "Theo dõi VCT Pacific {year}: lịch thi đấu theo giờ địa phương, nhánh đấu tương tác, đội hình các đội Partner & Open, thống kê và giải thích thể thức {year}.",
+    "scheduleTitle": "Lịch thi đấu & Kết quả VCT Pacific {year}",
+    "scheduleDescription": "Toàn bộ lịch thi đấu và kết quả VCT Pacific {year}, lọc theo giải đấu, cấp giải, đội tuyển và trạng thái. Giờ tự động đổi theo múi giờ của bạn.",
+    "teamsTitle": "Đội tuyển & Đội hình VCT Pacific {year}",
+    "teamsDescription": "Danh sách 8 đội Partner và các đội Open Qualifier tại VCT Pacific {year}, cập nhật đội hình thi đấu, ban huấn luyện và lịch trình mùa giải.",
+    "tournamentsTitle": "Hệ sinh thái giải đấu VCT Pacific {year}",
+    "tournamentsDescription": "Toàn cảnh 3 tầng giải đấu VCT Pacific {year}: vòng loại quốc nội, Kickoff, Pacific Cup, Masters Seoul, Masters Valencia và Champions Austin.",
+    "statisticsTitle": "Thống kê VCT Pacific {year} - Agent, Map & Tuyển thủ",
+    "statisticsDescription": "Trung tâm thống kê VCT Pacific {year}: tỉ lệ chọn và thắng Agent, thông số thắng bên Công/Thủ theo bản đồ và bảng xếp hạng ACS, K/D, ADR tuyển thủ.",
+    "rulesTitle": "Giải thích thể thức VCT Pacific {year} - Kỷ nguyên giải mở",
+    "rulesDescription": "Chi tiết thể thức VCT {year}: 8 đội Partner + 4 suất Open Qualifier, quy tắc giữ 3/5 đội hình, hỗ trợ tài chính đội Open và luật 1v1 Skirmish.",
+    "offseasonTitle": "Giải đấu Offseason VCT Pacific {year}",
+    "offseasonDescription": "Tổng hợp các giải giao hữu quốc tế và vòng loại khu vực APAC diễn ra trong giai đoạn Offseason trước thềm mùa giải VCT Pacific {year}.",
+    "teamTitle": "{name} ({tag}) - Đội hình & Lịch thi đấu {year}",
+    "teamDescription": "Hồ sơ {name} ({tag}) tại VCT Pacific {year} ({region}). Đội hình: {roster}. Xem ban huấn luyện, hành trình giải đấu và lịch thi đấu.",
+    "tournamentTitle": "{name} - Lịch thi đấu & Nhánh đấu",
+    "matchTitle": "{a} vs {b} - {event}",
+    "matchDescription": "{a} vs {b} ({format}) - {stage}, {event}. Theo dõi giờ thi đấu, kết quả 1v1 Skirmish, cấm/chọn map và bảng thông số tuyển thủ."
+  },
   "nav": {
     "home": "Trang chủ",
     "tournaments": "Giải đấu",
@@ -255,7 +276,10 @@
     "skirmishStep3": "Đội thắng ưu tiên chọn map/bên",
     "capsuleTitle": "Team Capsules {year}",
     "capsuleText": "Đội Partner tiếp tục được chia doanh thu từ vật phẩm số. Bộ Team Capsule {year} của từng đội chưa được công bố - trang sẽ cập nhật khi có thông tin.",
-    "unconfirmedNote": "Mục đánh dấu \"Dự kiến\" là thông tin chưa được Riot xác nhận chính thức."
+    "unconfirmedNote": "Mục đánh dấu \"Dự kiến\" là thông tin chưa được Riot xác nhận chính thức.",
+    "roadshowsAlt": "Lộ trình các điểm dừng VCT Pacific {year} Roadshows tại Bangkok, Manila và Tokyo",
+    "pathToCupsAlt": "Sơ đồ hành trình từ Vòng loại mở tới các giải Pacific Cup {year}",
+    "lcqAlt": "Vòng Loại Cuối Cùng Pacific Cup (LCQ) {year} - phân bổ suất khu vực"
   },
   "footer": {
     "disclaimer": "VCT Pacific Fan Hub là trang do fan thực hiện, không liên kết, không được tài trợ hay xác nhận bởi Riot Games.",

@@ -10,6 +10,7 @@ interface Props {
 }
 const { team, fallback = '?', size = 'md', class: className = '' } = Astro.props;
 const dims = { sm: 'size-7 text-[0.6rem]', md: 'size-10 text-xs', lg: 'size-14 text-sm', xl: 'size-20 text-xl' }[size];
+const px = { sm: 28, md: 40, lg: 56, xl: 80 }[size];
 const tag = team?.data.tag ?? fallback;
 const logo = team?.data.logo;
 // Use the synced team logo when available; otherwise fall back to a flat monogram in the team's colours.
@@ -26,5 +27,5 @@ const style = team && !logo ? `background:${team.data.colors.primary};color:${te
   style={style}
   aria-hidden="true"
 >
-  {logo ? <img src={logo} alt="" class="size-full object-contain" loading="lazy" decoding="async" /> : tag}
+  {logo ? <img src={logo} alt="" width={px} height={px} class="size-full object-contain" loading="lazy" decoding="async" /> : tag}
 </span>

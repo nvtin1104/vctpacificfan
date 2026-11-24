@@ -6,6 +6,27 @@
     "unofficial": "非公式ファンサイト",
     "skip": "本文へスキップ"
   },
+  "seo": {
+    "homeTitle": "VCT Pacific Fan Hub {year} - 試合日程・ブラケット・ロスター",
+    "homeDescription": "VCT Pacific {year} 非公式ファンサイト：現地時間の試合日程、インタラクティブブラケット、パートナー＆オープン予選チームのロスター、統計、{year}年形式解説。",
+    "scheduleTitle": "VCT Pacific {year} 試合日程 & 結果",
+    "scheduleDescription": "VCT Pacific {year} 全試合の日程と結果。ティア、大会、チーム、ステータスで絞り込み可能。端末のタイムゾーン自動変換とネタバレ防止に対応。",
+    "teamsTitle": "VCT Pacific {year} 出場チーム & ロスター",
+    "teamsDescription": "VCT Pacific {year} のパートナー8チームとオープン予選チームの最新ロスター、コーチングスタッフ、大会ルート、チーム別日程を掲載。",
+    "tournamentsTitle": "VCT Pacific {year} 大会エコシステム",
+    "tournamentsDescription": "VCT Pacific {year} の3層大会構造：国内予選、バンコクKickoff、Pacific Cup、Masters Seoul、Masters Valencia、Champions Austin。",
+    "statisticsTitle": "VCT Pacific {year} スタッツ - エージェント・マップ・選手",
+    "statisticsDescription": "VCT Pacific {year} 統計ハブ：エージェントのピック率・勝率、マップ別攻撃/防衛勝率、ACS・K/D・KAST・ADR別の選手ランキング。",
+    "rulesTitle": "VCT Pacific {year} フォーマット解説 - オープン時代",
+    "rulesDescription": "VCT {year} 年新方式の完全ガイド：パートナー8チーム＋オープン予選4枠、ロスター3/5継続ルール、オープンチーム支援金、1v1スカーミッシュ。",
+    "offseasonTitle": "VCT Pacific {year} オフシーズン大会",
+    "offseasonDescription": "VCT Pacific {year} シーズン開幕前に開催される国際招待大会およびAPACサーキットのオフシーズン大会一覧。",
+    "teamTitle": "{name} ({tag}) - {year} ロスター & 日程",
+    "teamDescription": "{name} ({tag}) VCT Pacific {year} チーム情報（{region}）。ロスター：{roster}。スタッフ、大会実績、試合日程を確認。",
+    "tournamentTitle": "{name} - 日程・ブラケット",
+    "matchTitle": "{a} vs {b} - {event}",
+    "matchDescription": "{a} vs {b}（{format}）- {stage}、{event}。試合開始時間、1v1スカーミッシュ、マップBAN/PICK、選手スコアボード。"
+  },
   "nav": {
     "home": "ホーム",
     "tournaments": "大会",
@@ -255,7 +276,10 @@
     "skirmishStep3": "勝者がマップ/サイド優先権",
     "capsuleTitle": "{year} チームカプセル",
     "capsuleText": "パートナーチームは引き続きデジタルアイテム売上の分配を受けます。{year}年のチームカプセルはまだ公開されておらず、公開され次第このページを更新します。",
-    "unconfirmedNote": "「予定」と表示された項目は、Riotがまだ正式に確定していない情報です。"
+    "unconfirmedNote": "「予定」と表示された項目は、Riotがまだ正式に確定していない情報です。",
+    "roadshowsAlt": "VCT Pacific {year} ロードショー開催都市：バンコク、マニラ、東京",
+    "pathToCupsAlt": "VCT {year} オープン予選からPacific Cupへの進出ルート",
+    "lcqAlt": "Pacific Cup 最終予選（LCQ）{year} 地域別出場枠"
   },
   "footer": {
     "disclaimer": "VCT Pacific Fan Hubはファンが制作したサイトであり、Riot Gamesとの提携・後援・承認関係はありません。",

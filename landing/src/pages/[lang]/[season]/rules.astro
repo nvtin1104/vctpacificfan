@@ -6,8 +6,9 @@ import Sources from '../../../components/ui/Sources.astro';
 import TeamBadge from '../../../components/ui/TeamBadge.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { formatMoney, loc, localePath, useT, type Lang } from '../../../i18n';
-import { db, firstOfKind, seasonConfig, seasonPath, seasonStaticPaths, teamsOf } from '../../../lib/data';
-import { breadcrumbLd } from '../../../lib/jsonld';
+import { db, firstOfKind, seasonBanner, seasonConfig, seasonPath, seasonStaticPaths, teamsOf } from '../../../lib/data';
+import { articleLd, breadcrumbLd, faqPageLd } from '../../../lib/jsonld';
+import { ogImagePath } from '../../../lib/seo';
 
 // Only seasons whose season.json sets "explainer": true have a format explainer (its copy lives in i18n rules.*).
 export const getStaticPaths = () => seasonStaticPaths(s => s.explainer === true);
@@ -25,14 +26,38 @@ const cupRegions = Object.entries(
 const regionColor = ['#ff4655', '#f5b942', '#3ddbb0', '#7aa2ff', '#c084fc', '#f472b6', '#ece8e1'];
 const stipendLabels = [t('rules.stipendKickoff'), t('rules.stipendMasters'), t('rules.stipendChampions')];
 const maxSeason = season.stipends[0].amount * 3 + season.stipends[1].amount * 2 + season.stipends[2].amount;
+const faqs = [
+  { question: t('rules.modelTitle'), answer: t('rules.modelText') },
+  { question: t('rules.partnerTitle'), answer: `${t('rules.partnerText')} ${t('rules.partnerTerm')}` },
+  { question: t('rules.cupTitle'), answer: t('rules.cupText') },
+  { question: t('rules.continuityTitle'), answer: `${t('rules.continuityText')} ${t('rules.continuityNote')}` },
+  { question: t('rules.stipendTitle'), answer: t('rules.stipendText') },
+  { question: t('rules.skirmishTitle'), answer: t('rules.skirmishText') },
+  { question: t('rules.capsuleTitle'), answer: t('rules.capsuleText') },
+];
 ---
 
 <BaseLayout
   lang={lang}
   path={path}
-  title={t('rules.title')}
-  description={t('rules.lead')}
-  jsonLd={[breadcrumbLd([{ name: t('nav.home'), path: '/' }, { name: t('nav.rules'), path }], Astro.site, lang)]}
+  title={t('seo.rulesTitle')}
+  description={t('seo.rulesDescription')}
+  ogType="article"
+  modifiedTime={season.asOf}
+  jsonLd={[
+    articleLd({
+      site: Astro.site,
+      lang,
+      path,
+      headline: t('seo.rulesTitle'),
+      description: t('seo.rulesDescription'),
+      dateModified: season.asOf,
+      image: seasonBanner(year)?.image.src ?? ogImagePath('default'),
+      siteName: t('meta.siteName'),
+    }),
+    faqPageLd(faqs),
+    breadcrumbLd([{ name: t('nav.home'), path: '/' }, { name: t('nav.rules'), path }], Astro.site, lang),
+  ]}
 >
   <div class="wrap py-10">
     <SectionTitle as="h1" eyebrow={t('nav.rules')} title={t('rules.title')} lead={t('rules.lead')} />
@@ -88,7 +113,7 @@ const maxSeason = season.stipends[0].amount * 3 + season.stipends[1].amount * 2 
         <figure class="overflow-hidden rounded-lg border border-line bg-surface">
           <img
             src="/images/primer/roadshows-2027.jpg"
-            alt="VCT Pacific 2027 Roadshows - Bangkok, Manila, Tokyo"
+            alt={t('rules.roadshowsAlt')}
             width="1920"
             height="1080"
             loading="lazy"
@@ -123,7 +148,7 @@ const maxSeason = season.stipends[0].amount * 3 + season.stipends[1].amount * 2 
       <figure class="overflow-hidden rounded-lg border border-line bg-surface">
         <img
           src="/images/primer/path-to-cups-2027.jpg"
-          alt="Path to Cups from Open Qualifiers"
+          alt={t('rules.pathToCupsAlt')}
           width="1920"
           height="1080"
           loading="lazy"
@@ -175,7 +200,7 @@ const maxSeason = season.stipends[0].amount * 3 + season.stipends[1].amount * 2 
         <figure class="overflow-hidden rounded-lg border border-line bg-surface">
           <img
             src="/images/primer/cup-lcq-2027.jpg"
-            alt="Pacific Cup Last Chance Qualifier (LCQ)"
+            alt={t('rules.lcqAlt')}
             width="1920"
             height="1080"
             loading="lazy"

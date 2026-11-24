@@ -10,7 +10,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { formatDateRange, formatMoney, LOCALES, loc, localePath, useT, type Lang } from '../../../i18n';
 import { countryName, db, feedersOf, refId, regionName, seasonConfig, sectionPath } from '../../../lib/data';
 import { breadcrumbLd, tournamentLd } from '../../../lib/jsonld';
-import { ogImagePath } from '../../../lib/seo';
+import { ogImagePath, truncateDescription } from '../../../lib/seo';
 
 export async function getStaticPaths() {
   const { tournaments } = await db();
@@ -42,7 +42,8 @@ const primerGraphicByKind: Record<string, string> = {
   champions: '/images/primer/roadmap-2027.jpg',
 };
 const primerGraphic = d.season === 2027 ? primerGraphicByKind[d.kind] : undefined;
-const description = `${loc(d.description, lang)} ${loc(d.format.summary, lang)}`.slice(0, 300);
+const metaTitle = d.name.length <= 38 ? t('seo.tournamentTitle', { name: d.name }) : d.name;
+const description = truncateDescription(`${loc(d.description, lang)} ${loc(d.format.summary, lang)}`, 160);
 const crumbs = [
   { name: t('nav.home'), path: '/' },
   { name: t('nav.tournaments'), path: sectionPath(d.season, 'tournaments') },
@@ -53,14 +54,17 @@ const crumbs = [
 <BaseLayout
   lang={lang}
   path={`/tournaments/${event.id}`}
-  title={d.name}
+  title={metaTitle}
   description={description}
   ogImage={ogImagePath('tournament', event.id)}
-  jsonLd={[tournamentLd(event, eventMatches, Astro.site, lang), breadcrumbLd(crumbs, Astro.site, lang)]}
+  ogImageAlt={d.name}
+  jsonLd={[tournamentLd(event, eventMatches, teams, Astro.site, lang), breadcrumbLd(crumbs, Astro.site, lang)]}
 >
   <section class="border-b border-line">
     <div class="wrap py-12 md:py-16">
       <nav class="mb-6 tabular-nums text-xs uppercase text-muted" aria-label="Breadcrumb">
+        <a href={localePath(lang)} class="hover:text-white">{t('nav.home')}</a>
+        <span aria-hidden="true"> / </span>
         <a href={localePath(lang, sectionPath(d.season, 'tournaments'))} class="hover:text-white">{t('nav.tournaments')} {d.season}</a>
         <span aria-hidden="true"> / </span>
         <span>{t(`tier.${d.tier}`)}</span>
@@ -102,7 +106,7 @@ const crumbs = [
           <figure class="mt-6 overflow-hidden rounded-lg border border-line bg-surface">
             <img
               src={primerGraphic}
-              alt={d.name}
+              alt={`${d.name} - ${t('common.format')}`}
               width="1920"
               height="1080"
               loading="lazy"
@@ -166,15 +170,26 @@ const crumbs = [
             const team = slot.team ? teams.get(slot.team.id) : undefined;
             const from = slot.from ? tournament.get(slot.from.id) : undefined;
             const href = team ? localePath(lang, `/teams/${team.id}`) : from ? localePath(lang, `/tournaments/${from.id}`) : undefined;
+            const inner = (
+              <>
+                <TeamBadge team={team} fallback="?" />
+                <span class="min-w-0">
+                  <span class:list={['block truncate', team && 'font-semibold']}>{team ? team.data.name : loc(slot.label, lang)}</span>
+                  <span class="block truncate text-xs text-muted">{team ? loc(slot.label, lang) : from ? t('tournaments.fromEvent', { event: from.data.shortName }) : t('common.tbd')}</span>
+                </span>
+              </>
+            );
             return (
               <li>
-                <a href={href} class:list={['flex h-full items-center gap-3 p-3', team ? 'panel' : 'border border-dashed border-line text-muted']}>
-                  <TeamBadge team={team} fallback="?" />
-                  <span class="min-w-0">
-                    <span class:list={['block truncate', team && 'font-semibold']}>{team ? team.data.name : loc(slot.label, lang)}</span>
-                    <span class="block truncate text-xs text-muted">{team ? loc(slot.label, lang) : from ? t('tournaments.fromEvent', { event: from.data.shortName }) : t('common.tbd')}</span>
-                  </span>
-                </a>
+                {href ? (
+                  <a href={href} class:list={['flex h-full items-center gap-3 p-3', team ? 'panel' : 'border border-dashed border-line text-muted']}>
+                    {inner}
+                  </a>
+                ) : (
+                  <div class:list={['flex h-full items-center gap-3 p-3', team ? 'panel' : 'border border-dashed border-line text-muted']}>
+                    {inner}
+                  </div>
+                )}
               </li>
             );
           })}
