@@ -530,5 +530,231 @@
         }
       }
     }
+  },
+  {
+    "id": "vct-pacific-2027-kickoff-qualifier",
+    "tournament": "vct-pacific-2027-kickoff-qualifier",
+    "type": "double-elimination",
+    "confirmed": false,
+    "note": {
+      "vi": "Lịch playoffs/finals theo công bố khu vực (Korea, Japan, SEA, Kickoff LCQ). Cặp đấu TBA đến khi hết vòng loại mở / bốc thăm.",
+      "en": "Playoffs/finals windows follow regional announcements (Korea, Japan, SEA, Kickoff LCQ). Pairings TBA until open qualifiers / draws complete.",
+      "ko": "지역별 발표에 따른 플레이오프/결승 일정(한국·일본·SEA·킥오프 LCQ). 오픈 예선/추첨 전까지 대진 TBA.",
+      "ja": "地域発表に基づくプレイオフ/決勝日程（韓国・日本・SEA・Kickoff LCQ）。オープン予選/抽選まで組み合わせはTBA。"
+    },
+    "sections": [
+      {
+        "id": "playoffs",
+        "title": {
+          "vi": "Playoffs / Finals",
+          "en": "Playoffs / Finals",
+          "ko": "플레이오프 / 결승",
+          "ja": "プレイオフ / 決勝"
+        },
+        "rounds": [
+          {
+            "id": "korea-finals",
+            "title": {
+              "vi": "Korea Finals",
+              "en": "Korea Finals",
+              "ko": "한국 결승",
+              "ja": "韓国決勝"
+            },
+            "matches": [
+              "koq27-kr-ubf",
+              "koq27-kr-lbf",
+              "koq27-kr-gf"
+            ]
+          },
+          {
+            "id": "japan-finals",
+            "title": {
+              "vi": "Japan Finals",
+              "en": "Japan Finals",
+              "ko": "일본 결승",
+              "ja": "日本決勝"
+            },
+            "matches": [
+              "koq27-jp-ubf",
+              "koq27-jp-lbf",
+              "koq27-jp-gf"
+            ]
+          },
+          {
+            "id": "sea-finals",
+            "title": {
+              "vi": "SEA Finals",
+              "en": "SEA Finals",
+              "ko": "SEA 결승",
+              "ja": "SEA決勝"
+            },
+            "matches": [
+              "koq27-sea-gf"
+            ]
+          },
+          {
+            "id": "kickoff-lcq",
+            "title": {
+              "vi": "Kickoff LCQ",
+              "en": "Kickoff LCQ",
+              "ko": "킥오프 LCQ",
+              "ja": "Kickoff LCQ"
+            },
+            "matches": [
+              "koq27-lcq-ubsf1",
+              "koq27-lcq-ubsf2",
+              "koq27-lcq-gf"
+            ]
+          }
+        ]
+      }
+    ],
+    "progression": {
+      "koq27-kr-ubf": {
+        "winner": {
+          "match": "koq27-kr-gf",
+          "slot": 0
+        },
+        "loser": {
+          "match": "koq27-kr-lbf",
+          "slot": 0
+        }
+      },
+      "koq27-kr-lbf": {
+        "winner": {
+          "match": "koq27-kr-gf",
+          "slot": 1
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "koq27-kr-gf": {
+        "winner": {
+          "qualifies": 1
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "koq27-jp-ubf": {
+        "winner": {
+          "match": "koq27-jp-gf",
+          "slot": 0
+        },
+        "loser": {
+          "match": "koq27-jp-lbf",
+          "slot": 0
+        }
+      },
+      "koq27-jp-lbf": {
+        "winner": {
+          "match": "koq27-jp-gf",
+          "slot": 1
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "koq27-jp-gf": {
+        "winner": {
+          "qualifies": 1
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "koq27-sea-gf": {
+        "winner": {
+          "qualifies": 1
+        },
+        "loser": {
+          "match": "koq27-lcq-ubsf1",
+          "slot": 0
+        }
+      },
+      "koq27-lcq-ubsf1": {
+        "winner": {
+          "match": "koq27-lcq-gf",
+          "slot": 0
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "koq27-lcq-ubsf2": {
+        "winner": {
+          "match": "koq27-lcq-gf",
+          "slot": 1
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "koq27-lcq-gf": {
+        "winner": {
+          "qualifies": 1
+        },
+        "loser": {
+          "eliminated": true
+        }
+      }
+    }
+  },
+  {
+    "id": "red-bull-home-ground-2026",
+    "tournament": "red-bull-home-ground-2026",
+    "type": "single-elimination",
+    "confirmed": false,
+    "note": {
+      "vi": "Group Stage 10-11/12; bracket 12-13/12. Cặp Group Stage của T1/ZETA chưa công bố - placeholder theo ngày Group Stage.",
+      "en": "Group Stage Dec 10-11; bracket Dec 12-13. T1/ZETA group pairings not published yet - placeholders on Group Stage dates.",
+      "ko": "조별리그 12/10-11, 브래킷 12/12-13. T1/ZETA 조 대진 미발표 - 조별리그 날짜 placeholder.",
+      "ja": "グループステージ12/10-11、ブラケット12/12-13。T1/ZETAのグループ組み合わせは未発表 - グループ日程のプレースホルダー。"
+    },
+    "sections": [
+      {
+        "id": "playoffs",
+        "title": {
+          "vi": "Group Stage (Pacific)",
+          "en": "Group Stage (Pacific)",
+          "ko": "조별리그 (퍼시픽)",
+          "ja": "グループステージ（Pacific）"
+        },
+        "rounds": [
+          {
+            "id": "group-stage",
+            "title": {
+              "vi": "Ngày 1 Group Stage",
+              "en": "Group Stage Day 1",
+              "ko": "조별리그 1일차",
+              "ja": "グループステージ1日目"
+            },
+            "matches": [
+              "rbhg26-t1-g1",
+              "rbhg26-zeta-g1"
+            ]
+          }
+        ]
+      }
+    ],
+    "progression": {
+      "rbhg26-t1-g1": {
+        "winner": {
+          "eliminated": true
+        },
+        "loser": {
+          "eliminated": true
+        }
+      },
+      "rbhg26-zeta-g1": {
+        "winner": {
+          "eliminated": true
+        },
+        "loser": {
+          "eliminated": true
+        }
+      }
+    }
   }
 ]

@@ -796,22 +796,63 @@
     "tier": 3,
     "region": "PAC",
     "location": null,
-    "startDate": null,
-    "endDate": null,
-    "datesConfirmed": false,
-    "status": "upcoming",
+    "startDate": "2026-11-17",
+    "endDate": "2026-12-20",
+    "datesConfirmed": true,
+    "status": "ongoing",
     "format": {
       "summary": {
-        "vi": "Vòng loại mở dẫn vào Playoffs Kickoff tại 3 khu vực: Hàn Quốc (1 suất), Nhật Bản (1 suất), Đông Nam Á (1 suất), cùng giải VLCC Kickoff gồm 4 đội (2 đội Nam Á, 1 đội Châu Đại Dương và Á quân Playoffs Kickoff Đông Nam Á) tranh suất thứ 4 tới Bangkok.",
-        "en": "Open qualifiers leading into regional Kickoff Playoffs across Korea (1 berth), Japan (1 berth), and Southeast Asia (1 berth), plus a 4-team Kickoff LCQ (2 South Asia teams, 1 Oceania team, and the SEA Kickoff Playoffs runner-up) for the 4th ticket to Bangkok.",
-        "ko": "한국(1장), 일본(1장), 동남아시아(1장) 지역별 킥오프 플레이오프와 4팀 규모의 킥오프 LCQ(남아시아 2팀, 오세아니아 1팀, 동남아 킥오프 플레이오프 준우승팀)를 통해 방콕행 4장의 티켓을 결정합니다.",
-        "ja": "韓国（1枠）、日本（1枠）、東南アジア（1枠）の地域別Kickoffプレイオフに加え、4チームによるKickoff LCQ（南アジア2チーム、オセアニア1チーム、東南アジアKickoffプレイオフ準優勝チーム）でバンコク行き4枠を決定します。"
+        "vi": "Chuỗi vòng loại Kickoff đang diễn ra: South Asia (17-29/11), Japan Open Qualifier (22-29/11) rồi Playoffs/Finals (2-12/12, Theatre G Rosso), Korea Playoffs (30/11-6/12, WDG Studio Hongdae), SEA Playoffs (7-13/12), Kickoff LCQ 4 đội (17-20/12).",
+        "en": "Kickoff qualifier circuit underway: South Asia (17-29 Nov), Japan Open Qualifier (22-29 Nov) then Playoffs/Finals (2-12 Dec, Theatre G Rosso), Korea Playoffs (30 Nov-6 Dec, WDG Studio Hongdae), SEA Playoffs (7-13 Dec), and a 4-team Kickoff LCQ (17-20 Dec).",
+        "ko": "킥오프 예선 진행 중: 남아시아(11/17-29), 일본 오픈 예선(11/22-29) 후 플레이오프/결승(12/2-12, Theatre G Rosso), 한국 플레이오프(11/30-12/6, WDG Studio Hongdae), SEA 플레이오프(12/7-13), 4팀 킥오프 LCQ(12/17-20).",
+        "ja": "Kickoff予選進行中：南アジア（11/17-29）、日本オープン予選（11/22-29）後プレイオフ/決勝（12/2-12、Theatre G Rosso）、韓国プレイオフ（11/30-12/6、WDG Studio Hongdae）、SEAプレイオフ（12/7-13）、4チームKickoff LCQ（12/17-20）。"
       },
       "teams": null,
       "confirmed": true
     },
     "prizePool": null,
-    "slots": [],
+    "slots": [
+      {
+        "team": null,
+        "from": null,
+        "label": {
+          "vi": "Hạng 1 Korea Qualifier Playoffs",
+          "en": "Korea Qualifier Playoffs winner",
+          "ko": "한국 예선 플레이오프 우승",
+          "ja": "韓国予選プレイオフ優勝"
+        }
+      },
+      {
+        "team": null,
+        "from": null,
+        "label": {
+          "vi": "Hạng 1 Japan Qualifier (Finals offline)",
+          "en": "Japan Qualifier winner (offline finals)",
+          "ko": "일본 예선 우승 (오프라인 결승)",
+          "ja": "日本予選優勝（オフライン決勝）"
+        }
+      },
+      {
+        "team": null,
+        "from": null,
+        "label": {
+          "vi": "Hạng 1 SEA Qualifier Playoffs",
+          "en": "SEA Qualifier Playoffs winner",
+          "ko": "동남아 예선 플레이오프 우승",
+          "ja": "東南アジア予選プレイオフ優勝"
+        }
+      },
+      {
+        "team": null,
+        "from": null,
+        "label": {
+          "vi": "Hạng 1 Kickoff LCQ (SA / OCE / #2 SEA)",
+          "en": "Kickoff LCQ winner (SA / OCE / #2 SEA)",
+          "ko": "킥오프 LCQ 우승 (남아시아·오세아니아·동남아 2위)",
+          "ja": "Kickoff LCQ優勝（南アジア・オセアニア・東南アジア2位）"
+        }
+      }
+    ],
     "qualifiesTo": [
       {
         "tournament": "vct-pacific-2027-kickoff",
@@ -825,10 +866,10 @@
       }
     ],
     "description": {
-      "vi": "Hệ thống Vòng loại VCT Pacific Kickoff 2027 khởi tranh cuối năm 2026 tại Hàn Quốc, Nhật Bản, Đông Nam Á và VLCC (Nam Á / Châu Đại Dương / #2 SEA).",
-      "en": "The VCT Pacific 2027 Kickoff Qualifier circuit starting late 2026 across Korea, Japan, Southeast Asia, and the Kickoff LCQ (South Asia / Oceania / #2 SEA).",
-      "ko": "2026년 말 시작되는 VCT 퍼시픽 2027 킥오프 예선 (한국, 일본, 동남아시아 및 킥오프 LCQ).",
-      "ja": "2026年末に開幕するVCT Pacific 2027 Kickoff予選（韓国、日本、東南アジア、Kickoff LCQ）。"
+      "vi": "Hệ thống vòng loại Kickoff Pacific 2027 (cuối 2026): Korea, Japan, SEA và Kickoff LCQ tranh 4 suất Open tới Bangkok.",
+      "en": "VCT Pacific 2027 Kickoff Qualifier circuit (late 2026): Korea, Japan, SEA and Kickoff LCQ for 4 Open berths to Bangkok.",
+      "ko": "VCT 퍼시픽 2027 킥오프 예선(2026년 말): 한국·일본·SEA·킥오프 LCQ에서 방콕 오픈 4장을 결정.",
+      "ja": "VCT Pacific 2027 Kickoff予選（2026年末）：韓国・日本・SEA・Kickoff LCQでバンコクのオープン4枠を決定。"
     },
     "sources": [
       {
@@ -842,6 +883,22 @@
       {
         "label": "Inquirer - Riot outlines VCT 2027 qualification paths",
         "url": "https://technology.inquirer.net/147531/riot-outlines-vct-2027-qualification-paths-funding-tournaments"
+      },
+      {
+        "label": "Liquipedia - VCT 2027 Pacific Kickoff Korea",
+        "url": "https://liquipedia.net/valorant/VCT/2027/Pacific/Kickoff/Korea"
+      },
+      {
+        "label": "Liquipedia - VCT 2027 Pacific Kickoff Japan",
+        "url": "https://liquipedia.net/valorant/VCT/2027/Pacific/Kickoff/Japan"
+      },
+      {
+        "label": "Liquipedia - VCT 2027 Pacific Kickoff Southeast Asia",
+        "url": "https://liquipedia.net/valorant/VCT/2027/Pacific/Kickoff/Southeast_Asia"
+      },
+      {
+        "label": "Liquipedia - VCT 2027 Pacific Kickoff LCQ",
+        "url": "https://liquipedia.net/valorant/VCT/2027/Pacific/Kickoff/Last_Chance_Qualifier"
       }
     ]
   },
@@ -1444,10 +1501,10 @@
     "status": "upcoming",
     "format": {
       "summary": {
-        "vi": "Giải mời OFF//SEASON quốc tế tại Los Angeles, có sự góp mặt của T1 và ZETA DIVISION từ VCT Pacific, kèm lễ bốc thăm trực tiếp VCT Kickoff 2027.",
-        "en": "Global OFF//SEASON invitational in Los Angeles featuring VCT Pacific representatives T1 and ZETA DIVISION, plus the live draw for the 2027 VCT Kickoff.",
-        "ko": "로스앤젤레스에서 열리는 글로벌 OFF//SEASON 초청전. VCT 퍼시픽 대표 T1, ZETA DIVISION 참가 및 2027 VCT 킥오프 조 추첨 진행.",
-        "ja": "ロサンゼルス開催のグローバルOFF//SEASON招待大会。VCT PacificからT1とZETA DIVISIONが出場し、2027 VCTキックオフの公開抽選会も実施。"
+        "vi": "Giải mời OFF//SEASON tại Los Angeles (Shrine Auditorium): Group Stage 10-11/12, Bracket R1 & bán kết 12/12, chung kết 13/12. T1 và ZETA DIVISION đại diện Pacific; 2 suất NA Qualifier còn trống. Bốc thăm Kickoff 2027 diễn ra trong sự kiện.",
+        "en": "Global OFF//SEASON invitational in Los Angeles (Shrine Auditorium): Group Stage Dec 10-11, Bracket R1 & semis Dec 12, Final Dec 13. T1 and ZETA DIVISION represent Pacific; 2 NA Qualifier slots still TBD. The 2027 VCT Kickoff live draw is part of the event.",
+        "ko": "로스앤젤레스(Shrine Auditorium) OFF//SEASON 초청전: 조별리그 12/10-11, 브래킷 1라운드·준결승 12/12, 결승 12/13. T1·ZETA DIVISION이 퍼시픽 대표. NA 예선 2자리는 미정. 2027 VCT 킥오프 공개 추첨도 진행.",
+        "ja": "ロサンゼルス（Shrine Auditorium）のOFF//SEASON招待大会：グループステージ12/10-11、ブラケット1回戦・準決勝12/12、決勝12/13。T1とZETA DIVISIONがPacific代表。NA予選2枠は未定。2027 VCTキックオフ公開抽選も実施。"
       },
       "teams": 10,
       "confirmed": true
@@ -1564,8 +1621,16 @@
     },
     "sources": [
       {
-        "label": "Red Bull - Red Bull Home Ground 2026",
-        "url": "https://www.redbull.com/int-en/events/red-bull-home-ground"
+        "label": "Red Bull - Red Bull Home Ground 2026 schedule",
+        "url": "https://www.redbull.com/int-en/events/red-bull-home-ground/red-bull-home-ground-schedule"
+      },
+      {
+        "label": "Red Bull - Red Bull Home Ground 2026 teams",
+        "url": "https://www.redbull.com/int-en/events/red-bull-home-ground/red-bull-home-ground-teams-2026"
+      },
+      {
+        "label": "vct.today - Red Bull Home Ground 2026",
+        "url": "https://vct.today/matches/red-bull-home-ground-2026"
       },
       {
         "label": "Liquipedia - Red Bull Home Ground 2026",
@@ -1608,6 +1673,10 @@
       {
         "label": "VLR.gg - VALORANT Off-Season Events",
         "url": "https://www.vlr.gg/events"
+      },
+      {
+        "label": "Liquipedia - BOOM Esports (Predator League Indonesia context)",
+        "url": "https://liquipedia.net/valorant/BOOM_Esports"
       }
     ]
   }

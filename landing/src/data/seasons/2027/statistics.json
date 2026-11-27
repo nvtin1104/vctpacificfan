@@ -11,5 +11,31 @@
     "agents": [],
     "maps": [],
     "players": []
+  },
+  {
+    "id": "vct-pacific-2027-kickoff-qualifier",
+    "tournament": "vct-pacific-2027-kickoff-qualifier",
+    "status": "pending",
+    "updatedAt": "2026-11-27",
+    "source": {
+      "label": "Liquipedia - VCT 2027 Pacific Kickoff Qualifiers",
+      "url": "https://liquipedia.net/valorant/VCT/2027/Pacific/Kickoff"
+    },
+    "agents": [],
+    "maps": [],
+    "players": []
+  },
+  {
+    "id": "red-bull-home-ground-2026",
+    "tournament": "red-bull-home-ground-2026",
+    "status": "pending",
+    "updatedAt": "2026-11-27",
+    "source": {
+      "label": "Liquipedia - Red Bull Home Ground 2026",
+      "url": "https://liquipedia.net/valorant/Red_Bull_Home_Ground/2026"
+    },
+    "agents": [],
+    "maps": [],
+    "players": []
   }
 ]

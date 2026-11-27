@@ -7,7 +7,9 @@
     "country": "VN",
     "role": null,
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/Crazyguy"
+      "liquipedia": "https://liquipedia.net/valorant/Crazyguy",
+      "x": "https://twitter.com/crazyguyfps",
+      "twitch": "https://www.twitch.tv/crazyguyfps"
     }
   },
   {
@@ -18,7 +20,9 @@
     "country": "JP",
     "role": null,
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/Meiy"
+      "liquipedia": "https://liquipedia.net/valorant/Meiy",
+      "x": "https://twitter.com/meiyfps",
+      "twitch": "https://www.twitch.tv/meiy_vl"
     }
   },
   {
@@ -29,7 +33,9 @@
     "country": "KR",
     "role": "Initiator",
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/Akame"
+      "liquipedia": "https://liquipedia.net/valorant/Akame",
+      "x": "https://twitter.com/Akame_o3",
+      "twitch": "https://www.twitch.tv/akame_o3"
     }
   },
   {
@@ -40,7 +46,9 @@
     "country": "JP",
     "role": null,
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/CLZ"
+      "liquipedia": "https://liquipedia.net/valorant/CLZ",
+      "x": "https://twitter.com/Cluzqhi_3",
+      "twitch": "https://www.twitch.tv/cluzqhi3"
     }
   },
   {
@@ -51,7 +59,9 @@
     "country": "JP",
     "role": null,
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/SugarZ3ro"
+      "liquipedia": "https://liquipedia.net/valorant/SugarZ3ro",
+      "x": "https://twitter.com/SugarZ3roVL",
+      "twitch": "https://www.twitch.tv/sugarz3ro"
     }
   },
   {
@@ -62,7 +72,9 @@
     "country": "JP",
     "role": null,
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/Aace"
+      "liquipedia": "https://liquipedia.net/valorant/Aace",
+      "x": "https://twitter.com/Aaceful",
+      "twitch": "https://www.twitch.tv/aaceful"
     }
   },
   {
@@ -121,7 +133,9 @@
     "country": "KR",
     "role": null,
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/T3xture"
+      "liquipedia": "https://liquipedia.net/valorant/T3xture",
+      "x": "https://twitter.com/t3xture_kr",
+      "twitch": "https://www.twitch.tv/t3xturekr"
     }
   },
   {
@@ -144,7 +158,8 @@
     "country": "KR",
     "role": "Controller",
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/Karon"
+      "liquipedia": "https://liquipedia.net/valorant/Karon",
+      "x": "https://twitter.com/Karonvlrt"
     }
   },
   {
@@ -155,7 +170,8 @@
     "country": "KR",
     "role": "Duelist",
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/Dambi"
+      "liquipedia": "https://liquipedia.net/valorant/Dambi",
+      "x": "https://twitter.com/Dambi_vlrt"
     }
   },
   {
@@ -166,7 +182,9 @@
     "country": "KR",
     "role": null,
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/MaKo"
+      "liquipedia": "https://liquipedia.net/valorant/MaKo",
+      "x": "https://twitter.com/MakoVlrt",
+      "twitch": "https://www.twitch.tv/makovlrt"
     }
   },
   {
@@ -176,7 +194,8 @@
     "country": "KR",
     "role": "Controller",
     "socials": {
-      "x": "https://twitter.com/rayvlrt"
+      "x": "https://twitter.com/rayvlrt",
+      "liquipedia": "https://liquipedia.net/valorant/Ray_(Korean_player)"
     }
   },
   {
@@ -245,7 +264,10 @@
     "name": "Kim Yun-seung",
     "country": "KR",
     "role": "Flex",
-    "socials": {}
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/KEN",
+      "x": "https://twitter.com/Kenvlrt06"
+    }
   },
   {
     "id": "yatsuka",
@@ -267,7 +289,8 @@
     "country": "ID",
     "role": null,
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/Xffero"
+      "liquipedia": "https://liquipedia.net/valorant/Xffero",
+      "x": "https://twitter.com/davidmichs"
     }
   },
   {
@@ -278,7 +301,8 @@
     "country": "RU",
     "role": "Duelist",
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/Jemkin"
+      "liquipedia": "https://liquipedia.net/valorant/Jemkin",
+      "x": "https://twitter.com/Jemkin1"
     }
   },
   {
@@ -546,7 +570,8 @@
     "country": "TH",
     "role": "Initiator",
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/Killua"
+      "liquipedia": "https://liquipedia.net/valorant/Killua",
+      "x": "https://twitter.com/killuaX456"
     }
   },
   {
@@ -557,7 +582,8 @@
     "country": "TH",
     "role": "Controller",
     "socials": {
-      "liquipedia": "https://liquipedia.net/valorant/JitBoyS"
+      "liquipedia": "https://liquipedia.net/valorant/JitBoyS",
+      "x": "https://twitter.com/jitboyy_"
     }
   },
   {
@@ -774,6 +800,54 @@
     "socials": {
       "liquipedia": "https://liquipedia.net/valorant/Asuna",
       "x": "https://twitter.com/asunaa"
+    }
+  },
+  {
+    "id": "eko",
+    "handle": "eKo",
+    "name": "Yeom Wang-ryong",
+    "country": "KR",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/EKo",
+      "x": "https://twitter.com/eKoVLRT",
+      "twitch": "https://www.twitch.tv/ekokr"
+    }
+  },
+  {
+    "id": "absol",
+    "handle": "Absol",
+    "name": "Kazuki Fujinoki",
+    "country": "JP",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Absol",
+      "x": "https://twitter.com/Absol_s",
+      "twitch": "https://www.twitch.tv/absol_dayo"
+    }
+  },
+  {
+    "id": "syouta",
+    "handle": "SyouTa",
+    "name": "Shota Aoki",
+    "country": "JP",
+    "role": null,
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/SyouTa",
+      "x": "https://twitter.com/SyouTa_fps",
+      "twitch": "https://www.twitch.tv/syouta_fps"
+    }
+  },
+  {
+    "id": "ara",
+    "handle": "ara",
+    "name": "Eduard-George Hanceriuc",
+    "country": "RO",
+    "role": "Duelist",
+    "socials": {
+      "liquipedia": "https://liquipedia.net/valorant/Ara",
+      "x": "https://twitter.com/ara999_",
+      "twitch": "https://www.twitch.tv/999ara_"
     }
   }
 ]

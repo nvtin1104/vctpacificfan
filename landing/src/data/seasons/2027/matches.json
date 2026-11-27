@@ -1288,5 +1288,521 @@
     "veto": null,
     "maps": null,
     "vodUrl": null
+  },
+  {
+    "id": "koq27-kr-ubf",
+    "tournament": "vct-pacific-2027-kickoff-qualifier",
+    "section": "playoffs",
+    "round": "korea-ub-final",
+    "order": 0,
+    "stage": {
+      "vi": "Korea Qualifier - Chung kết nhánh trên",
+      "en": "Korea Qualifier - Upper Bracket Final",
+      "ko": "한국 예선 - 상위 브래킷 결승",
+      "ja": "韓国予選 - アッパーブラケット決勝"
+    },
+    "format": "Bo3",
+    "startTime": "2026-12-05T12:00:00+09:00",
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Korea UBF A",
+          "en": "Korea UBF A",
+          "ko": "Korea UBF A",
+          "ja": "Korea UBF A"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Korea UBF B",
+          "en": "Korea UBF B",
+          "ko": "Korea UBF B",
+          "ja": "Korea UBF B"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "koq27-kr-lbf",
+    "tournament": "vct-pacific-2027-kickoff-qualifier",
+    "section": "playoffs",
+    "round": "korea-lb-final",
+    "order": 1,
+    "stage": {
+      "vi": "Korea Qualifier - Chung kết nhánh dưới",
+      "en": "Korea Qualifier - Lower Bracket Final",
+      "ko": "한국 예선 - 하위 브래킷 결승",
+      "ja": "韓国予選 - ロワーブラケット決勝"
+    },
+    "format": "Bo3",
+    "startTime": "2026-12-05T15:00:00+09:00",
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Korea LBF A",
+          "en": "Korea LBF A",
+          "ko": "Korea LBF A",
+          "ja": "Korea LBF A"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Korea LBF B",
+          "en": "Korea LBF B",
+          "ko": "Korea LBF B",
+          "ja": "Korea LBF B"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "koq27-kr-gf",
+    "tournament": "vct-pacific-2027-kickoff-qualifier",
+    "section": "playoffs",
+    "round": "korea-grand-final",
+    "order": 2,
+    "stage": {
+      "vi": "Korea Qualifier - Chung kết (suất Kickoff)",
+      "en": "Korea Qualifier - Grand Final (Kickoff berth)",
+      "ko": "한국 예선 - 그랜드 파이널 (킥오프 출전권)",
+      "ja": "韓国予選 - グランドファイナル（Kickoff出場権）"
+    },
+    "format": "Bo5",
+    "startTime": "2026-12-06T14:00:00+09:00",
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Korea GF A",
+          "en": "Korea GF A",
+          "ko": "Korea GF A",
+          "ja": "Korea GF A"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Korea GF B",
+          "en": "Korea GF B",
+          "ko": "Korea GF B",
+          "ja": "Korea GF B"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "koq27-jp-ubf",
+    "tournament": "vct-pacific-2027-kickoff-qualifier",
+    "section": "playoffs",
+    "round": "japan-ub-final",
+    "order": 3,
+    "stage": {
+      "vi": "Japan Qualifier Finals - Chung kết nhánh trên (Theatre G Rosso)",
+      "en": "Japan Qualifier Finals - Upper Bracket Final (Theatre G Rosso)",
+      "ko": "일본 예선 결승 - 상위 브래킷 결승 (Theatre G Rosso)",
+      "ja": "日本予選決勝 - アッパーブラケット決勝（Theatre G Rosso）"
+    },
+    "format": "Bo3",
+    "startTime": "2026-12-11T14:00:00+09:00",
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Japan UBF A",
+          "en": "Japan UBF A",
+          "ko": "Japan UBF A",
+          "ja": "Japan UBF A"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Japan UBF B",
+          "en": "Japan UBF B",
+          "ko": "Japan UBF B",
+          "ja": "Japan UBF B"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "koq27-jp-lbf",
+    "tournament": "vct-pacific-2027-kickoff-qualifier",
+    "section": "playoffs",
+    "round": "japan-lb-final",
+    "order": 4,
+    "stage": {
+      "vi": "Japan Qualifier Finals - Chung kết nhánh dưới (Theatre G Rosso)",
+      "en": "Japan Qualifier Finals - Lower Bracket Final (Theatre G Rosso)",
+      "ko": "일본 예선 결승 - 하위 브래킷 결승 (Theatre G Rosso)",
+      "ja": "日本予選決勝 - ロワーブラケット決勝（Theatre G Rosso）"
+    },
+    "format": "Bo3",
+    "startTime": "2026-12-11T17:00:00+09:00",
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Japan LBF A",
+          "en": "Japan LBF A",
+          "ko": "Japan LBF A",
+          "ja": "Japan LBF A"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Japan LBF B",
+          "en": "Japan LBF B",
+          "ko": "Japan LBF B",
+          "ja": "Japan LBF B"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "koq27-jp-gf",
+    "tournament": "vct-pacific-2027-kickoff-qualifier",
+    "section": "playoffs",
+    "round": "japan-grand-final",
+    "order": 5,
+    "stage": {
+      "vi": "Japan Qualifier - Grand Final Bo5 (suất Kickoff)",
+      "en": "Japan Qualifier - Grand Final Bo5 (Kickoff berth)",
+      "ko": "일본 예선 - 그랜드 파이널 Bo5 (킥오프 출전권)",
+      "ja": "日本予選 - グランドファイナル Bo5（Kickoff出場権）"
+    },
+    "format": "Bo5",
+    "startTime": "2026-12-12T14:00:00+09:00",
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Japan GF A",
+          "en": "Japan GF A",
+          "ko": "Japan GF A",
+          "ja": "Japan GF A"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Japan GF B",
+          "en": "Japan GF B",
+          "ko": "Japan GF B",
+          "ja": "Japan GF B"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "koq27-sea-gf",
+    "tournament": "vct-pacific-2027-kickoff-qualifier",
+    "section": "playoffs",
+    "round": "sea-grand-final",
+    "order": 6,
+    "stage": {
+      "vi": "SEA Qualifier - Chung kết (suất Kickoff; á quân vào LCQ)",
+      "en": "SEA Qualifier - Grand Final (Kickoff berth; runner-up to LCQ)",
+      "ko": "SEA 예선 - 그랜드 파이널 (킥오프 출전권; 준우승은 LCQ)",
+      "ja": "SEA予選 - グランドファイナル（Kickoff出場権；準優勝はLCQ）"
+    },
+    "format": "Bo5",
+    "startTime": "2026-12-13T14:00:00+07:00",
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "SEA GF A",
+          "en": "SEA GF A",
+          "ko": "SEA GF A",
+          "ja": "SEA GF A"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "SEA GF B",
+          "en": "SEA GF B",
+          "ko": "SEA GF B",
+          "ja": "SEA GF B"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "koq27-lcq-ubsf1",
+    "tournament": "vct-pacific-2027-kickoff-qualifier",
+    "section": "playoffs",
+    "round": "lcq-ub-sf",
+    "order": 7,
+    "stage": {
+      "vi": "Kickoff LCQ - Bán kết nhánh trên #1",
+      "en": "Kickoff LCQ - Upper Bracket SF #1",
+      "ko": "킥오프 LCQ - 상위 준결승 #1",
+      "ja": "Kickoff LCQ - アッパー準決勝 #1"
+    },
+    "format": "Bo3",
+    "startTime": "2026-12-17T12:00:00+07:00",
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Á quân SEA",
+          "en": "SEA runner-up",
+          "ko": "SEA 준우승",
+          "ja": "SEA準優勝"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Châu Đại Dương #1",
+          "en": "Oceania #1",
+          "ko": "오세아니아 1위",
+          "ja": "オセアニア1位"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "koq27-lcq-ubsf2",
+    "tournament": "vct-pacific-2027-kickoff-qualifier",
+    "section": "playoffs",
+    "round": "lcq-ub-sf",
+    "order": 8,
+    "stage": {
+      "vi": "Kickoff LCQ - Bán kết nhánh trên #2",
+      "en": "Kickoff LCQ - Upper Bracket SF #2",
+      "ko": "킥오프 LCQ - 상위 준결승 #2",
+      "ja": "Kickoff LCQ - アッパー準決勝 #2"
+    },
+    "format": "Bo3",
+    "startTime": "2026-12-17T15:00:00+07:00",
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Nam Á #1",
+          "en": "South Asia #1",
+          "ko": "남아시아 1위",
+          "ja": "南アジア1位"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Nam Á #2",
+          "en": "South Asia #2",
+          "ko": "남아시아 2위",
+          "ja": "南アジア2位"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "koq27-lcq-gf",
+    "tournament": "vct-pacific-2027-kickoff-qualifier",
+    "section": "playoffs",
+    "round": "lcq-grand-final",
+    "order": 9,
+    "stage": {
+      "vi": "Kickoff LCQ - Chung kết (suất Kickoff thứ 4)",
+      "en": "Kickoff LCQ - Grand Final (4th Kickoff berth)",
+      "ko": "킥오프 LCQ - 그랜드 파이널 (킥오프 4번째 출전권)",
+      "ja": "Kickoff LCQ - グランドファイナル（Kickoff 4枠目）"
+    },
+    "format": "Bo5",
+    "startTime": "2026-12-20T14:00:00+07:00",
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Kickoff LCQ GF A",
+          "en": "Kickoff LCQ GF A",
+          "ko": "Kickoff LCQ GF A",
+          "ja": "Kickoff LCQ GF A"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Kickoff LCQ GF B",
+          "en": "Kickoff LCQ GF B",
+          "ko": "Kickoff LCQ GF B",
+          "ja": "Kickoff LCQ GF B"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "rbhg26-t1-g1",
+    "tournament": "red-bull-home-ground-2026",
+    "section": "group",
+    "round": "group-stage",
+    "order": 0,
+    "stage": {
+      "vi": "Group Stage - T1 (lịch chi tiết TBA)",
+      "en": "Group Stage - T1 (detailed slate TBA)",
+      "ko": "조별리그 - T1 (상세 일정 TBA)",
+      "ja": "グループステージ - T1（詳細スケジュール TBA）"
+    },
+    "format": "Bo3",
+    "startTime": "2026-12-10T18:00:00-08:00",
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": "t1",
+        "placeholder": {
+          "vi": "T1",
+          "en": "T1",
+          "ko": "T1",
+          "ja": "T1"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Đối thủ bảng TBA",
+          "en": "Group opponent TBA",
+          "ko": "조 상대 TBA",
+          "ja": "グループ対戦相手 TBA"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
+  },
+  {
+    "id": "rbhg26-zeta-g1",
+    "tournament": "red-bull-home-ground-2026",
+    "section": "group",
+    "round": "group-stage",
+    "order": 1,
+    "stage": {
+      "vi": "Group Stage - ZETA DIVISION (lịch chi tiết TBA)",
+      "en": "Group Stage - ZETA DIVISION (detailed slate TBA)",
+      "ko": "조별리그 - ZETA DIVISION (상세 일정 TBA)",
+      "ja": "グループステージ - ZETA DIVISION（詳細スケジュール TBA）"
+    },
+    "format": "Bo3",
+    "startTime": "2026-12-10T20:00:00-08:00",
+    "status": "upcoming",
+    "teams": [
+      {
+        "team": "zeta-division",
+        "placeholder": {
+          "vi": "ZETA DIVISION",
+          "en": "ZETA DIVISION",
+          "ko": "ZETA DIVISION",
+          "ja": "ZETA DIVISION"
+        },
+        "score": null
+      },
+      {
+        "team": null,
+        "placeholder": {
+          "vi": "Đối thủ bảng TBA",
+          "en": "Group opponent TBA",
+          "ko": "조 상대 TBA",
+          "ja": "グループ対戦相手 TBA"
+        },
+        "score": null
+      }
+    ],
+    "winner": null,
+    "skirmish": null,
+    "veto": null,
+    "maps": null,
+    "vodUrl": null
   }
 ]

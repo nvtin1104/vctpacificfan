@@ -12,18 +12,18 @@
       {
         "player": "crazyguy",
         "role": null,
-        "igl": false,
+        "igl": true,
         "sub": false,
-        "status": "reported"
+        "status": "official"
       }
     ],
     "staff": [],
     "history": [],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia",
-      "url": "https://liquipedia.net/valorant/GAM_Esports"
+      "label": "GAM VALORANT official X - WELCOME HOME, CRAZYGUY (2026-11-27)",
+      "url": "https://x.com/GAMValorant/status/2126189259937984735"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "crazy-raccoon-2027",
@@ -116,10 +116,10 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia",
-      "url": "https://liquipedia.net/valorant/Crazy_Raccoon"
+      "label": "Sheep Esports / vct.today reported (no CR X roster post yet) & Liquipedia",
+      "url": "https://x.com/crazyraccoon406"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "paper-rex-2027",
@@ -259,10 +259,10 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - Paper Rex",
-      "url": "https://liquipedia.net/valorant/Paper_Rex"
+      "label": "Paper Rex official X - Introducing the 2027 Paper Rex VALORANT Roster",
+      "url": "https://x.com/pprxteam/status/2124080388750651406"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "gen-g-2027",
@@ -380,10 +380,10 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - Gen.G Esports",
-      "url": "https://liquipedia.net/valorant/Gen.G_Esports"
+      "label": "Gen.G Gold official X roster announcements (Ray/Dambi/MaKo/Karon) + RaxcaL loan to VARREL",
+      "url": "https://x.com/geng_gold/status/2126194317173706830"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "t1-2027",
@@ -506,10 +506,10 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - T1",
-      "url": "https://liquipedia.net/valorant/T1"
+      "label": "T1 official X roster announcements (TenZ, crashies, Sacy, iZu/stax/BuZz)",
+      "url": "https://x.com/T1"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "zeta-division-2027",
@@ -531,6 +531,27 @@
       {
         "player": "yatsuka",
         "role": "Duelist",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "eko",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "absol",
+        "role": null,
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "syouta",
+        "role": null,
         "igl": false,
         "sub": false,
         "status": "reported"
@@ -609,10 +630,10 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - ZETA DIVISION",
-      "url": "https://liquipedia.net/valorant/ZETA_DIVISION"
+      "label": "Sheep Esports reported five (no ZETA X roster post yet) & Liquipedia",
+      "url": "https://x.com/zetadivision"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "rex-regum-qeon-2027",
@@ -729,10 +750,10 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - Rex Regum Qeon",
-      "url": "https://liquipedia.net/valorant/Rex_Regum_Qeon"
+      "label": "RRQ official X - thank you crazyguy (2026-11-25) + Liquipedia",
+      "url": "https://x.com/teamrrqofficial/status/2125454436524753299"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "full-sense-2027",
@@ -768,6 +789,13 @@
       {
         "player": "kr1stal",
         "role": "Initiator",
+        "igl": false,
+        "sub": false,
+        "status": "reported"
+      },
+      {
+        "player": "ara",
+        "role": "Duelist",
         "igl": false,
         "sub": false,
         "status": "reported"
@@ -850,10 +878,10 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - FULL SENSE",
-      "url": "https://liquipedia.net/valorant/FULL_SENSE"
+      "label": "FULL SENSE official X contract renewals (Killua, seph1roth, JitBoyS, Leviathan, Crws/THEE); ara/Kr1stal still reported",
+      "url": "https://x.com/fullsense_gg"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "g2-esports-2027",
