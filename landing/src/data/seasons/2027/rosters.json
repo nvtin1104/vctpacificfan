@@ -506,7 +506,7 @@
       }
     ],
     "source": {
-      "label": "T1 official X roster announcements (TenZ, crashies, Sacy, iZu/stax/BuZz)",
+      "label": "T1 official X - TenZ/crashies/Sacy 2027 roster",
       "url": "https://x.com/T1"
     },
     "asOf": "2026-11-27"
@@ -630,8 +630,8 @@
       }
     ],
     "source": {
-      "label": "Sheep Esports reported five (no ZETA X roster post yet) & Liquipedia",
-      "url": "https://x.com/zetadivision"
+      "label": "Sheep Esports - ZETA 2027 reported five (KEN/yatsuka/eKo/Absol/SyouTa); not official yet",
+      "url": "https://www.sheepesports.com/en/articles/sources-yatsuka-set-to-join-zeta-division-for-the-2027-vct-season/en"
     },
     "asOf": "2026-11-27"
   },
@@ -1045,10 +1045,10 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - G2 Esports",
-      "url": "https://liquipedia.net/valorant/G2_Esports"
+      "label": "VCT Rostermania 2027 (vct.today) & Sheep - G2 contracts registered (kiNgg/Sato/HYUNMIN)",
+      "url": "https://vct.today/americas"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "loud-2027",
@@ -1159,10 +1159,10 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - LOUD",
-      "url": "https://liquipedia.net/valorant/LOUD"
+      "label": "Sheep Esports - LOUD completed roster for VCT Americas 2027 (RBHG debut)",
+      "url": "https://www.sheepesports.com/en/articles/loud-completed-roster-for-vct-americas-2027/en"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "sentinels-2027",
@@ -1316,10 +1316,10 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - Sentinels",
-      "url": "https://liquipedia.net/valorant/Sentinels"
+      "label": "Sentinels official keiko signing + 2027 lineup (johnqt/OXY/brawk/canezerra/Zellsis)",
+      "url": "https://x.com/Sentinels"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "nrg-2027",
@@ -1350,7 +1350,7 @@
         "role": null,
         "igl": false,
         "sub": false,
-        "status": "official"
+        "status": "reported"
       },
       {
         "player": "eeiu",
@@ -1371,7 +1371,7 @@
       {
         "handle": "bonkar",
         "position": "head-coach",
-        "status": "official"
+        "status": "reported"
       },
       {
         "handle": "mitch",
@@ -1472,10 +1472,10 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - NRG",
-      "url": "https://liquipedia.net/valorant/NRG"
+      "label": "VCT Rostermania 2027 (vct.today) - NRG; eeiu official, zekken/skuba reported",
+      "url": "https://vct.today/americas"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "fnatic-2027",
@@ -1506,14 +1506,14 @@
         "role": "Controller",
         "igl": true,
         "sub": false,
-        "status": "reported"
+        "status": "official"
       },
       {
         "player": "marteen",
         "role": "Duelist",
         "igl": false,
         "sub": false,
-        "status": "reported"
+        "status": "official"
       },
       {
         "player": "minny",
@@ -1611,10 +1611,10 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - Fnatic",
-      "url": "https://liquipedia.net/valorant/Fnatic"
+      "label": "FNATIC official X - valyn (Nov 26) and marteen (Nov 25); Minny/ANGE1 still reported (Sheep)",
+      "url": "https://x.com/FNATIC"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   },
   {
     "id": "100-thieves-2027",
@@ -1748,9 +1748,9 @@
       }
     ],
     "source": {
-      "label": "VCT Rostermania 2027 (vct.today) & Liquipedia - 100 Thieves",
-      "url": "https://liquipedia.net/valorant/100_Thieves"
+      "label": "100 Thieves official re-signings (Asuna/Cryocells) + locked 2027 five",
+      "url": "https://vct.today/americas"
     },
-    "asOf": "2026-11-23"
+    "asOf": "2026-11-27"
   }
 ]

@@ -8,7 +8,7 @@ import StatusPill from '../../../components/ui/StatusPill.astro';
 import TeamBadge from '../../../components/ui/TeamBadge.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { formatDateRange, formatMoney, LOCALES, loc, localePath, useT, type Lang } from '../../../i18n';
-import { countryName, db, feedersOf, refId, regionName, seasonConfig, sectionPath } from '../../../lib/data';
+import { countryName, db, feedersOf, refId, regionName, resolvedRoster, seasonConfig, sectionPath } from '../../../lib/data';
 import { breadcrumbLd, tournamentLd } from '../../../lib/jsonld';
 import { ogImagePath, truncateDescription } from '../../../lib/seo';
 
@@ -18,13 +18,25 @@ export async function getStaticPaths() {
 }
 
 const lang = Astro.params.lang as Lang;
-const { tournament, team: teams, matches, bracketFor } = await db();
+const { tournament, team: teams, matches, bracketFor, player: playersMap, roster } = await db();
 const event = tournament.get(Astro.params.slug!)!;
 const d = event.data;
 const t = useT(lang, { year: d.season });
 const eventMatches = matches.filter(m => refId(m.data.tournament) === event.id);
 const bracket = bracketFor.get(event.id);
 const feeders = await feedersOf(event.id);
+/** Starter handles for each confirmed slot team in this event's season (shown on participant cards). */
+const slotRosters = new Map(
+  d.slots
+    .map(s => refId(s.team))
+    .filter((id): id is string => !!id)
+    .map(id => {
+      const r = roster.get(`${id}:${d.season}`);
+      if (!r) return [id, [] as string[]] as const;
+      const starters = resolvedRoster(r.data, playersMap).filter(p => !p.sub);
+      return [id, starters.map(p => p.handle)] as const;
+    }),
+);
 const dates = formatDateRange(d.startDate, d.endDate, lang);
 const place = d.location ? `${loc(d.location.city, lang)}, ${countryName(d.location.country, lang)}` : regionName(d.region, lang);
 // Fixed payment for open teams, by event kind, from that season's config.
@@ -170,12 +182,14 @@ const crumbs = [
             const team = slot.team ? teams.get(slot.team.id) : undefined;
             const from = slot.from ? tournament.get(slot.from.id) : undefined;
             const href = team ? localePath(lang, `/teams/${team.id}`) : from ? localePath(lang, `/tournaments/${from.id}`) : undefined;
+            const handles = team ? slotRosters.get(team.id) ?? [] : [];
             const inner = (
               <>
                 <TeamBadge team={team} fallback="?" />
                 <span class="min-w-0">
                   <span class:list={['block truncate', team && 'font-semibold']}>{team ? team.data.name : loc(slot.label, lang)}</span>
                   <span class="block truncate text-xs text-muted">{team ? loc(slot.label, lang) : from ? t('tournaments.fromEvent', { event: from.data.shortName }) : t('common.tbd')}</span>
+                  {handles.length > 0 && <span class="mt-1 block text-xs leading-snug text-muted/90">{handles.join(' · ')}</span>}
                 </span>
               </>
             );
